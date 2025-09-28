@@ -7,7 +7,9 @@ public class JavaProject {
         System.out.println("Hola mundo");
         int[] arr = {1,2,3,4,5,6};
         for(int e : arr){
-            System.out.println("hola mundo kbros de mrd son "+e);                                  
+            for(int x : arr){
+                System.out.println("mas perros "+x);
+            }
         }
     }
     
