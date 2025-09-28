@@ -10,6 +10,8 @@ public class JavaProject {
             for(int x : arr){
                 System.out.println("mas perros "+x);
                 System.out.println("adios mundo");
+                
+                
             }
         }
     }
