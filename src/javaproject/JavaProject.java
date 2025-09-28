@@ -9,6 +9,7 @@ public class JavaProject {
         for(int e : arr){
             for(int x : arr){
                 System.out.println("mas perros "+x);
+                System.out.println("adios mundo");
             }
         }
     }
