@@ -7,6 +7,7 @@ public class JavaProject {
         System.out.println("a hate the wordl");
             System.out.println("adios mundo");
             System.out.println("Ya no");
+            System.out.println("Puede ser");
     }
     
 }
