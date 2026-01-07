@@ -11,17 +11,34 @@ import java.awt.Color;
  * @author andylnx
  */
 public class interfazOwner extends javax.swing.JFrame {
-    
-final Color azulHover = new Color(153, 204, 255);
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfazOwner.class.getName());
 
-    /**
-     * Creates new form interfazOwner
-     */
+final Color azulHover = new Color(153, 204, 255);
+final Color colorLetra= new Color(255,255,255);
+private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfazOwner.class.getName());
+
+   public static String[][] datos_pacien= new String[10][100];
+   public static String[][] datos_citas = new String[8][300];
+   public static String[][] datos_aten = new String[8][300];
+   public static int[] num_medi=new int[300];//solo cantidad de medicinas de cada paciente
+   public static int[][] ind_medi=new int[20][300];//los indices los los medicamentos de cada paciente
+   public static int[][] cant_medi=new int[20][300];//la cantidad de cada medicamento de cada paciente
+   public static String[][] datos_medi = new String[6][300];
+   public static int indiceCita=0;
+   //maximo podrá recetar 20 medicamentos
+
     public interfazOwner() {
         initComponents();
+        setResizable(true);
         setSize(1366, 768);
         db.setVisible(true);
+
+    }
+    public void cambiarPanel(javax.swing.JPanel nuevoPanel) {
+
+    spaceDates.removeAll();
+    spaceDates.add(nuevoPanel, java.awt.BorderLayout.CENTER);
+    spaceDates.revalidate();
+    spaceDates.repaint();
     }
 
     /**
@@ -53,30 +70,27 @@ final Color azulHover = new Color(153, 204, 255);
         db4 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        spaceProfile = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         spaceDates = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(20, 20, 40));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
+        jPanel8.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(10, 60, 100));
         jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
 
-        jpan5.setBackground(new java.awt.Color(153, 153, 255));
+        jpan5.setBackground(new java.awt.Color(10, 60, 100));
+        jpan5.setForeground(new java.awt.Color(10, 60, 100));
         jpan5.setLayout(new java.awt.GridLayout(1, 2));
 
-        db5.setBackground(new java.awt.Color(255, 255, 255));
+        db5.setBackground(new java.awt.Color(10, 60, 100));
         db5.setFont(new java.awt.Font("JetBrainsMono NF ExtraBold", 1, 14)); // NOI18N
         db5.setForeground(new java.awt.Color(255, 255, 255));
         db5.setText("Salir");
@@ -105,15 +119,16 @@ final Color azulHover = new Color(153, 204, 255);
         jLabel7.setText("LOGO");
 
         jLabel8.setFont(new java.awt.Font("JetBrainsMono NF ExtraBold", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("C.S Fraternidad");
 
-        jpan.setBackground(new java.awt.Color(255, 255, 255));
+        jpan.setBackground(new java.awt.Color(10, 60, 100));
+        jpan.setForeground(new java.awt.Color(10, 60, 100));
         jpan.setLayout(new java.awt.GridLayout(1, 2));
 
-        db.setBackground(new java.awt.Color(255, 255, 255));
+        db.setBackground(new java.awt.Color(10, 60, 100));
         db.setFont(new java.awt.Font("JetBrainsMono NF ExtraBold", 1, 14)); // NOI18N
-        db.setForeground(new java.awt.Color(0, 0, 0));
+        db.setForeground(new java.awt.Color(255, 255, 255));
         db.setBorder(null);
         db.setContentAreaFilled(false);
         db.setLabel("Pacientes");
@@ -132,12 +147,13 @@ final Color azulHover = new Color(153, 204, 255);
         });
         jpan.add(db);
 
-        jpan1.setBackground(new java.awt.Color(255, 255, 255));
+        jpan1.setBackground(new java.awt.Color(10, 60, 100));
+        jpan1.setForeground(new java.awt.Color(10, 60, 100));
         jpan1.setLayout(new java.awt.GridLayout(1, 2));
 
-        db1.setBackground(new java.awt.Color(255, 255, 255));
+        db1.setBackground(new java.awt.Color(10, 60, 100));
         db1.setFont(new java.awt.Font("JetBrainsMono NF ExtraBold", 1, 14)); // NOI18N
-        db1.setForeground(new java.awt.Color(0, 0, 0));
+        db1.setForeground(new java.awt.Color(255, 255, 255));
         db1.setText("Citas");
         db1.setBorder(null);
         db1.setContentAreaFilled(false);
@@ -156,12 +172,13 @@ final Color azulHover = new Color(153, 204, 255);
         });
         jpan1.add(db1);
 
-        jpan2.setBackground(new java.awt.Color(255, 255, 255));
+        jpan2.setBackground(new java.awt.Color(10, 60, 100));
+        jpan2.setForeground(new java.awt.Color(10, 60, 100));
         jpan2.setLayout(new java.awt.GridLayout(1, 2));
 
-        db2.setBackground(new java.awt.Color(255, 255, 255));
+        db2.setBackground(new java.awt.Color(10, 60, 100));
         db2.setFont(new java.awt.Font("JetBrainsMono NF ExtraBold", 1, 14)); // NOI18N
-        db2.setForeground(new java.awt.Color(0, 0, 0));
+        db2.setForeground(new java.awt.Color(255, 255, 255));
         db2.setText("Atenciones");
         db2.setBorder(null);
         db2.setContentAreaFilled(false);
@@ -180,12 +197,13 @@ final Color azulHover = new Color(153, 204, 255);
         });
         jpan2.add(db2);
 
-        jpan3.setBackground(new java.awt.Color(255, 255, 255));
+        jpan3.setBackground(new java.awt.Color(10, 60, 100));
+        jpan3.setForeground(new java.awt.Color(10, 60, 100));
         jpan3.setLayout(new java.awt.GridLayout(1, 2));
 
-        db3.setBackground(new java.awt.Color(255, 255, 255));
+        db3.setBackground(new java.awt.Color(10, 60, 100));
         db3.setFont(new java.awt.Font("JetBrainsMono NF ExtraBold", 1, 14)); // NOI18N
-        db3.setForeground(new java.awt.Color(0, 0, 0));
+        db3.setForeground(new java.awt.Color(255, 255, 255));
         db3.setText("Botica");
         db3.setBorder(null);
         db3.setContentAreaFilled(false);
@@ -204,12 +222,13 @@ final Color azulHover = new Color(153, 204, 255);
         });
         jpan3.add(db3);
 
-        jpan4.setBackground(new java.awt.Color(255, 255, 255));
+        jpan4.setBackground(new java.awt.Color(10, 60, 100));
+        jpan4.setForeground(new java.awt.Color(10, 60, 100));
         jpan4.setLayout(new java.awt.GridLayout(1, 2));
 
-        db4.setBackground(new java.awt.Color(255, 255, 255));
+        db4.setBackground(new java.awt.Color(10, 60, 100));
         db4.setFont(new java.awt.Font("JetBrainsMono NF ExtraBold", 1, 14)); // NOI18N
-        db4.setForeground(new java.awt.Color(0, 0, 0));
+        db4.setForeground(new java.awt.Color(255, 255, 255));
         db4.setText("Personal");
         db4.setBorder(null);
         db4.setContentAreaFilled(false);
@@ -254,7 +273,7 @@ final Color azulHover = new Color(153, 204, 255);
                         .addComponent(jLabel8)
                         .addGap(26, 26, 26)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 202, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
                         .addComponent(jpan, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jpan1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -310,88 +329,46 @@ final Color azulHover = new Color(153, 204, 255);
 
         jPanel8.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 50));
 
-        spaceProfile.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        jLabel1.setText("Dr. Rodriguez");
-
-        jLabel2.setText("Medicina general");
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/cropped_image(1).png"))); // NOI18N
-
-        javax.swing.GroupLayout spaceProfileLayout = new javax.swing.GroupLayout(spaceProfile);
-        spaceProfile.setLayout(spaceProfileLayout);
-        spaceProfileLayout.setHorizontalGroup(
-            spaceProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(spaceProfileLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(spaceProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addGroup(spaceProfileLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel1)))
-                .addContainerGap(59, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, spaceProfileLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(92, 92, 92))
-        );
-        spaceProfileLayout.setVerticalGroup(
-            spaceProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(spaceProfileLayout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addContainerGap(128, Short.MAX_VALUE))
-        );
-
-        jPanel8.add(spaceProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 220, 350));
-
         spaceDates.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         spaceDates.setForeground(new java.awt.Color(255, 255, 255));
-        spaceDates.setLayout(new java.awt.GridLayout(1, 0));
+        spaceDates.setLayout(new java.awt.BorderLayout());
 
-        jScrollPane1.setBorder(null);
+        jPanel2.setBackground(new java.awt.Color(236, 242, 246));
 
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel2.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(44, 62, 80));
+        jLabel2.setText("Posta Fraternidad");
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos Generales"));
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 177, Short.MAX_VALUE)
-        );
-
-        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 760, 200));
-
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos Especificos"));
+        jLabel1.setForeground(new java.awt.Color(44, 62, 80));
+        jLabel1.setText("<html><h2>Bienvenidos al sistema de gestión del C.S. Fraternidad. Nos dedicamos a brindar atención primaria de calidad a nuestra comunidad ucayalina. A través de esta plataforma, centralizamos el cuidado de nuestros Pacientes, agilizamos la programación de Citas y optimizamos el registro de Atenciones diarias. Gestionamos con transparencia nuestra Botica para asegurar el abastecimiento oportuno y contamos con un módulo de Personal para coordinar al equipo humano que vela por tu salud. Tecnología y vocación de servicio, unidas por el bienestar de Fraternidad </h2>\n");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(224, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(433, 433, 433))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1015, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 147, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(147, 147, 147)
+                .addComponent(jLabel2)
+                .addGap(56, 56, 56)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(256, Short.MAX_VALUE))
         );
 
-        jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 760, 170));
+        spaceDates.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        jScrollPane1.setViewportView(jPanel4);
-
-        spaceDates.add(jScrollPane1);
-
-        jPanel8.add(spaceDates, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 940, 590));
+        jPanel8.add(spaceDates, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1360, 700));
 
         getContentPane().add(jPanel8, java.awt.BorderLayout.CENTER);
 
@@ -399,8 +376,8 @@ final Color azulHover = new Color(153, 204, 255);
     }// </editor-fold>//GEN-END:initComponents
 
     private void dbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dbActionPerformed
-        // TODO add your handling code here:
-        
+        cambiarPanel(new Pacientes_Menu());
+
     }//GEN-LAST:event_dbActionPerformed
 
     private void dbMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dbMouseEntered
@@ -411,7 +388,7 @@ final Color azulHover = new Color(153, 204, 255);
 
     private void dbMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dbMouseExited
         // TODO add your handling code here:
-        db.setForeground(Color.black);
+        db.setForeground(colorLetra);
         jpan.setBorder(new javax.swing.border.MatteBorder(0, 0, 0, 0, java.awt.Color.BLACK));
     }//GEN-LAST:event_dbMouseExited
 
@@ -423,12 +400,15 @@ final Color azulHover = new Color(153, 204, 255);
 
     private void db1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_db1MouseExited
         // TODO add your handling code here:
-        db1.setForeground(Color.black);
+        db1.setForeground(colorLetra);
         jpan1.setBorder(new javax.swing.border.MatteBorder(0, 0, 0, 0, java.awt.Color.BLACK));
     }//GEN-LAST:event_db1MouseExited
 
     private void db1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_db1ActionPerformed
-        // TODO add your handling code here:
+        
+        cambiarPanel(new moduloCitas());
+
+
     }//GEN-LAST:event_db1ActionPerformed
 
     private void db2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_db2MouseEntered
@@ -439,11 +419,13 @@ final Color azulHover = new Color(153, 204, 255);
 
     private void db2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_db2MouseExited
         // TODO add your handling code here:
-        db2.setForeground(Color.black);
+        db2.setForeground(colorLetra);
         jpan2.setBorder(new javax.swing.border.MatteBorder(0, 0, 0, 0, java.awt.Color.BLACK));
     }//GEN-LAST:event_db2MouseExited
 
     private void db2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_db2ActionPerformed
+        cambiarPanel(new seleccion());
+
 
     }//GEN-LAST:event_db2ActionPerformed
 
@@ -455,23 +437,24 @@ final Color azulHover = new Color(153, 204, 255);
 
     private void db3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_db3MouseExited
         // TODO add your handling code here:
-        db3.setForeground(Color.black);
+        db3.setForeground(colorLetra);
         jpan3.setBorder(new javax.swing.border.MatteBorder(0, 0, 0, 0, java.awt.Color.BLACK));
     }//GEN-LAST:event_db3MouseExited
 
     private void db3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_db3ActionPerformed
-  
+
+        cambiarPanel(new botica_principal());
     }//GEN-LAST:event_db3ActionPerformed
 
     private void db4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_db4MouseEntered
         // TODO add your handling code here:
         db4.setForeground(azulHover);
-        jpan4.setBorder(new javax.swing.border.MatteBorder(0, 0, 2, 0,azulHover));
+        jpan4.setBorder(new javax.swing.border.MatteBorder(0, 0, 2, 0, azulHover));
     }//GEN-LAST:event_db4MouseEntered
 
     private void db4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_db4MouseExited
         // TODO add your handling code here:
-        db4.setForeground(Color.black);
+        db4.setForeground(colorLetra);
         jpan4.setBorder(new javax.swing.border.MatteBorder(0, 0, 0, 0, java.awt.Color.BLACK));
     }//GEN-LAST:event_db4MouseExited
 
@@ -487,7 +470,7 @@ final Color azulHover = new Color(153, 204, 255);
 
     private void db5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_db5MouseExited
         // TODO add your handling code here:
-        db5.setForeground(Color.black);
+        db5.setForeground(colorLetra);
         jpan5.setBorder(new javax.swing.border.MatteBorder(0, 0, 0, 0, java.awt.Color.BLACK));
     }//GEN-LAST:event_db5MouseExited
 
@@ -529,17 +512,13 @@ final Color azulHover = new Color(153, 204, 255);
     private javax.swing.JButton db5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel jpan;
@@ -548,7 +527,6 @@ final Color azulHover = new Color(153, 204, 255);
     private javax.swing.JPanel jpan3;
     private javax.swing.JPanel jpan4;
     private javax.swing.JPanel jpan5;
-    private javax.swing.JPanel spaceDates;
-    private javax.swing.JPanel spaceProfile;
+    public static javax.swing.JPanel spaceDates;
     // End of variables declaration//GEN-END:variables
 }
