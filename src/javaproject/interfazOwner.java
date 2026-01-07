@@ -340,7 +340,7 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
         jLabel2.setText("Posta Fraternidad");
 
         jLabel1.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel1.setText("<html><h2>Bienvenidos al sistema de gestión del C.S. Fraternidad. Nos dedicamos a brindar atención primaria de calidad a nuestra comunidad ucayalina. A través de esta plataforma, centralizamos el cuidado de nuestros Pacientes, agilizamos la programación de Citas y optimizamos el registro de Atenciones diarias. Gestionamos con transparencia nuestra Botica para asegurar el abastecimiento oportuno y contamos con un módulo de Personal para coordinar al equipo humano que vela por tu salud. Tecnología y vocación de servicio, unidas por el bienestar de Fraternidad </h2>\n");
+        jLabel1.setText("<html><h2>Bienvenidos al sistema de gestión del C.S. Fraternidad. Nos dedicamos a brindar atención primaria de calidad a nuestra comunidad ucayalina. A través de esta plataforma, centralizamos el cuidado de nuestros Pacientes, agilizamos la programación de Citas y optimizamos el registro de Atenciones diarias. Gestionamos con transparencia nuestra Botica para asegurar el abastecimiento oportuno y contamos con un módulo de Personal para coordinar al equipo humano que vela por tu salud. Tecnología y vocación de servicio, unidas por el bienestar de Fraternidad </h2> ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
