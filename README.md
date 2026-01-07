@@ -63,5 +63,5 @@ El sistema está dividido en 5 módulos fundamentales para la operación de la p
 
 ---
 <p align="center">
-  Desarrollado por [Tu Nombre] - Pucallpa, 2026
+  Desarrollado por Grupo 5 - Pucallpa, 2026
 </p>
