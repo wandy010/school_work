@@ -24,6 +24,8 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
    public static int[][] cant_medi=new int[20][300];//la cantidad de cada medicamento de cada paciente
    public static String[][] datos_medi = new String[6][300];
    public static int indiceCita=0;
+   
+  public static int paciente_control =0;
    //maximo podrá recetar 20 medicamentos
 
     public interfazOwner() {

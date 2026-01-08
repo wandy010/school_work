@@ -27,10 +27,10 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel5 = new javax.swing.JPanel();
-        jTextField4 = new javax.swing.JTextField();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        paciente_busq = new javax.swing.JTextField();
+        paciente_filtro = new javax.swing.JComboBox<>();
         jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        paciente_bt_busq = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -40,7 +40,9 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        panelmostrar = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        paciente_mostrar = new javax.swing.JTextPane();
         jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(236, 242, 246));
@@ -49,20 +51,25 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(236, 242, 246));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Busquedaa y Filtro", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
-        jTextField4.setBackground(new java.awt.Color(236, 242, 246));
-        jTextField4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)));
+        paciente_busq.setBackground(new java.awt.Color(236, 242, 246));
+        paciente_busq.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)));
 
-        jComboBox4.setBackground(new java.awt.Color(236, 242, 246));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)));
+        paciente_filtro.setBackground(new java.awt.Color(236, 242, 246));
+        paciente_filtro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DNI", "NOMBRE" }));
+        paciente_filtro.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)));
 
         jButton8.setBackground(new java.awt.Color(40, 110, 160));
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("Nuevo Paciente");
 
-        jButton9.setBackground(new java.awt.Color(40, 110, 160));
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("Lupa");
+        paciente_bt_busq.setBackground(new java.awt.Color(40, 110, 160));
+        paciente_bt_busq.setForeground(new java.awt.Color(255, 255, 255));
+        paciente_bt_busq.setText("Lupa");
+        paciente_bt_busq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paciente_bt_busqActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -70,11 +77,11 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(paciente_busq, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9)
+                .addComponent(paciente_bt_busq)
                 .addGap(18, 18, 18)
-                .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(paciente_filtro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton8)
                 .addGap(4, 4, 4))
@@ -86,12 +93,12 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(paciente_busq, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(paciente_bt_busq, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(paciente_filtro, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
@@ -157,19 +164,15 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         jLabel8.setForeground(new java.awt.Color(44, 62, 80));
         jLabel8.setText("Ver o Editar Lista de Pacientes");
 
-        jPanel6.setBackground(new java.awt.Color(236, 242, 246));
-        jPanel6.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)));
+        panelmostrar.setBackground(new java.awt.Color(236, 242, 246));
+        panelmostrar.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)));
+        panelmostrar.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 422, Short.MAX_VALUE)
-        );
+        paciente_mostrar.setBackground(new java.awt.Color(236, 242, 246));
+        paciente_mostrar.setForeground(new java.awt.Color(44, 62, 80));
+        jScrollPane1.setViewportView(paciente_mostrar);
+
+        panelmostrar.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         jButton1.setBackground(new java.awt.Color(40, 110, 160));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -187,14 +190,14 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelmostrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1)))
-                .addContainerGap())
+                .addGap(37, 37, 37))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,8 +211,8 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
                 .addGap(20, 20, 20)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelmostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -220,21 +223,29 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         principal.cambiarPanel(new Pacientes_Menu());
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void paciente_bt_busqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_bt_busqActionPerformed
+        // TODO add your handling code here:
+        String busq = paciente_busq.getText();
+        if(paciente_filtro.getSelectedIndex()==0){
+            for (int i = 0; i < interfazOwner.paciente_control; i++) {
+                if(Integer.parseInt(busq) == Integer.parseInt( interfazOwner.datos_pacien[i][0])){
+                    paciente_mostrar.setText(
+                   interfazOwner.datos_pacien[i][0]+"\t"+
+                    interfazOwner.datos_pacien[i][1] +" "+ interfazOwner.datos_pacien[i][2]+" "+interfazOwner.datos_pacien[i][3]+"\t"+
+                    interfazOwner.datos_pacien[i][5] +"/"+interfazOwner.datos_pacien[i][6]+"\t"+
+                    interfazOwner.datos_pacien[i][7]
+                    );
+                }
+            }
+        }else{
+            paciente_mostrar.setText("No hay nadie ps sano preuba otro modo perra ");
+        }
+    }//GEN-LAST:event_paciente_bt_busqActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -243,15 +254,13 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton paciente_bt_busq;
+    private javax.swing.JTextField paciente_busq;
+    private javax.swing.JComboBox<String> paciente_filtro;
+    private javax.swing.JTextPane paciente_mostrar;
+    private javax.swing.JPanel panelmostrar;
     // End of variables declaration//GEN-END:variables
 }
