@@ -152,7 +152,7 @@ public class nuevaCita extends javax.swing.JPanel {
         txtApellidoMaterno = new javax.swing.JTextField();
         txtNombres = new javax.swing.JTextField();
         lblDNI = new javax.swing.JLabel();
-        btnBorrarDatos = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
         lblSexo = new javax.swing.JLabel();
         lblEdad = new javax.swing.JLabel();
         cboSexo = new javax.swing.JComboBox<>();
@@ -161,6 +161,7 @@ public class nuevaCita extends javax.swing.JPanel {
         txtEdad = new javax.swing.JTextField();
         lblTelefono = new javax.swing.JLabel();
         txtTelefono = new javax.swing.JTextField();
+        btnBorrarDatos1 = new javax.swing.JButton();
         panelFechaYHora = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -172,7 +173,6 @@ public class nuevaCita extends javax.swing.JPanel {
         cboDia_cita = new javax.swing.JComboBox<>();
         lblMes = new javax.swing.JLabel();
         cboMes_citas = new javax.swing.JComboBox<>();
-        lblAnyo = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         lblHoraInicio = new javax.swing.JLabel();
         cboHoraInicio = new javax.swing.JComboBox<>();
@@ -194,72 +194,78 @@ public class nuevaCita extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(682, 528));
 
         panelDatosPersonales.setBackground(new java.awt.Color(236, 242, 246));
-        panelDatosPersonales.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Personales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        panelDatosPersonales.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Personales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
         panelDatosPersonales.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtDNI.setBackground(new java.awt.Color(236, 242, 246));
-        txtDNI.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        txtDNI.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
         panelDatosPersonales.add(txtDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 173, 35));
 
         txtApellidoPaterno.setBackground(new java.awt.Color(236, 242, 246));
-        txtApellidoPaterno.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "APELLIDO PATERNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        txtApellidoPaterno.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "APELLIDO PATERNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
         txtApellidoPaterno.addActionListener(this::txtApellidoPaternoActionPerformed);
-        panelDatosPersonales.add(txtApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 240, -1));
+        panelDatosPersonales.add(txtApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 240, -1));
 
         txtApellidoMaterno.setBackground(new java.awt.Color(236, 242, 246));
-        txtApellidoMaterno.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "APELLIDO MATERNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
-        panelDatosPersonales.add(txtApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 240, -1));
+        txtApellidoMaterno.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "APELLIDO MATERNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
+        panelDatosPersonales.add(txtApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 240, -1));
 
         txtNombres.setBackground(new java.awt.Color(236, 242, 246));
-        txtNombres.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "NOMBRES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
-        panelDatosPersonales.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 240, -1));
+        txtNombres.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "NOMBRES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
+        panelDatosPersonales.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 240, -1));
 
         lblDNI.setForeground(new java.awt.Color(44, 62, 80));
         lblDNI.setText("DNI:");
         lblDNI.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelDatosPersonales.add(lblDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 39, -1));
 
-        btnBorrarDatos.setBackground(new java.awt.Color(40, 110, 160));
-        btnBorrarDatos.setForeground(new java.awt.Color(255, 255, 255));
-        btnBorrarDatos.setText("BORRAR");
-        btnBorrarDatos.addActionListener(this::btnBorrarDatosActionPerformed);
-        panelDatosPersonales.add(btnBorrarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, -1));
+        btnBuscar.setBackground(new java.awt.Color(40, 110, 160));
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setText("BUSCAR");
+        btnBuscar.addActionListener(this::btnBuscarActionPerformed);
+        panelDatosPersonales.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         lblSexo.setForeground(new java.awt.Color(44, 62, 80));
         lblSexo.setText("SEXO:");
-        panelDatosPersonales.add(lblSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 42, 20));
+        panelDatosPersonales.add(lblSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 42, 20));
 
         lblEdad.setForeground(new java.awt.Color(44, 62, 80));
         lblEdad.setText("EDAD:");
-        panelDatosPersonales.add(lblEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 42, 20));
+        panelDatosPersonales.add(lblEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 42, 20));
 
         cboSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HOMBRE", "MUJER" }));
         cboSexo.setBorder(null);
-        panelDatosPersonales.add(cboSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
+        panelDatosPersonales.add(cboSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
 
         cboSeguro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SIS", "Otro" }));
         cboSeguro.setBorder(null);
-        panelDatosPersonales.add(cboSeguro, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 85, -1));
+        panelDatosPersonales.add(cboSeguro, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 85, -1));
 
         lblSeguro.setForeground(new java.awt.Color(44, 62, 80));
         lblSeguro.setText("SEGURO DE VIDA:");
-        panelDatosPersonales.add(lblSeguro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 106, 20));
+        panelDatosPersonales.add(lblSeguro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 106, 20));
 
         txtEdad.setBackground(new java.awt.Color(236, 242, 246));
         txtEdad.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtEdad.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
-        panelDatosPersonales.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 81, 22));
+        txtEdad.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
+        panelDatosPersonales.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 81, 22));
 
         lblTelefono.setForeground(new java.awt.Color(44, 62, 80));
         lblTelefono.setText("TELÉFONO:");
-        panelDatosPersonales.add(lblTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+        panelDatosPersonales.add(lblTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
 
         txtTelefono.setBackground(new java.awt.Color(236, 242, 246));
-        txtTelefono.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
-        panelDatosPersonales.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 90, -1));
+        txtTelefono.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
+        panelDatosPersonales.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 90, -1));
+
+        btnBorrarDatos1.setBackground(new java.awt.Color(40, 110, 160));
+        btnBorrarDatos1.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrarDatos1.setText("BORRAR");
+        btnBorrarDatos1.addActionListener(this::btnBorrarDatos1ActionPerformed);
+        panelDatosPersonales.add(btnBorrarDatos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, -1));
 
         panelFechaYHora.setBackground(new java.awt.Color(236, 242, 246));
-        panelFechaYHora.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Personales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        panelFechaYHora.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Personales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
         panelFechaYHora.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setForeground(new java.awt.Color(44, 62, 80));
@@ -305,9 +311,6 @@ public class nuevaCita extends javax.swing.JPanel {
 
         cboMes_citas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" }));
 
-        lblAnyo.setForeground(new java.awt.Color(44, 62, 80));
-        lblAnyo.setText("AÑO 2026");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -321,9 +324,7 @@ public class nuevaCita extends javax.swing.JPanel {
                 .addComponent(lblMes, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(cboMes_citas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(lblAnyo, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -333,8 +334,7 @@ public class nuevaCita extends javax.swing.JPanel {
                     .addComponent(lblDia)
                     .addComponent(cboDia_cita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblMes)
-                    .addComponent(cboMes_citas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblAnyo))
+                    .addComponent(cboMes_citas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -460,7 +460,7 @@ public class nuevaCita extends javax.swing.JPanel {
         txtMotivo.setBackground(new java.awt.Color(236, 242, 246));
         txtMotivo.setColumns(20);
         txtMotivo.setRows(5);
-        txtMotivo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        txtMotivo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
         jScrollPane1.setViewportView(txtMotivo);
 
         panelFechaYHora.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 470, 100));
@@ -471,11 +471,11 @@ public class nuevaCita extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addGap(34, 34, 34)
                 .addComponent(panelDatosPersonales, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addComponent(panelFechaYHora, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -483,7 +483,7 @@ public class nuevaCita extends javax.swing.JPanel {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelDatosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelFechaYHora, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE))
+                    .addComponent(panelFechaYHora, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -492,7 +492,7 @@ public class nuevaCita extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtApellidoPaternoActionPerformed
 
-    private void btnBorrarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarDatosActionPerformed
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         txtDNI.setText("");
         txtApellidoPaterno.setText("");
         txtApellidoMaterno.setText("");
@@ -501,7 +501,7 @@ public class nuevaCita extends javax.swing.JPanel {
         txtEdad.setText("");
         cboSeguro.setSelectedIndex(0);
         txtTelefono.setText("");
-    }//GEN-LAST:event_btnBorrarDatosActionPerformed
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnBorrarFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarFechaActionPerformed
         cboDia_cita.setSelectedIndex(0);
@@ -522,10 +522,15 @@ public class nuevaCita extends javax.swing.JPanel {
         borrar();
     }//GEN-LAST:event_btnConfirmarCitaActionPerformed
 
+    private void btnBorrarDatos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarDatos1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarDatos1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBorrarDatos;
+    private javax.swing.JButton btnBorrarDatos1;
     private javax.swing.JButton btnBorrarFecha;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnConfirmarCita;
     private javax.swing.JComboBox<String> cboArea;
     private javax.swing.JComboBox<String> cboDia_cita;
@@ -544,7 +549,6 @@ public class nuevaCita extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblAnyo;
     private javax.swing.JLabel lblArea;
     private javax.swing.JLabel lblDNI;
     private javax.swing.JLabel lblDia;
