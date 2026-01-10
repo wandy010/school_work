@@ -12,21 +12,24 @@ import java.awt.Color;
  */
 public class interfazOwner extends javax.swing.JFrame {
 
-final Color azulHover = new Color(153, 204, 255);
-final Color colorLetra= new Color(255,255,255);
-private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfazOwner.class.getName());
+    final Color azulHover = new Color(153, 204, 255);
+    final Color colorLetra = new Color(255, 255, 255);
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfazOwner.class.getName());
 
-   public static String[][] datos_pacien= new String[10][100];
-   public static String[][] datos_citas = new String[8][300];
-   public static String[][] datos_aten = new String[8][300];
-   public static int[] num_medi=new int[300];//solo cantidad de medicinas de cada paciente
-   public static int[][] ind_medi=new int[20][300];//los indices los los medicamentos de cada paciente
-   public static int[][] cant_medi=new int[20][300];//la cantidad de cada medicamento de cada paciente
-   public static String[][] datos_medi = new String[6][300];
-   public static int indiceCita=0;
-   
-  public static int paciente_control =0;
-   //maximo podrá recetar 20 medicamentos
+    public static String[][] datos_pacien = new String[10][100];
+    public static String[][] datos_citas = new String[8][300];
+    public static String[][] datos_aten = new String[8][300];
+    public static int[] num_medi = new int[300];//solo cantidad de medicinas de cada paciente
+    public static int[][] ind_medi = new int[20][300];//los indices los los medicamentos de cada paciente
+    public static int[][] cant_medi = new int[20][300];//la cantidad de cada medicamento de cada paciente
+    public static String[][] datos_medi = new String[3][300];
+    public static int[][] datos_medi2 = new int[3][300];
+    
+    public static int indiceCita = 0;
+
+    public static int paciente_control = 0;
+    public static int medi_control = 0;
+    //maximo podrá recetar 20 medicamentos
 
     public interfazOwner() {
         initComponents();
@@ -35,12 +38,13 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
         db.setVisible(true);
 
     }
+
     public void cambiarPanel(javax.swing.JPanel nuevoPanel) {
 
-    spaceDates.removeAll();
-    spaceDates.add(nuevoPanel, java.awt.BorderLayout.CENTER);
-    spaceDates.revalidate();
-    spaceDates.repaint();
+        spaceDates.removeAll();
+        spaceDates.add(nuevoPanel, java.awt.BorderLayout.CENTER);
+        spaceDates.revalidate();
+        spaceDates.repaint();
     }
 
     /**
@@ -349,7 +353,7 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(224, Short.MAX_VALUE)
+                .addContainerGap(234, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -370,7 +374,7 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
 
         spaceDates.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        jPanel8.add(spaceDates, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1360, 700));
+        jPanel8.add(spaceDates, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1370, 700));
 
         getContentPane().add(jPanel8, java.awt.BorderLayout.CENTER);
 
@@ -407,7 +411,7 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
     }//GEN-LAST:event_db1MouseExited
 
     private void db1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_db1ActionPerformed
-        
+
         cambiarPanel(new moduloCitas());
 
 
@@ -444,7 +448,7 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
     }//GEN-LAST:event_db3MouseExited
 
     private void db3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_db3ActionPerformed
-
+        
         cambiarPanel(new botica_principal());
     }//GEN-LAST:event_db3ActionPerformed
 

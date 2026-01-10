@@ -81,8 +81,9 @@ public class botica_principal extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-    interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);    
+    
+    interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this); 
+   
     principal.cambiarPanel(new stock_medi());
     }//GEN-LAST:event_jButton1ActionPerformed
 
