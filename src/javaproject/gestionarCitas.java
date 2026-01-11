@@ -39,7 +39,7 @@ public class gestionarCitas extends javax.swing.JPanel {
         btnBorrarCita = new javax.swing.JButton();
         txtPosicion_a_Borrar = new javax.swing.JTextField();
 
-        setPreferredSize(new java.awt.Dimension(977, 625));
+        setPreferredSize(new java.awt.Dimension(1360, 718));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelSecundario.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "BUSCAR"));
