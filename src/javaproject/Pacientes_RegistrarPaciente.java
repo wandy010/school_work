@@ -18,6 +18,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
     public Pacientes_RegistrarPaciente() {
         setSize(1360, HEIGHT);
         initComponents();
+        activarFormulario(false);
     }
 
     /**
@@ -46,7 +47,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         paciente_edad = new javax.swing.JTextField();
         paciente_sex = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Paciente_agregar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
@@ -215,9 +216,14 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(40, 110, 160));
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Limpiar Formulario");
+        Paciente_agregar.setBackground(new java.awt.Color(40, 110, 160));
+        Paciente_agregar.setForeground(new java.awt.Color(255, 255, 255));
+        Paciente_agregar.setText("Agregar Paciente");
+        Paciente_agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Paciente_agregarActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(236, 242, 246));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Identificación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
@@ -279,7 +285,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(917, 917, 917)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Paciente_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
                         .addComponent(pacientes_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(59, 59, 59))
@@ -314,15 +320,39 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pacientes_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Paciente_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31))
         );
 
         add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    
+    public void activarFormulario(boolean r){
+        paciente_dni.setEnabled(r);
+        paciente_ap.setEnabled(r);
+        paciente_am.setEnabled(r);
+        paciente_nombre.setEnabled(r);
+        paciente_nc.setEnabled(r);
+        paciente_edad.setEnabled(r);
+        paciente_sex.setEnabled(r);
+        paciente_cel.setEnabled(r);
+        paciente_direccion.setEnabled(r);
+        paciente_referencia.setEnabled(r);
+    }
+     public void limpiarFormulario(){
+        paciente_dni.setText("");
+        paciente_ap.setText("");
+        paciente_am.setText("");
+        paciente_nombre.setText("");
+        paciente_nc.setText("");
+        paciente_edad.setText("");
+        paciente_cel.setText("");
+        paciente_direccion.setText("");
+        paciente_referencia.setText("");
+        paciente_sex.setSelectedIndex(0);
+       
+        
+    }
     private void pacientes_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pacientes_guardarActionPerformed
         // TODO add your handling code here:
         int pacientecontrol =interfazOwner.paciente_control ;
@@ -337,7 +367,8 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         interfazOwner.datos_pacien[8][pacientecontrol] = paciente_direccion.getText();
         interfazOwner.datos_pacien[9][pacientecontrol] = paciente_referencia.getText();
         interfazOwner.paciente_control++;
-        
+        limpiarFormulario();
+        activarFormulario(false);
         
     }//GEN-LAST:event_pacientes_guardarActionPerformed
 
@@ -360,11 +391,16 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_paciente_hcActionPerformed
 
+    private void Paciente_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Paciente_agregarActionPerformed
+        // TODO add your handling code here:
+        activarFormulario(true);
+    }//GEN-LAST:event_Paciente_agregarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Paciente_agregar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
