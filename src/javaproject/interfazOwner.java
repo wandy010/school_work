@@ -91,7 +91,6 @@ public class interfazOwner extends javax.swing.JFrame {
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(10, 60, 100));
-        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
 
         jpan5.setBackground(new java.awt.Color(10, 60, 100));
         jpan5.setForeground(new java.awt.Color(10, 60, 100));
@@ -336,7 +335,6 @@ public class interfazOwner extends javax.swing.JFrame {
 
         jPanel8.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 50));
 
-        spaceDates.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         spaceDates.setForeground(new java.awt.Color(255, 255, 255));
         spaceDates.setLayout(new java.awt.BorderLayout());
 
@@ -353,7 +351,7 @@ public class interfazOwner extends javax.swing.JFrame {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 240, 1015, 202));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondo(1).png"))); // NOI18N
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 670));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
 
         spaceDates.add(jPanel2, java.awt.BorderLayout.CENTER);
 
