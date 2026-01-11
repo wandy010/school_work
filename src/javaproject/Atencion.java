@@ -3,22 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package javaproject;
-
-import java.awt.Color;
 import java.awt.Component;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-
 /**
  *
  * @author ricar
  */
 public class Atencion extends javax.swing.JPanel {
-    
+
     /**
      * Creates new form panelPersonal
      */
-    int []pos= new int [300];
+    int[] pos = new int[1];
+
     public Atencion() {
         initComponents();
         /*mostrardatospanel.setVisible(false);
@@ -26,24 +24,29 @@ public class Atencion extends javax.swing.JPanel {
         setPanelEnabled(evaluacionpanel,false);
         setPanelEnabled(medicamentospanel, false);
         
-        */
+         */
 
         DefaultTableModel modelo = (DefaultTableModel) citastable.getModel();
         modelo.setRowCount(0);
+
         for (int i = 0; i < 300; i++) {
-            
-        modelo.addRow(interfazOwner.datos_citas);
+
+            // si no hay cita, no la agregues
+            if (interfazOwner.datos_citas[0][i] == null) {
+                continue;
+            }
+
+            modelo.addRow(new Object[]{
+                i,
+                interfazOwner.datos_citas[0][i],
+                interfazOwner.datos_citas[1][i],
+                interfazOwner.datos_citas[2][i] + "0",
+                interfazOwner.datos_citas[3][i] + "0",});
         }
-       
-       
+
         motivotxt.setEditable(false);
-        interfazOwner.datos_pacien[0][0]="12";
-        interfazOwner.datos_pacien[1][0]="Tapia";
-        interfazOwner.datos_pacien[2][0]="Llerena";
-        interfazOwner.datos_pacien[3][0]="Ricardo";
-        
+
         activarpaneles(false);
-        interfazOwner.datos_citas[0][4]="Hola mundo";
     }
 
     private void setPanelEnabled(JPanel panel, boolean enabled) {
@@ -91,8 +94,7 @@ public class Atencion extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         dnifield = new javax.swing.JTextField();
         buscarbutton = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        seleccioncombo = new javax.swing.JComboBox<>();
         mostrardatospanel = new javax.swing.JPanel();
         dninombre = new javax.swing.JLabel();
         dnilabel = new javax.swing.JLabel();
@@ -188,13 +190,10 @@ public class Atencion extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tallafield, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(imclabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(signospanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(signospanelLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(precionfield, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signospanelLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(frecuenciafield, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(precionfield, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(frecuenciafield, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(signospanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(saturacionfield, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -205,12 +204,11 @@ public class Atencion extends javax.swing.JPanel {
             .addGroup(signospanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(signospanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(temperaturafield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(signospanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(precionfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(temperaturafield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(signospanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(pesofield, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tallafield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(pesofield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tallafield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(precionfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(signospanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imclabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -219,12 +217,12 @@ public class Atencion extends javax.swing.JPanel {
                         .addComponent(saturacionfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(guardardatosbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("DATOS DEL PACIENTE"));
 
-        dnifield.setBorder(javax.swing.BorderFactory.createTitledBorder("DNI"));
+        dnifield.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         buscarbutton.setText("BUSCAR");
         buscarbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -233,9 +231,8 @@ public class Atencion extends javax.swing.JPanel {
             }
         });
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder("COLA"));
-
-        jLabel1.setText("Ó");
+        seleccioncombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DNI", "COLA" }));
+        seleccioncombo.setBorder(javax.swing.BorderFactory.createTitledBorder("Busqueda"));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -243,29 +240,23 @@ public class Atencion extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(dnifield, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(seleccioncombo, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
+                .addComponent(dnifield, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(buscarbutton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(dnifield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(buscarbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addComponent(buscarbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(seleccioncombo, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(dnifield)))
         );
 
         dninombre.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 12)); // NOI18N
@@ -303,7 +294,7 @@ public class Atencion extends javax.swing.JPanel {
                     .addComponent(dnilabel)
                     .addComponent(sexolabel)
                     .addComponent(edadlabel))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         citastable.setModel(new javax.swing.table.DefaultTableModel(
@@ -525,7 +516,6 @@ public class Atencion extends javax.swing.JPanel {
 
     private void guardardatosbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardardatosbuttonActionPerformed
 
-
         double peso = Double.parseDouble(pesofield.getText());
         double tallaCm = Double.parseDouble(tallafield.getText());
         double tallaM = tallaCm / 100.0;
@@ -542,9 +532,9 @@ public class Atencion extends javax.swing.JPanel {
         interfazOwner.datos_aten[8][pos[0]] = String.valueOf(indice);
 
         setPanelEnabled(signospanel, false);
-signospanel.setBorder(
-    javax.swing.BorderFactory.createTitledBorder("SIGNOS VITALES (GUARDADO)")
-);
+        signospanel.setBorder(
+                javax.swing.BorderFactory.createTitledBorder("SIGNOS VITALES (GUARDADO)")
+        );
         /*pesofield.setText("");
         tallafield.setText("");
         temperaturafield.setText("");
@@ -555,46 +545,88 @@ signospanel.setBorder(
     }//GEN-LAST:event_guardardatosbuttonActionPerformed
 
     private void confirmarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarbuttonActionPerformed
-    interfazOwner.datos_aten[9][pos[0]] =diagnosticotxt.getText();
-    interfazOwner.datos_aten[10][pos[0]] =consideracionestxt.getText();
-    activarpaneles(false);
+        interfazOwner.datos_aten[9][pos[0]] = diagnosticotxt.getText();
+        interfazOwner.datos_aten[10][pos[0]] = consideracionestxt.getText();
+        activarpaneles(false);
     }//GEN-LAST:event_confirmarbuttonActionPerformed
 
     private void borrarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarbuttonActionPerformed
-    dnifield.setText("");
-    tallafield.setText("");
-    pesofield.setText("");
-    temperaturafield.setText("");
-    precionfield.setText("");
-    frecuenciafield.setText("");
-    saturacionfield.setText("");
+        dnifield.setText("");
+        tallafield.setText("");
+        pesofield.setText("");
+        temperaturafield.setText("");
+        precionfield.setText("");
+        frecuenciafield.setText("");
+        saturacionfield.setText("");
 
-    motivotxt.setText("");
-    diagnosticotxt.setText("");
-    consideracionestxt.setText("");
+        motivotxt.setText("");
+        diagnosticotxt.setText("");
+        consideracionestxt.setText("");
 
-    imclabel.setText("");
-    jSpinner1.setValue(0);
-    
-     activarpaneles(false);
-    
+        imclabel.setText("");
+        jSpinner1.setValue(0);
+
+        activarpaneles(false);
+
     }//GEN-LAST:event_borrarbuttonActionPerformed
 
     private void buscarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarbuttonActionPerformed
-        for (int i = 0; i < 300; i++) {
+        String valor;
+        if (dnifield != null) {
+            switch (seleccioncombo.getSelectedIndex()) {
+                case 0: valor=dnifield.getText();
+                    /*for (int i = 0; i < 300; i++) {
+                        if (interfazOwner.datos_citas[0][i] != null
+                                && interfazOwner.datos_citas[0][i].equals(dnifield.getText())) {
 
-            if (interfazOwner.datos_pacien[0][i] != null &&
-                interfazOwner.datos_pacien[0][i].equals(dnifield.getText())) {
-                activarpaneles(true);
-                pos[0]=i;
-                dninombre.setText(interfazOwner.datos_pacien[1][i]+" "+interfazOwner.datos_pacien[2][i]+" "+interfazOwner.datos_pacien[3][i]);
-                dnilabel.setText(interfazOwner.datos_pacien[0][i]);
-                edadlabel.setText(interfazOwner.datos_pacien[5][i]);
-                sexolabel.setText(interfazOwner.datos_pacien[6][i]);
-                break; //
+                            activarpaneles(true);
+                            pos[0] = i;
+                            dninombre.setText(interfazOwner.datos_pacien[1][i] + " " + interfazOwner.datos_pacien[2][i] + " " + interfazOwner.datos_pacien[3][i]);
+                            dnilabel.setText(interfazOwner.datos_pacien[0][i]);
+                            edadlabel.setText(interfazOwner.datos_pacien[5][i]);
+                            sexolabel.setText(interfazOwner.datos_pacien[6][i]);
+                            motivotxt.setText(interfazOwner.datos_citas[4][pos[0]]);
+                            break; //
+                        }
+                    }*/
+
+                    break;
+                case 1:
+                    for (int i = 0; i < 300; i++) {
+                        if (interfazOwner.datos_citas[0][i] != null
+                                && interfazOwner.datos_citas[0][i].equals(interfazOwner.datos_citas[0][Integer.parseInt(dnifield.getText())])) {
+                            valor=interfazOwner.datos_citas[0][Integer.parseInt(dnifield.getText())];
+                            /*activarpaneles(true);
+                            pos[0] = i;
+                            dninombre.setText(interfazOwner.datos_pacien[1][i] + " " + interfazOwner.datos_pacien[2][i] + " " + interfazOwner.datos_pacien[3][i]);
+                            dnilabel.setText(interfazOwner.datos_pacien[0][i]);
+                            edadlabel.setText(interfazOwner.datos_pacien[5][i]);
+                            sexolabel.setText(interfazOwner.datos_pacien[6][i]);
+                            motivotxt.setText(interfazOwner.datos_citas[4][pos[0]]);
+                            break; //
+*/
+                        }
+                    }
+
+                default:
+                    throw new AssertionError();
             }
+            for (int i = 0; i < 300; i++) {
+                        if (interfazOwner.datos_citas[0][i] != null
+                                && interfazOwner.datos_citas[0][i].equals(valor)) {
+
+                            activarpaneles(true);
+                            pos[0] = i;
+                            dninombre.setText(interfazOwner.datos_pacien[1][i] + " " + interfazOwner.datos_pacien[2][i] + " " + interfazOwner.datos_pacien[3][i]);
+                            dnilabel.setText(interfazOwner.datos_pacien[0][i]);
+                            edadlabel.setText(interfazOwner.datos_pacien[5][i]);
+                            sexolabel.setText(interfazOwner.datos_pacien[6][i]);
+                            motivotxt.setText(interfazOwner.datos_citas[4][pos[0]]);
+                            break; //
+                        }
+                    }
         }
-        motivotxt.setText(interfazOwner.datos_citas[4][pos[0]]);
+
 
     }//GEN-LAST:event_buscarbuttonActionPerformed
 
@@ -615,7 +647,6 @@ signospanel.setBorder(
     private javax.swing.JButton guardardatosbutton;
     private javax.swing.JLabel imclabel;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel9;
@@ -625,7 +656,6 @@ signospanel.setBorder(
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JPanel medicamentospanel;
     private javax.swing.JPanel mostrardatospanel;
@@ -633,6 +663,7 @@ signospanel.setBorder(
     private javax.swing.JTextField pesofield;
     private javax.swing.JTextField precionfield;
     private javax.swing.JTextField saturacionfield;
+    private javax.swing.JComboBox<String> seleccioncombo;
     private javax.swing.JLabel sexolabel;
     private javax.swing.JPanel signospanel;
     private javax.swing.JTextField tallafield;
