@@ -60,7 +60,7 @@ public class Pacientes_Menu extends javax.swing.JPanel {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/agregar.png"))); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Nuevo REGISTRO");
 
@@ -79,11 +79,12 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                         .addGap(100, 100, 100)
                         .addComponent(jLabel3))
                     .addGroup(mRegistrarLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
-                .addGap(123, 123, 123))
+                        .addGap(76, 76, 76)
+                        .addComponent(jLabel4))
+                    .addGroup(mRegistrarLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         mRegistrarLayout.setVerticalGroup(
             mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,7 +94,7 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                 .addGap(12, 12, 12)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -106,7 +107,7 @@ public class Pacientes_Menu extends javax.swing.JPanel {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Ver o Editar");
 
@@ -124,14 +125,13 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                 .addGroup(mVELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mVELayout.createSequentialGroup()
                         .addGap(110, 110, 110)
-                        .addComponent(jLabel6))
+                        .addGroup(mVELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6)))
                     .addGroup(mVELayout.createSequentialGroup()
                         .addGap(81, 81, 81)
-                        .addComponent(jLabel7))
-                    .addGroup(mVELayout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(87, 87, 87))
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(106, 106, 106))
         );
         mVELayout.setVerticalGroup(
             mVELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

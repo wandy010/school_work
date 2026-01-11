@@ -31,51 +31,41 @@ public class seleccion extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         textodebug = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(1360, 718));
         setLayout(new java.awt.BorderLayout());
 
+        atencionpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setBackground(new java.awt.Color(10, 60, 100));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ATENCION");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        atencionpanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 230, 335, 100));
 
+        jButton2.setBackground(new java.awt.Color(10, 60, 100));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("VER LISTA / DEBUG");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        atencionpanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 382, 335, 100));
 
         textodebug.setColumns(20);
         textodebug.setRows(5);
         jScrollPane1.setViewportView(textodebug);
 
-        javax.swing.GroupLayout atencionpanelLayout = new javax.swing.GroupLayout(atencionpanel);
-        atencionpanel.setLayout(atencionpanelLayout);
-        atencionpanelLayout.setHorizontalGroup(
-            atencionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(atencionpanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(atencionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 823, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 16, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        atencionpanelLayout.setVerticalGroup(
-            atencionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(atencionpanelLayout.createSequentialGroup()
-                .addGroup(atencionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(atencionpanelLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1))
-                .addContainerGap())
-        );
+        atencionpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 30, 650, 658));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondoHospital.png"))); // NOI18N
+        atencionpanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 720));
 
         add(atencionpanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
@@ -101,6 +91,7 @@ public class seleccion extends javax.swing.JPanel {
     private javax.swing.JPanel atencionpanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea textodebug;
     // End of variables declaration//GEN-END:variables
