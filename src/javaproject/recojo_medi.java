@@ -45,11 +45,15 @@ public class recojo_medi extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
 
+        setBackground(new java.awt.Color(236, 242, 246));
         setPreferredSize(new java.awt.Dimension(840, 520));
         setLayout(new java.awt.BorderLayout());
 
+        jPanel2.setBackground(new java.awt.Color(236, 242, 246));
         jPanel2.setPreferredSize(new java.awt.Dimension(1370, 50));
 
+        jButton2.setBackground(new java.awt.Color(40, 110, 160));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Siguiente paciente");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,10 +61,13 @@ public class recojo_medi extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(40, 110, 160));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Volver");
 
+        jTextField1.setBackground(new java.awt.Color(236, 242, 246));
         jTextField1.setText("xxx");
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Nro de medicamentos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 2, 14))); // NOI18N
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210))), "Nro de medicamentos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 2, 14), new java.awt.Color(44, 62, 80))); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -93,13 +100,15 @@ public class recojo_medi extends javax.swing.JPanel {
 
         add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos del paciente:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 3, 24))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(236, 242, 246));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Datos del paciente:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 3, 24), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(1375, 200));
         jPanel1.setLayout(new java.awt.GridLayout(1, 2));
 
         jPanel4.setLayout(new java.awt.GridLayout(2, 2));
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombres"));
+        jTextField2.setBackground(new java.awt.Color(236, 242, 246));
+        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)), "Nombres", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -107,10 +116,12 @@ public class recojo_medi extends javax.swing.JPanel {
         });
         jPanel4.add(jTextField2);
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellidos"));
+        jTextField3.setBackground(new java.awt.Color(236, 242, 246));
+        jTextField3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)), "Apellidos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel4.add(jTextField3);
 
-        jTextField4.setBorder(javax.swing.BorderFactory.createTitledBorder("DNI"));
+        jTextField4.setBackground(new java.awt.Color(236, 242, 246));
+        jTextField4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)), "DNI", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
@@ -118,21 +129,29 @@ public class recojo_medi extends javax.swing.JPanel {
         });
         jPanel4.add(jTextField4);
 
-        jTextField5.setBorder(javax.swing.BorderFactory.createTitledBorder("Sexo"));
+        jTextField5.setBackground(new java.awt.Color(236, 242, 246));
+        jTextField5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)), "Sexo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel4.add(jTextField5);
 
         jPanel1.add(jPanel4);
 
         jPanel5.setLayout(new java.awt.BorderLayout());
 
-        jTextField7.setBorder(javax.swing.BorderFactory.createTitledBorder("Diagnóstico"));
+        jTextField7.setBackground(new java.awt.Color(236, 242, 246));
+        jTextField7.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)), "Diagnóstico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel5.add(jTextField7, java.awt.BorderLayout.CENTER);
 
+        jPanel6.setBackground(new java.awt.Color(236, 242, 246));
         jPanel6.setPreferredSize(new java.awt.Dimension(682, 30));
         jPanel6.setLayout(new java.awt.GridLayout(1, 2));
 
+        jLabel1.setBackground(new java.awt.Color(236, 242, 246));
+        jLabel1.setForeground(new java.awt.Color(44, 62, 80));
         jLabel1.setText("Nro de paciente:");
         jPanel6.add(jLabel1);
+
+        jTextField8.setBackground(new java.awt.Color(236, 242, 246));
+        jTextField8.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         jPanel6.add(jTextField8);
 
         jPanel5.add(jPanel6, java.awt.BorderLayout.PAGE_END);
@@ -141,11 +160,16 @@ public class recojo_medi extends javax.swing.JPanel {
 
         add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Receta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 3, 24))); // NOI18N
+        jPanel3.setBackground(new java.awt.Color(236, 242, 246));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Receta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 3, 24), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel3.setLayout(new java.awt.BorderLayout());
 
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
+
+        jTextArea1.setBackground(new java.awt.Color(236, 242, 246));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel3.add(jScrollPane1, java.awt.BorderLayout.CENTER);

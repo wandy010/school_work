@@ -104,14 +104,19 @@ public class stock_medi extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(236, 242, 246));
         setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Resgistrar medicamento"));
+        jPanel2.setBackground(new java.awt.Color(236, 242, 246));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Resgistrar medicamento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel2.setPreferredSize(new java.awt.Dimension(1370, 140));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
+        jPanel3.setBackground(new java.awt.Color(236, 242, 246));
         jPanel3.setLayout(new java.awt.GridLayout(1, 2));
 
+        btnue.setBackground(new java.awt.Color(40, 110, 160));
+        btnue.setForeground(new java.awt.Color(255, 255, 255));
         btnue.setText("Nuevo ingreso");
         btnue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +125,8 @@ public class stock_medi extends javax.swing.JPanel {
         });
         jPanel3.add(btnue);
 
+        btguar.setBackground(new java.awt.Color(40, 110, 160));
+        btguar.setForeground(new java.awt.Color(255, 255, 255));
         btguar.setText("Guardar");
         btguar.setEnabled(false);
         btguar.addActionListener(new java.awt.event.ActionListener() {
@@ -131,29 +138,46 @@ public class stock_medi extends javax.swing.JPanel {
 
         jPanel2.add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
+        jPanel4.setBackground(new java.awt.Color(236, 242, 246));
         jPanel4.setLayout(new java.awt.GridLayout(3, 4));
 
+        jLabel5.setBackground(new java.awt.Color(236, 242, 246));
+        jLabel5.setForeground(new java.awt.Color(44, 62, 80));
         jLabel5.setText("Nombre");
         jPanel4.add(jLabel5);
 
+        im1.setBackground(new java.awt.Color(236, 242, 246));
+        im1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         im1.setEnabled(false);
         jPanel4.add(im1);
 
+        jLabel4.setBackground(new java.awt.Color(236, 242, 246));
+        jLabel4.setForeground(new java.awt.Color(44, 62, 80));
         jLabel4.setText("Dosis");
         jPanel4.add(jLabel4);
 
+        im2.setBackground(new java.awt.Color(236, 242, 246));
+        im2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         im2.setEnabled(false);
         jPanel4.add(im2);
 
+        jLabel3.setBackground(new java.awt.Color(236, 242, 246));
+        jLabel3.setForeground(new java.awt.Color(44, 62, 80));
         jLabel3.setText("Marca");
         jPanel4.add(jLabel3);
 
+        im3.setBackground(new java.awt.Color(236, 242, 246));
+        im3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         im3.setEnabled(false);
         jPanel4.add(im3);
 
+        jLabel2.setBackground(new java.awt.Color(236, 242, 246));
+        jLabel2.setForeground(new java.awt.Color(44, 62, 80));
         jLabel2.setText("Cantidad");
         jPanel4.add(jLabel2);
 
+        im4.setBackground(new java.awt.Color(236, 242, 246));
+        im4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         im4.setEnabled(false);
         im4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,15 +186,23 @@ public class stock_medi extends javax.swing.JPanel {
         });
         jPanel4.add(im4);
 
+        jLabel1.setBackground(new java.awt.Color(236, 242, 246));
+        jLabel1.setForeground(new java.awt.Color(44, 62, 80));
         jLabel1.setText("Vencimiento lote");
         jPanel4.add(jLabel1);
 
+        im5.setBackground(new java.awt.Color(236, 242, 246));
+        im5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         im5.setEnabled(false);
         jPanel4.add(im5);
 
+        jLabel6.setBackground(new java.awt.Color(236, 242, 246));
+        jLabel6.setForeground(new java.awt.Color(44, 62, 80));
         jLabel6.setText("Alerta de stock mínimo");
         jPanel4.add(jLabel6);
 
+        im6.setBackground(new java.awt.Color(236, 242, 246));
+        im6.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         im6.setEnabled(false);
         jPanel4.add(im6);
 
@@ -178,12 +210,17 @@ public class stock_medi extends javax.swing.JPanel {
 
         add(jPanel2, java.awt.BorderLayout.NORTH);
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Inventario"));
+        jPanel5.setBackground(new java.awt.Color(236, 242, 246));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Inventario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel5.setPreferredSize(new java.awt.Dimension(462, 300));
         jPanel5.setLayout(new java.awt.GridLayout(1, 1));
 
+        jScrollPane1.setBackground(new java.awt.Color(236, 242, 246));
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
+        jScrollPane1.setForeground(new java.awt.Color(44, 62, 80));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(452, 340));
 
+        tabla.setBackground(new java.awt.Color(236, 242, 246));
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -204,10 +241,15 @@ public class stock_medi extends javax.swing.JPanel {
 
         jPanel5.add(jScrollPane1);
 
+        jPanel1.setBackground(new java.awt.Color(236, 242, 246));
+
+        jLabel7.setForeground(new java.awt.Color(44, 62, 80));
         jLabel7.setText("Ingrese codigo para editar");
         jPanel1.add(jLabel7);
         jPanel1.add(jSeparator2);
 
+        txbusc.setBackground(new java.awt.Color(236, 242, 246));
+        txbusc.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         txbusc.setPreferredSize(new java.awt.Dimension(100, 22));
         txbusc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,6 +259,8 @@ public class stock_medi extends javax.swing.JPanel {
         jPanel1.add(txbusc);
         jPanel1.add(jSeparator3);
 
+        jButton3.setBackground(new java.awt.Color(40, 110, 160));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Seleccionar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,8 +270,12 @@ public class stock_medi extends javax.swing.JPanel {
         jPanel1.add(jButton3);
         jPanel1.add(jSeparator4);
 
+        jScrollPane2.setBackground(new java.awt.Color(236, 242, 246));
+        jScrollPane2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
+        jScrollPane2.setForeground(new java.awt.Color(44, 62, 80));
         jScrollPane2.setPreferredSize(new java.awt.Dimension(500, 120));
 
+        tabla1.setBackground(new java.awt.Color(236, 242, 246));
         tabla1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -241,6 +289,8 @@ public class stock_medi extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane2);
 
+        jButton2.setBackground(new java.awt.Color(40, 110, 160));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("EDITAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -249,6 +299,8 @@ public class stock_medi extends javax.swing.JPanel {
         });
         jPanel1.add(jButton2);
 
+        jButton1.setBackground(new java.awt.Color(40, 110, 160));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("REGRESAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -359,7 +411,7 @@ public class stock_medi extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     public static javax.swing.JTable tabla;
-    private javax.swing.JTable tabla1;
+    public static javax.swing.JTable tabla1;
     private javax.swing.JTextField txbusc;
     // End of variables declaration//GEN-END:variables
 }
