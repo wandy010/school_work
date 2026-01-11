@@ -80,6 +80,7 @@ public class interfazOwner extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(20, 20, 40));
@@ -340,37 +341,19 @@ public class interfazOwner extends javax.swing.JFrame {
         spaceDates.setLayout(new java.awt.BorderLayout());
 
         jPanel2.setBackground(new java.awt.Color(236, 242, 246));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(44, 62, 80));
         jLabel2.setText("Posta Fraternidad");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 147, -1, -1));
 
         jLabel1.setForeground(new java.awt.Color(44, 62, 80));
         jLabel1.setText("<html><h2>Bienvenidos al sistema de gestión del C.S. Fraternidad. Nos dedicamos a brindar atención primaria de calidad a nuestra comunidad ucayalina. A través de esta plataforma, centralizamos el cuidado de nuestros Pacientes, agilizamos la programación de Citas y optimizamos el registro de Atenciones diarias. Gestionamos con transparencia nuestra Botica para asegurar el abastecimiento oportuno y contamos con un módulo de Personal para coordinar al equipo humano que vela por tu salud. Tecnología y vocación de servicio, unidas por el bienestar de Fraternidad </h2> ");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 240, 1015, 202));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(234, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(433, 433, 433))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1015, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119))))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addComponent(jLabel2)
-                .addGap(56, 56, 56)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(256, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondo(1).png"))); // NOI18N
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 670));
 
         spaceDates.add(jPanel2, java.awt.BorderLayout.CENTER);
 
@@ -518,6 +501,7 @@ public class interfazOwner extends javax.swing.JFrame {
     private javax.swing.JButton db5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

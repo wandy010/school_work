@@ -25,25 +25,32 @@ public class Pacientes_Menu extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         mRegistrar = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         mVE = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        fondos = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(20, 40, 60));
         jLabel1.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel1.setText("Gestion de pacientes");
+        jLabel1.setText("GestiÓÓÓon de pacientes");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 63, -1, 105));
 
-        mRegistrar.setBackground(new java.awt.Color(40, 110, 160));
+        jLabel2.setBackground(new java.awt.Color(20, 40, 60));
+        jLabel2.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(44, 62, 80));
+        jLabel2.setText("posta de fraternidad");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, -1, -1));
+
+        mRegistrar.setBackground(new java.awt.Color(30, 60, 90));
         mRegistrar.setPreferredSize(new java.awt.Dimension(330, 330));
         mRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -51,11 +58,11 @@ public class Pacientes_Menu extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/agregaruser.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/agregar.png"))); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Registrar Nuevo");
+        jLabel4.setText("Nuevo REGISTRO");
 
         jLabel5.setFont(new java.awt.Font("FreeMono", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,52 +76,45 @@ public class Pacientes_Menu extends javax.swing.JPanel {
             .addGroup(mRegistrarLayout.createSequentialGroup()
                 .addGroup(mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mRegistrarLayout.createSequentialGroup()
-                        .addGap(113, 113, 113)
+                        .addGap(100, 100, 100)
                         .addComponent(jLabel3))
                     .addGroup(mRegistrarLayout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel4))
-                    .addGroup(mRegistrarLayout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(94, 94, 94))
+                        .addGap(44, 44, 44)
+                        .addGroup(mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                .addGap(123, 123, 123))
         );
         mRegistrarLayout.setVerticalGroup(
             mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mRegistrarLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(54, 54, 54)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        add(mRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 207, -1, -1));
+        add(mRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 207, -1, 330));
 
-        jLabel2.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel2.setText("posta de fraternidad");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(561, 174, -1, -1));
-
-        mVE.setBackground(new java.awt.Color(40, 110, 160));
-        mVE.setPreferredSize(new java.awt.Dimension(330, 330));
+        mVE.setBackground(new java.awt.Color(30, 60, 90));
         mVE.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 mVEMouseClicked(evt);
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Ver o Editar");
 
-        jLabel8.setFont(new java.awt.Font("FreeMono", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("FreeMono", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("<html><h3>ingrese datos de personas que nunca se atendieron en esta posta</h3>");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/carpet.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/guardar.png"))); // NOI18N
 
         javax.swing.GroupLayout mVELayout = new javax.swing.GroupLayout(mVE);
         mVE.setLayout(mVELayout);
@@ -123,32 +123,32 @@ public class Pacientes_Menu extends javax.swing.JPanel {
             .addGroup(mVELayout.createSequentialGroup()
                 .addGroup(mVELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mVELayout.createSequentialGroup()
-                        .addGap(124, 124, 124)
+                        .addGap(110, 110, 110)
                         .addComponent(jLabel6))
                     .addGroup(mVELayout.createSequentialGroup()
-                        .addGap(114, 114, 114)
+                        .addGap(81, 81, 81)
                         .addComponent(jLabel7))
                     .addGroup(mVELayout.createSequentialGroup()
-                        .addGap(63, 63, 63)
+                        .addGap(81, 81, 81)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(105, 105, 105))
+                .addGap(87, 87, 87))
         );
         mVELayout.setVerticalGroup(
             mVELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mVELayout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
+                .addGap(49, 49, 49)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        add(mVE, new org.netbeans.lib.awtextra.AbsoluteConstraints(776, 207, -1, -1));
+        add(mVE, new org.netbeans.lib.awtextra.AbsoluteConstraints(776, 207, 340, 330));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondo(1).png"))); // NOI18N
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        fondos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondoHospital.png"))); // NOI18N
+        add(fondos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 720));
     }// </editor-fold>//GEN-END:initComponents
 
     private void mRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mRegistrarMouseClicked
@@ -169,8 +169,8 @@ public class Pacientes_Menu extends javax.swing.JPanel {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel fondos;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
