@@ -118,53 +118,62 @@ public class Atencion extends javax.swing.JPanel {
         borrarbutton = new javax.swing.JButton();
         confirmarbutton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(236, 242, 246));
         setMinimumSize(new java.awt.Dimension(840, 520));
 
-        signospanel.setBorder(javax.swing.BorderFactory.createTitledBorder("SIGNOS VITALES"));
+        signospanel.setBackground(new java.awt.Color(236, 242, 246));
+        signospanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "SIGNOS VITALES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
-        tallafield.setBorder(javax.swing.BorderFactory.createTitledBorder("TALLA (CM)"));
+        tallafield.setBackground(new java.awt.Color(236, 242, 246));
+        tallafield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TALLA (CM)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         tallafield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tallafieldActionPerformed(evt);
             }
         });
 
-        pesofield.setBorder(javax.swing.BorderFactory.createTitledBorder("PESO (KG)"));
+        pesofield.setBackground(new java.awt.Color(236, 242, 246));
+        pesofield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PESO (KG)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         pesofield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pesofieldActionPerformed(evt);
             }
         });
 
-        precionfield.setBorder(javax.swing.BorderFactory.createTitledBorder("PRECION ARTERIAL"));
+        precionfield.setBackground(new java.awt.Color(236, 242, 246));
+        precionfield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PRECION ARTERIAL", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         precionfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 precionfieldActionPerformed(evt);
             }
         });
 
-        frecuenciafield.setBorder(javax.swing.BorderFactory.createTitledBorder("FRECUENCIA CARDIACA"));
+        frecuenciafield.setBackground(new java.awt.Color(236, 242, 246));
+        frecuenciafield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FRECUENCIA CARDIACA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         frecuenciafield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 frecuenciafieldActionPerformed(evt);
             }
         });
 
-        saturacionfield.setBorder(javax.swing.BorderFactory.createTitledBorder("SATURACION "));
+        saturacionfield.setBackground(new java.awt.Color(236, 242, 246));
+        saturacionfield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "SATURACION ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         saturacionfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saturacionfieldActionPerformed(evt);
             }
         });
 
-        temperaturafield.setBorder(javax.swing.BorderFactory.createTitledBorder("TEMPERATURA (C)"));
+        temperaturafield.setBackground(new java.awt.Color(236, 242, 246));
+        temperaturafield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TEMPERATURA (C)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         temperaturafield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 temperaturafieldActionPerformed(evt);
             }
         });
 
+        guardardatosbutton.setBackground(new java.awt.Color(40, 110, 160));
+        guardardatosbutton.setForeground(new java.awt.Color(255, 255, 255));
         guardardatosbutton.setText("GUARDAR DATOS");
         guardardatosbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +182,7 @@ public class Atencion extends javax.swing.JPanel {
         });
 
         imclabel.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        imclabel.setBorder(javax.swing.BorderFactory.createTitledBorder("IMC"));
+        imclabel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "IMC", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
         javax.swing.GroupLayout signospanelLayout = new javax.swing.GroupLayout(signospanel);
         signospanel.setLayout(signospanelLayout);
@@ -217,13 +226,19 @@ public class Atencion extends javax.swing.JPanel {
                         .addComponent(saturacionfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(guardardatosbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("DATOS DEL PACIENTE"));
+        jPanel3.setBackground(new java.awt.Color(236, 242, 246));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "DATOS DEL PACIENTE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
+        jPanel4.setBackground(java.awt.Color.white);
+
+        dnifield.setBackground(new java.awt.Color(236, 242, 246));
         dnifield.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
+        buscarbutton.setBackground(new java.awt.Color(40, 110, 160));
+        buscarbutton.setForeground(new java.awt.Color(255, 255, 255));
         buscarbutton.setText("BUSCAR");
         buscarbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,8 +246,9 @@ public class Atencion extends javax.swing.JPanel {
             }
         });
 
+        seleccioncombo.setBackground(new java.awt.Color(236, 242, 246));
         seleccioncombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DNI", "COLA" }));
-        seleccioncombo.setBorder(javax.swing.BorderFactory.createTitledBorder("Busqueda"));
+        seleccioncombo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Busqueda", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -259,14 +275,16 @@ public class Atencion extends javax.swing.JPanel {
                     .addComponent(dnifield)))
         );
 
+        mostrardatospanel.setBackground(java.awt.Color.white);
+
         dninombre.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 12)); // NOI18N
-        dninombre.setBorder(javax.swing.BorderFactory.createTitledBorder("PACIENTE"));
+        dninombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PACIENTE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
-        dnilabel.setBorder(javax.swing.BorderFactory.createTitledBorder("DNI"));
+        dnilabel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DNI", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
-        sexolabel.setBorder(javax.swing.BorderFactory.createTitledBorder("SEXO"));
+        sexolabel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "SEXO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
-        edadlabel.setBorder(javax.swing.BorderFactory.createTitledBorder("EDAD"));
+        edadlabel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EDAD", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
         javax.swing.GroupLayout mostrardatospanelLayout = new javax.swing.GroupLayout(mostrardatospanel);
         mostrardatospanel.setLayout(mostrardatospanelLayout);
@@ -297,6 +315,7 @@ public class Atencion extends javax.swing.JPanel {
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
+        citastable.setBackground(new java.awt.Color(236, 242, 246));
         citastable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"", null, null, null, null},
@@ -346,21 +365,25 @@ public class Atencion extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        evaluacionpanel.setBorder(javax.swing.BorderFactory.createTitledBorder("EVALUACION"));
+        evaluacionpanel.setBackground(new java.awt.Color(236, 242, 246));
+        evaluacionpanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EVALUACION", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
+        motivotxt.setBackground(new java.awt.Color(236, 242, 246));
         motivotxt.setColumns(20);
         motivotxt.setRows(5);
-        motivotxt.setBorder(javax.swing.BorderFactory.createTitledBorder("Motivo"));
+        motivotxt.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Motivo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jScrollPane1.setViewportView(motivotxt);
 
+        diagnosticotxt.setBackground(new java.awt.Color(236, 242, 246));
         diagnosticotxt.setColumns(20);
         diagnosticotxt.setRows(5);
-        diagnosticotxt.setBorder(javax.swing.BorderFactory.createTitledBorder("Diagnostico"));
+        diagnosticotxt.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Diagnostico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jScrollPane2.setViewportView(diagnosticotxt);
 
+        consideracionestxt.setBackground(new java.awt.Color(236, 242, 246));
         consideracionestxt.setColumns(20);
         consideracionestxt.setRows(5);
-        consideracionestxt.setBorder(javax.swing.BorderFactory.createTitledBorder("Consideraciones"));
+        consideracionestxt.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Consideraciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jScrollPane3.setViewportView(consideracionestxt);
 
         javax.swing.GroupLayout evaluacionpanelLayout = new javax.swing.GroupLayout(evaluacionpanel);
@@ -386,10 +409,16 @@ public class Atencion extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        medicamentospanel.setBorder(javax.swing.BorderFactory.createTitledBorder("MEDICAMENTOS"));
+        medicamentospanel.setBackground(new java.awt.Color(236, 242, 246));
+        medicamentospanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MEDICAMENTOS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
-        jTextField10.setBorder(javax.swing.BorderFactory.createTitledBorder("CODIGO"));
+        jPanel9.setBackground(java.awt.Color.white);
 
+        jTextField10.setBackground(new java.awt.Color(236, 242, 246));
+        jTextField10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CODIGO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+
+        jButton3.setBackground(new java.awt.Color(40, 110, 160));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("AGREGAR");
 
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
@@ -435,6 +464,8 @@ public class Atencion extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        borrarbutton.setBackground(new java.awt.Color(40, 110, 160));
+        borrarbutton.setForeground(new java.awt.Color(255, 255, 255));
         borrarbutton.setText("BORRAR");
         borrarbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -442,6 +473,8 @@ public class Atencion extends javax.swing.JPanel {
             }
         });
 
+        confirmarbutton.setBackground(new java.awt.Color(40, 110, 160));
+        confirmarbutton.setForeground(new java.awt.Color(255, 255, 255));
         confirmarbutton.setText("CONFIRMAR");
         confirmarbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

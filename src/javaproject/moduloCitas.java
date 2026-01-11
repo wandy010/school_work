@@ -39,7 +39,7 @@ public class moduloCitas extends javax.swing.JPanel {
 
         lblModuloCitas.setBackground(new java.awt.Color(0, 0, 0));
         lblModuloCitas.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 1, 24)); // NOI18N
-        lblModuloCitas.setForeground(new java.awt.Color(0, 0, 0));
+        lblModuloCitas.setForeground(new java.awt.Color(44, 62, 80));
         lblModuloCitas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblModuloCitas.setText("MODULO DE CITAS");
         add(lblModuloCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
@@ -48,13 +48,13 @@ public class moduloCitas extends javax.swing.JPanel {
         btnGestionarCitas.setForeground(new java.awt.Color(255, 255, 255));
         btnGestionarCitas.setText("Gestionar citas");
         btnGestionarCitas.addActionListener(this::btnGestionarCitasActionPerformed);
-        add(btnGestionarCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 219, 167, 54));
+        add(btnGestionarCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 167, 54));
 
         btnNuevaCita.setBackground(new java.awt.Color(10, 60, 100));
         btnNuevaCita.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevaCita.setText("Nueva cita");
         btnNuevaCita.addActionListener(this::btnNuevaCitaActionPerformed);
-        add(btnNuevaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 136, 167, 54));
+        add(btnNuevaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 167, 54));
 
         citas.setOpaque(false);
 
@@ -98,7 +98,7 @@ public class moduloCitas extends javax.swing.JPanel {
             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
         );
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 230, 257));
+        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 230, 257));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondoHospital.png"))); // NOI18N
         add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 720));

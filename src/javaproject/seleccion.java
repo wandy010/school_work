@@ -27,6 +27,7 @@ public class seleccion extends javax.swing.JPanel {
     private void initComponents() {
 
         atencionpanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -38,6 +39,12 @@ public class seleccion extends javax.swing.JPanel {
 
         atencionpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(44, 62, 80));
+        jLabel1.setText("MODULO DE ATENCIONES");
+        jLabel1.setToolTipText("");
+        atencionpanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+
         jButton1.setBackground(new java.awt.Color(10, 60, 100));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ATENCION");
@@ -46,7 +53,7 @@ public class seleccion extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        atencionpanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 230, 335, 100));
+        atencionpanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 335, 100));
 
         jButton2.setBackground(new java.awt.Color(10, 60, 100));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -56,7 +63,7 @@ public class seleccion extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        atencionpanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 382, 335, 100));
+        atencionpanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 335, 100));
 
         jScrollPane1.setOpaque(false);
 
@@ -95,6 +102,7 @@ public class seleccion extends javax.swing.JPanel {
     private javax.swing.JPanel atencionpanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea textodebug;
