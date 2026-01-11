@@ -24,28 +24,24 @@ public class Pacientes_Menu extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         mRegistrar = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         mVE = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(236, 242, 246));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1360, 718));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(44, 62, 80));
         jLabel1.setText("Gestion de pacientes");
-
-        jLabel2.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel2.setText("posta de fraternidad");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 63, -1, 105));
 
         mRegistrar.setBackground(new java.awt.Color(40, 110, 160));
         mRegistrar.setPreferredSize(new java.awt.Dimension(330, 330));
@@ -57,11 +53,11 @@ public class Pacientes_Menu extends javax.swing.JPanel {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/agregaruser.png"))); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Registrar Nuevo");
 
-        jLabel5.setFont(new java.awt.Font("FreeMono", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("FreeMono", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("<html><h3>ingrese datos de personas que nunca se atendieron en esta posta</h3>");
@@ -73,15 +69,15 @@ public class Pacientes_Menu extends javax.swing.JPanel {
             .addGroup(mRegistrarLayout.createSequentialGroup()
                 .addGroup(mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mRegistrarLayout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(113, 113, 113)
+                        .addComponent(jLabel3))
                     .addGroup(mRegistrarLayout.createSequentialGroup()
-                        .addGap(85, 85, 85)
+                        .addGap(74, 74, 74)
                         .addComponent(jLabel4))
                     .addGroup(mRegistrarLayout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addComponent(jLabel3)))
-                .addGap(114, 114, 114))
+                        .addGap(74, 74, 74)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(94, 94, 94))
         );
         mRegistrarLayout.setVerticalGroup(
             mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,6 +90,13 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        add(mRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 207, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(44, 62, 80));
+        jLabel2.setText("posta de fraternidad");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(561, 174, -1, -1));
 
         mVE.setBackground(new java.awt.Color(40, 110, 160));
         mVE.setPreferredSize(new java.awt.Dimension(330, 330));
@@ -142,51 +145,10 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(mRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(228, 228, 228)
-                        .addComponent(mVE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel1)
-                        .addGap(166, 166, 166))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(343, 343, 343)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 350, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(254, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mVE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(181, Short.MAX_VALUE))
-        );
+        add(mVE, new org.netbeans.lib.awtextra.AbsoluteConstraints(776, 207, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondo(1).png"))); // NOI18N
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void mRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mRegistrarMouseClicked
@@ -195,7 +157,6 @@ public class Pacientes_Menu extends javax.swing.JPanel {
         interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
 
         principal.cambiarPanel(new Pacientes_RegistrarPaciente());
-
     }//GEN-LAST:event_mRegistrarMouseClicked
 
     private void mVEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mVEMouseClicked
@@ -209,6 +170,7 @@ public class Pacientes_Menu extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -216,7 +178,6 @@ public class Pacientes_Menu extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel mRegistrar;
     private javax.swing.JPanel mVE;
     // End of variables declaration//GEN-END:variables
