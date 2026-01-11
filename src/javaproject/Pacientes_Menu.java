@@ -50,7 +50,7 @@ public class Pacientes_Menu extends javax.swing.JPanel {
         jLabel2.setText("posta de fraternidad");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, -1, -1));
 
-        mRegistrar.setBackground(new java.awt.Color(30, 60, 90));
+        mRegistrar.setBackground(new java.awt.Color(10, 60, 100));
         mRegistrar.setPreferredSize(new java.awt.Dimension(330, 330));
         mRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -99,7 +99,7 @@ public class Pacientes_Menu extends javax.swing.JPanel {
 
         add(mRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 207, -1, 330));
 
-        mVE.setBackground(new java.awt.Color(30, 60, 90));
+        mVE.setBackground(new java.awt.Color(10, 60, 100));
         mVE.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 mVEMouseClicked(evt);

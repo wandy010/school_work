@@ -33,6 +33,7 @@ public class moduloCitas extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtCitasProximasLista = new javax.swing.JTextArea();
+        fondo = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1370, 640));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -103,6 +104,9 @@ public class moduloCitas extends javax.swing.JPanel {
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 299, 230, 257));
 
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondoHospital.png"))); // NOI18N
+        add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
 
@@ -122,6 +126,7 @@ public class moduloCitas extends javax.swing.JPanel {
     private javax.swing.JButton btnGestionarCitas;
     private javax.swing.JButton btnNuevaCita;
     private javax.swing.JPanel citas;
+    private javax.swing.JLabel fondo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
