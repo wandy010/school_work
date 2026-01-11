@@ -58,14 +58,18 @@ public class seleccion extends javax.swing.JPanel {
         });
         atencionpanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 382, 335, 100));
 
+        jScrollPane1.setOpaque(false);
+
         textodebug.setColumns(20);
         textodebug.setRows(5);
+        textodebug.setOpaque(false);
         jScrollPane1.setViewportView(textodebug);
 
-        atencionpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 30, 650, 658));
+        atencionpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 650, 670));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondoHospital.png"))); // NOI18N
-        atencionpanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 720));
+        jLabel3.setPreferredSize(new java.awt.Dimension(1360, 718));
+        atencionpanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, -1));
 
         add(atencionpanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
