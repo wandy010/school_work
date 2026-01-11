@@ -326,16 +326,16 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
     private void pacientes_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pacientes_guardarActionPerformed
         // TODO add your handling code here:
         int pacientecontrol =interfazOwner.paciente_control ;
-        interfazOwner.datos_pacien[pacientecontrol][0] = paciente_dni.getText();
-        interfazOwner.datos_pacien[pacientecontrol][1] = paciente_ap.getText();
-        interfazOwner.datos_pacien[pacientecontrol][2] = paciente_am.getText();
-        interfazOwner.datos_pacien[pacientecontrol][3] = paciente_nombre.getText();
-        interfazOwner.datos_pacien[pacientecontrol][4] = paciente_nc.getText();
-        interfazOwner.datos_pacien[pacientecontrol][5] = paciente_edad.getText();
-        interfazOwner.datos_pacien[pacientecontrol][6] = paciente_sex.getSelectedItem().toString();
-        interfazOwner.datos_pacien[pacientecontrol][7] = paciente_cel.getText();
-        interfazOwner.datos_pacien[pacientecontrol][8] = paciente_direccion.getText();
-        interfazOwner.datos_pacien[pacientecontrol][9] = paciente_referencia.getText();
+        interfazOwner.datos_pacien[0][pacientecontrol] = paciente_dni.getText();
+        interfazOwner.datos_pacien[1][pacientecontrol] = paciente_ap.getText();
+        interfazOwner.datos_pacien[2][pacientecontrol] = paciente_am.getText();
+        interfazOwner.datos_pacien[3][pacientecontrol] = paciente_nombre.getText();
+        interfazOwner.datos_pacien[4][pacientecontrol] = paciente_nc.getText();
+        interfazOwner.datos_pacien[5][pacientecontrol] = paciente_edad.getText();
+        interfazOwner.datos_pacien[6][pacientecontrol] = paciente_sex.getSelectedItem().toString();
+        interfazOwner.datos_pacien[7][pacientecontrol] = paciente_cel.getText();
+        interfazOwner.datos_pacien[8][pacientecontrol] = paciente_direccion.getText();
+        interfazOwner.datos_pacien[9][pacientecontrol] = paciente_referencia.getText();
         interfazOwner.paciente_control++;
         
         
