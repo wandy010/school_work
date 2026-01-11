@@ -19,7 +19,6 @@ public class stock_medi extends javax.swing.JPanel {
 
     public stock_medi() {
         initComponents();
-
         rell_tabla();
     }
 
@@ -52,10 +51,9 @@ public class stock_medi extends javax.swing.JPanel {
     public void add_tabla(int x) {
         DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
 
-        modelo.addRow(new Object[]{x+1, interfazOwner.datos_medi[0][x],
+        modelo.addRow(new Object[]{x + 1, interfazOwner.datos_medi[0][x],
             interfazOwner.datos_medi[1][x], interfazOwner.datos_medi[2][x],
-            interfazOwner.datos_medi2[0][x], interfazOwner.datos_medi2[1][x],
-            interfazOwner.datos_medi2[2][x]});
+            interfazOwner.datos_medi2[0][x], interfazOwner.datos_medi2[1][x]});
     }
 
     public void rell_tabla() {
@@ -95,8 +93,16 @@ public class stock_medi extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        txbusc = new javax.swing.JTextField();
+        jSeparator3 = new javax.swing.JSeparator();
+        jButton3 = new javax.swing.JButton();
+        jSeparator4 = new javax.swing.JSeparator();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tabla1 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -183,11 +189,11 @@ public class stock_medi extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Codigo", "Nombre", "Dosis", "Cantidad", "Marca", "Vencimineto"
+                "Codigo", "Nombre", "Dosis", "Marca", "Cantidad", "Vencimineto"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, true
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -198,6 +204,51 @@ public class stock_medi extends javax.swing.JPanel {
 
         jPanel5.add(jScrollPane1);
 
+        jLabel7.setText("Ingrese codigo para editar");
+        jPanel1.add(jLabel7);
+        jPanel1.add(jSeparator2);
+
+        txbusc.setPreferredSize(new java.awt.Dimension(100, 22));
+        txbusc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txbuscActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txbusc);
+        jPanel1.add(jSeparator3);
+
+        jButton3.setText("Seleccionar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jPanel1.add(jSeparator4);
+
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(500, 120));
+
+        tabla1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Codigo", "Nombre", "Dosis", "Marca", "Cantidad", "Vencimineto", "Alerta(stock)"
+            }
+        ));
+        tabla1.setPreferredSize(new java.awt.Dimension(550, 0));
+        jScrollPane2.setViewportView(tabla1);
+
+        jPanel1.add(jScrollPane2);
+
+        jButton2.setText("EDITAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+
         jButton1.setText("REGRESAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,9 +256,6 @@ public class stock_medi extends javax.swing.JPanel {
             }
         });
         jPanel1.add(jButton1);
-
-        jButton2.setText("jButton2");
-        jPanel1.add(jButton2);
 
         jPanel5.add(jPanel1);
 
@@ -218,7 +266,7 @@ public class stock_medi extends javax.swing.JPanel {
         guar();
         add_tabla(c);
         c++;
-        interfazOwner.medi_control=c;
+        interfazOwner.medi_control = c;
         hab_des(false);
     }//GEN-LAST:event_btguarActionPerformed
 
@@ -236,6 +284,50 @@ public class stock_medi extends javax.swing.JPanel {
         principal.cambiarPanel(new botica_principal());
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        int b = Integer.parseInt(txbusc.getText());
+        int x = b - 1;
+        DefaultTableModel table = (DefaultTableModel) tabla1.getModel();
+
+        interfazOwner.datos_medi[0][x] = (String) table.getValueAt(x, 1);
+        interfazOwner.datos_medi[1][x] = (String) table.getValueAt(x, 2);
+        interfazOwner.datos_medi[2][x] = (String) table.getValueAt(x, 3);
+        interfazOwner.datos_medi2[0][x] = (int) table.getValueAt(x, 4);
+        interfazOwner.datos_medi2[1][x] = (int) table.getValueAt(x, 5);
+        interfazOwner.datos_medi2[2][x] = (int) table.getValueAt(x, 6);
+
+        DefaultTableModel tabla2 = (DefaultTableModel) tabla.getModel();
+
+        tabla2.setValueAt(interfazOwner.datos_medi[0][x], x, 1);
+        tabla2.setValueAt(interfazOwner.datos_medi[1][x], x, 2);
+        tabla2.setValueAt(interfazOwner.datos_medi[2][x], x, 3);
+        tabla2.setValueAt(interfazOwner.datos_medi[0][x], x, 4);
+        tabla2.setValueAt(interfazOwner.datos_medi[1][x], x, 5);
+
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        int b = Integer.parseInt(txbusc.getText());
+        int x = 0;
+        DefaultTableModel modelo = (DefaultTableModel) tabla1.getModel();
+        modelo.setRowCount(0);
+
+        modelo.addRow(new Object[]{x + 1, interfazOwner.datos_medi[0][x],
+            interfazOwner.datos_medi[1][x], interfazOwner.datos_medi[2][x],
+            interfazOwner.datos_medi2[0][x], interfazOwner.datos_medi2[1][x],
+            interfazOwner.datos_medi2[2][x]});
+
+        jButton3.setEnabled(false);
+        txbusc.setEditable(false);
+
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void txbuscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txbuscActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txbuscActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btguar;
@@ -248,18 +340,26 @@ public class stock_medi extends javax.swing.JPanel {
     private javax.swing.JTextField im6;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     public static javax.swing.JTable tabla;
+    private javax.swing.JTable tabla1;
+    private javax.swing.JTextField txbusc;
     // End of variables declaration//GEN-END:variables
 }

@@ -24,7 +24,7 @@ public class interfazOwner extends javax.swing.JFrame {
     public static int[][] cant_medi = new int[20][300];//la cantidad de cada medicamento de cada paciente
     public static String[][] datos_medi = new String[3][300];
     public static int[][] datos_medi2 = new int[3][300];
-    
+
     public static int indiceCita = 0;
 
     public static int paciente_control = 0;
@@ -448,7 +448,7 @@ public class interfazOwner extends javax.swing.JFrame {
     }//GEN-LAST:event_db3MouseExited
 
     private void db3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_db3ActionPerformed
-        
+
         cambiarPanel(new botica_principal());
     }//GEN-LAST:event_db3ActionPerformed
 
