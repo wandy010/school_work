@@ -46,11 +46,11 @@ public class recojo_medi extends javax.swing.JPanel {
         jTextArea1 = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(236, 242, 246));
-        setPreferredSize(new java.awt.Dimension(840, 520));
+        setPreferredSize(new java.awt.Dimension(1366, 718));
         setLayout(new java.awt.BorderLayout());
 
         jPanel2.setBackground(new java.awt.Color(236, 242, 246));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1370, 50));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1366, 50));
 
         jButton2.setBackground(new java.awt.Color(40, 110, 160));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -81,28 +81,28 @@ public class recojo_medi extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 952, Short.MAX_VALUE)
+                .addGap(943, 943, 943)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addComponent(jButton2)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
         jPanel1.setBackground(new java.awt.Color(236, 242, 246));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Datos del paciente:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 3, 24), new java.awt.Color(44, 62, 80))); // NOI18N
-        jPanel1.setPreferredSize(new java.awt.Dimension(1375, 200));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1366, 200));
         jPanel1.setLayout(new java.awt.GridLayout(1, 2));
 
         jPanel4.setLayout(new java.awt.GridLayout(2, 2));
@@ -162,6 +162,7 @@ public class recojo_medi extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(236, 242, 246));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Receta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 3, 24), new java.awt.Color(44, 62, 80))); // NOI18N
+        jPanel3.setPreferredSize(new java.awt.Dimension(1366, 122));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
         jScrollPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
