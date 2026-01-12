@@ -297,6 +297,7 @@ public class stock_medi extends javax.swing.JPanel {
         jButton2.setBackground(new java.awt.Color(40, 110, 160));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("EDITAR");
+        jButton2.setEnabled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
