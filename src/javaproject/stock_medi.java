@@ -4,6 +4,7 @@
  */
 package javaproject;
 
+import javaproject.interfazOwner;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -53,7 +54,8 @@ public class stock_medi extends javax.swing.JPanel {
 
         modelo.addRow(new Object[]{x + 1, interfazOwner.datos_medi[0][x],
             interfazOwner.datos_medi[1][x], interfazOwner.datos_medi[2][x],
-            interfazOwner.datos_medi2[0][x], interfazOwner.datos_medi2[1][x]});
+            interfazOwner.datos_medi2[0][x], interfazOwner.datos_medi2[1][x],
+        interfazOwner.datos_medi2[2][x]});
     }
 
     public void rell_tabla() {
@@ -96,11 +98,11 @@ public class stock_medi extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         txbusc = new javax.swing.JTextField();
-        jSeparator3 = new javax.swing.JSeparator();
         jButton3 = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tabla1 = new javax.swing.JTable();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
@@ -108,7 +110,7 @@ public class stock_medi extends javax.swing.JPanel {
         setLayout(new java.awt.BorderLayout());
 
         jPanel2.setBackground(new java.awt.Color(236, 242, 246));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Resgistrar medicamento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Resgistrar medicamento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel2.setPreferredSize(new java.awt.Dimension(1370, 140));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
@@ -211,7 +213,7 @@ public class stock_medi extends javax.swing.JPanel {
         add(jPanel2, java.awt.BorderLayout.NORTH);
 
         jPanel5.setBackground(new java.awt.Color(236, 242, 246));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Inventario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Inventario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel5.setPreferredSize(new java.awt.Dimension(462, 300));
         jPanel5.setLayout(new java.awt.GridLayout(1, 1));
 
@@ -226,11 +228,11 @@ public class stock_medi extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Codigo", "Nombre", "Dosis", "Marca", "Cantidad", "Vencimineto"
+                "Codigo", "Nombre", "Dosis", "Marca", "Cantidad", "Vencimineto", "Alerta de stock"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -257,7 +259,6 @@ public class stock_medi extends javax.swing.JPanel {
             }
         });
         jPanel1.add(txbusc);
-        jPanel1.add(jSeparator3);
 
         jButton3.setBackground(new java.awt.Color(40, 110, 160));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -268,30 +269,35 @@ public class stock_medi extends javax.swing.JPanel {
             }
         });
         jPanel1.add(jButton3);
+        jPanel1.add(jSeparator3);
         jPanel1.add(jSeparator4);
 
-        jScrollPane2.setBackground(new java.awt.Color(236, 242, 246));
-        jScrollPane2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
-        jScrollPane2.setForeground(new java.awt.Color(44, 62, 80));
-        jScrollPane2.setPreferredSize(new java.awt.Dimension(500, 120));
+        jScrollPane3.setPreferredSize(new java.awt.Dimension(670, 50));
 
-        tabla1.setBackground(new java.awt.Color(236, 242, 246));
-        tabla1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Codigo", "Nombre", "Dosis", "Marca", "Cantidad", "Vencimineto", "Alerta(stock)"
+                "Codigo", "Nombre", "Dosis", "Marca", "Cantidad", "Vencimiento", "Alerta de stock"
             }
-        ));
-        tabla1.setPreferredSize(new java.awt.Dimension(550, 0));
-        jScrollPane2.setViewportView(tabla1);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true, true, true, true
+            };
 
-        jPanel1.add(jScrollPane2);
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane3);
 
         jButton2.setBackground(new java.awt.Color(40, 110, 160));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("EDITAR");
+        jButton2.setEnabled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -337,41 +343,48 @@ public class stock_medi extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        int b = Integer.parseInt(txbusc.getText());
-        int x = b - 1;
-        DefaultTableModel table = (DefaultTableModel) tabla1.getModel();
+        int x = Integer.parseInt(txbusc.getText()) - 1;
 
-        interfazOwner.datos_medi[0][x] = (String) table.getValueAt(x, 1);
-        interfazOwner.datos_medi[1][x] = (String) table.getValueAt(x, 2);
-        interfazOwner.datos_medi[2][x] = (String) table.getValueAt(x, 3);
-        interfazOwner.datos_medi2[0][x] = (int) table.getValueAt(x, 4);
-        interfazOwner.datos_medi2[1][x] = (int) table.getValueAt(x, 5);
-        interfazOwner.datos_medi2[2][x] = (int) table.getValueAt(x, 6);
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
 
-        DefaultTableModel tabla2 = (DefaultTableModel) tabla.getModel();
+        interfazOwner.datos_medi[0][x] = (String) modelo1.getValueAt(x, 1);
+        interfazOwner.datos_medi[1][x] = (String) modelo1.getValueAt(x, 2);
+        interfazOwner.datos_medi[2][x] = (String) modelo1.getValueAt(x, 3);
+        interfazOwner.datos_medi2[0][x]
+                = Integer.parseInt(modelo1.getValueAt(x, 4).toString());
 
-        tabla2.setValueAt(interfazOwner.datos_medi[0][x], x, 1);
-        tabla2.setValueAt(interfazOwner.datos_medi[1][x], x, 2);
-        tabla2.setValueAt(interfazOwner.datos_medi[2][x], x, 3);
-        tabla2.setValueAt(interfazOwner.datos_medi[0][x], x, 4);
-        tabla2.setValueAt(interfazOwner.datos_medi[1][x], x, 5);
+        interfazOwner.datos_medi2[1][x]
+                = Integer.parseInt(modelo1.getValueAt(x, 5).toString());
 
+        interfazOwner.datos_medi2[2][x]
+                = Integer.parseInt(modelo1.getValueAt(x, 6).toString());
+
+        DefaultTableModel modelo2 = (DefaultTableModel) tabla.getModel();
+
+        modelo2.setValueAt(interfazOwner.datos_medi[0][x], x, 1);
+        modelo2.setValueAt(interfazOwner.datos_medi[1][x], x, 2);
+        modelo2.setValueAt(interfazOwner.datos_medi[2][x], x, 3);
+        modelo2.setValueAt(interfazOwner.datos_medi2[0][x], x, 4);
+        modelo2.setValueAt(interfazOwner.datos_medi2[1][x], x, 5);
+        modelo2.setValueAt(interfazOwner.datos_medi2[2][x], x, 6);
+        
+       modelo1.setNumRows(0);
+       jButton3.setEnabled(true);
+       txbusc.setText("");
+        txbusc.setEnabled(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        int b = Integer.parseInt(txbusc.getText());
-        int x = 0;
-        DefaultTableModel modelo = (DefaultTableModel) tabla1.getModel();
-        modelo.setRowCount(0);
-
+        int x = Integer.parseInt(txbusc.getText()) - 1;
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
         modelo.addRow(new Object[]{x + 1, interfazOwner.datos_medi[0][x],
             interfazOwner.datos_medi[1][x], interfazOwner.datos_medi[2][x],
             interfazOwner.datos_medi2[0][x], interfazOwner.datos_medi2[1][x],
             interfazOwner.datos_medi2[2][x]});
 
         jButton3.setEnabled(false);
-        txbusc.setEditable(false);
+        txbusc.setEnabled(false);
 
 
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -406,12 +419,12 @@ public class stock_medi extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JTable jTable1;
     public static javax.swing.JTable tabla;
-    public static javax.swing.JTable tabla1;
     private javax.swing.JTextField txbusc;
     // End of variables declaration//GEN-END:variables
 }
