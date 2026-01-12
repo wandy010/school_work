@@ -11,7 +11,7 @@ import java.awt.Color;
  * @author andylnx
  */
 public class interfazOwner extends javax.swing.JFrame {
-
+    
     final Color azulHover = new Color(153, 204, 255);
     final Color colorLetra = new Color(255, 255, 255);
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfazOwner.class.getName());
@@ -36,7 +36,13 @@ public class interfazOwner extends javax.swing.JFrame {
         setResizable(true);
         setSize(1366, 768);
         db.setVisible(true);
-
+        /**
+        principal_panel.removeAll();
+        login PanelLogin = new login();
+        principal_panel.add(PanelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
+        principal_panel.revalidate();
+        principal_panel.repaint();
+        * */
     }
 
     public void cambiarPanel(javax.swing.JPanel nuevoPanel) {
@@ -56,7 +62,7 @@ public class interfazOwner extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel8 = new javax.swing.JPanel();
+        principal_panel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jpan5 = new javax.swing.JPanel();
         db5 = new javax.swing.JButton();
@@ -86,8 +92,8 @@ public class interfazOwner extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
-        jPanel8.setPreferredSize(new java.awt.Dimension(1366, 768));
-        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        principal_panel.setPreferredSize(new java.awt.Dimension(1366, 768));
+        principal_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(10, 60, 100));
 
@@ -320,7 +326,7 @@ public class interfazOwner extends javax.swing.JFrame {
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        jPanel8.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 50));
+        principal_panel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 50));
 
         spaceDates.setForeground(new java.awt.Color(255, 255, 255));
         spaceDates.setPreferredSize(new java.awt.Dimension(1366, 718));
@@ -344,9 +350,9 @@ public class interfazOwner extends javax.swing.JFrame {
 
         spaceDates.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        jPanel8.add(spaceDates, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
+        principal_panel.add(spaceDates, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
 
-        getContentPane().add(jPanel8, java.awt.BorderLayout.CENTER);
+        getContentPane().add(principal_panel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -494,7 +500,6 @@ public class interfazOwner extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel jpan;
@@ -503,6 +508,7 @@ public class interfazOwner extends javax.swing.JFrame {
     private javax.swing.JPanel jpan3;
     private javax.swing.JPanel jpan4;
     private javax.swing.JPanel jpan5;
+    public javax.swing.JPanel principal_panel;
     public static javax.swing.JPanel spaceDates;
     // End of variables declaration//GEN-END:variables
 }
