@@ -15,6 +15,7 @@ public class login extends javax.swing.JPanel {
      */
     public login() {
         initComponents();
+     
     }
 
     /**
@@ -40,6 +41,11 @@ public class login extends javax.swing.JPanel {
         jTextField1.setText("jTextField1");
 
         jButton1.setText("INGRESAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Usuario/DNI");
 
@@ -113,6 +119,18 @@ public class login extends javax.swing.JPanel {
                 .addGap(94, 94, 94))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+// 1. Obtener la ventana actual (el JFrame donde estás ahora)
+    javax.swing.JFrame ventanaActual = (javax.swing.JFrame) javax.swing.SwingUtilities.getWindowAncestor(this);
+    
+    // 2. Destruir/Cerrar la ventana actual vieja
+    ventanaActual.dispose();
+    
+    // 3. Crear una NUEVA ventana principal desde cero (esto cargará el inicio original)
+    // Asegúrate que "interfazOwner" es el nombre exacto de tu JFrame principal
+    new interfazOwner().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
