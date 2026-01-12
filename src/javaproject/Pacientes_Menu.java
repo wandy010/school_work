@@ -29,11 +29,11 @@ public class Pacientes_Menu extends javax.swing.JPanel {
         mRegistrar = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         mVE = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         fondos = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -64,10 +64,9 @@ public class Pacientes_Menu extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Nuevo REGISTRO");
 
-        jLabel5.setFont(new java.awt.Font("FreeMono", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("<html><h3>ingrese datos de personas que nunca se atendieron en esta posta</h3>");
+        jLabel8.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("<html> <div style=\"width: 200px; text-align: center;\"> Registra un nuevo paciente en el sistema. </div> </html>");
 
         javax.swing.GroupLayout mRegistrarLayout = new javax.swing.GroupLayout(mRegistrar);
         mRegistrar.setLayout(mRegistrarLayout);
@@ -80,10 +79,11 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                         .addComponent(jLabel3))
                     .addGroup(mRegistrarLayout.createSequentialGroup()
                         .addGap(76, 76, 76)
-                        .addGroup(mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))))
-                .addContainerGap(49, Short.MAX_VALUE))
+                        .addComponent(jLabel4))
+                    .addGroup(mRegistrarLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         mRegistrarLayout.setVerticalGroup(
             mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,8 +92,8 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -110,11 +110,11 @@ public class Pacientes_Menu extends javax.swing.JPanel {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Ver o Editar");
 
-        jLabel8.setFont(new java.awt.Font("FreeMono", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("<html><h3>ingrese datos de personas que nunca se atendieron en esta posta</h3>");
-
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/guardar.png"))); // NOI18N
+
+        jLabel5.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("<html> <div style=\"width: 200px; text-align: center;\"> Busca, visualiza y actualiza los datos del paciente. </div> </html>");
 
         javax.swing.GroupLayout mVELayout = new javax.swing.GroupLayout(mVE);
         mVE.setLayout(mVELayout);
@@ -128,9 +128,9 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                             .addComponent(jLabel7)
                             .addComponent(jLabel6)))
                     .addGroup(mVELayout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(106, 106, 106))
+                        .addGap(53, 53, 53)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(240, 240, 240))
         );
         mVELayout.setVerticalGroup(
             mVELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,10 +139,12 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        jLabel5.getAccessibleContext().setAccessibleName("Busca, visualiza y actualiza los datos del paciente.");
 
         add(mVE, new org.netbeans.lib.awtextra.AbsoluteConstraints(776, 207, 340, 330));
 
