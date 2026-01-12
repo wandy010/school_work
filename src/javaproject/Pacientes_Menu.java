@@ -64,9 +64,9 @@ public class Pacientes_Menu extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Nuevo REGISTRO");
 
-        jLabel8.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("FreeMono", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("<html> <div style=\"width: 200px; text-align: center;\"> Registra un nuevo paciente en el sistema. </div> </html>");
+        jLabel8.setText("<html> <div style=\"width: 200px; text-align: center;\"> Complete el formulario de filiación para crear una nueva historia clínica en la base de datos</div> </html>");
 
         javax.swing.GroupLayout mRegistrarLayout = new javax.swing.GroupLayout(mRegistrar);
         mRegistrar.setLayout(mRegistrarLayout);
@@ -79,21 +79,22 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                         .addComponent(jLabel3))
                     .addGroup(mRegistrarLayout.createSequentialGroup()
                         .addGap(76, 76, 76)
-                        .addComponent(jLabel4))
-                    .addGroup(mRegistrarLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                        .addComponent(jLabel4)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mRegistrarLayout.createSequentialGroup()
+                .addGap(0, 38, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
         );
         mRegistrarLayout.setVerticalGroup(
             mRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mRegistrarLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(jLabel4)
-                .addGap(50, 50, 50)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -112,9 +113,9 @@ public class Pacientes_Menu extends javax.swing.JPanel {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/guardar.png"))); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("FreeMono", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("<html> <div style=\"width: 200px; text-align: center;\"> Busca, visualiza y actualiza los datos del paciente. </div> </html>");
+        jLabel5.setText("<html> <div style=\"width: 200px; text-align: center;\">Permite consultar el padrón de usuarios registrados y actualizar la información personal o de contacto</div> </html");
 
         javax.swing.GroupLayout mVELayout = new javax.swing.GroupLayout(mVE);
         mVE.setLayout(mVELayout);
@@ -128,20 +129,20 @@ public class Pacientes_Menu extends javax.swing.JPanel {
                             .addComponent(jLabel7)
                             .addComponent(jLabel6)))
                     .addGroup(mVELayout.createSequentialGroup()
-                        .addGap(53, 53, 53)
+                        .addGap(54, 54, 54)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(240, 240, 240))
+                .addGap(239, 239, 239))
         );
         mVELayout.setVerticalGroup(
             mVELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mVELayout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
-                .addGap(50, 50, 50)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jLabel5.getAccessibleContext().setAccessibleName("Busca, visualiza y actualiza los datos del paciente.");
