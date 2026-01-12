@@ -41,7 +41,7 @@ public class botica_principal extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1360, 718));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        botica_recojer.setBackground(new java.awt.Color(10, 60, 100));
+        botica_recojer.setBackground(new java.awt.Color(10, 60, 100,150));
         botica_recojer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botica_recojerMouseClicked(evt);
@@ -90,7 +90,7 @@ public class botica_principal extends javax.swing.JPanel {
 
         add(botica_recojer, new org.netbeans.lib.awtextra.AbsoluteConstraints(776, 207, 340, 330));
 
-        botica_stock.setBackground(new java.awt.Color(10, 60, 100));
+        botica_stock.setBackground(new java.awt.Color(10, 60, 100,150));
         botica_stock.setPreferredSize(new java.awt.Dimension(330, 330));
         botica_stock.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
