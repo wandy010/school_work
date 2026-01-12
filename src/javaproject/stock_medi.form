@@ -343,8 +343,8 @@
                     <Column editable="false" title="Nombre" type="java.lang.Object"/>
                     <Column editable="false" title="Dosis" type="java.lang.Object"/>
                     <Column editable="false" title="Marca" type="java.lang.Object"/>
-                    <Column editable="false" title="Cantidad" type="java.lang.Object"/>
                     <Column editable="false" title="Vencimineto" type="java.lang.Object"/>
+                    <Column editable="false" title="Cantidad" type="java.lang.Object"/>
                     <Column editable="true" title="Alerta de stock" type="java.lang.Object"/>
                   </Table>
                 </Property>
@@ -475,8 +475,8 @@
                         <Column editable="true" title="Nombre" type="java.lang.Object"/>
                         <Column editable="true" title="Dosis" type="java.lang.Object"/>
                         <Column editable="true" title="Marca" type="java.lang.Object"/>
-                        <Column editable="true" title="Cantidad" type="java.lang.Object"/>
                         <Column editable="true" title="Vencimiento" type="java.lang.Object"/>
+                        <Column editable="true" title="Cantidad" type="java.lang.Object"/>
                         <Column editable="true" title="Alerta de stock" type="java.lang.Object"/>
                       </Table>
                     </Property>

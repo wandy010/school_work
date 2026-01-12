@@ -38,9 +38,9 @@ public class stock_medi extends javax.swing.JPanel {
         interfazOwner.datos_medi[0][c] = im1.getText();
         interfazOwner.datos_medi[1][c] = im2.getText();
         interfazOwner.datos_medi[2][c] = im3.getText();
-        interfazOwner.datos_medi2[0][c] = Integer.parseInt(im4.getText());
-        interfazOwner.datos_medi2[1][c] = Integer.parseInt(im5.getText());
-        interfazOwner.datos_medi2[2][c] = Integer.parseInt(im6.getText());
+        interfazOwner.datos_medi[3][c] = im4.getText();
+        interfazOwner.datos_medi2[0][c] = Integer.parseInt(im5.getText());
+        interfazOwner.datos_medi2[1][c] = Integer.parseInt(im6.getText());
         im1.setText("");
         im2.setText("");
         im3.setText("");
@@ -54,8 +54,8 @@ public class stock_medi extends javax.swing.JPanel {
 
         modelo.addRow(new Object[]{x + 1, interfazOwner.datos_medi[0][x],
             interfazOwner.datos_medi[1][x], interfazOwner.datos_medi[2][x],
-            interfazOwner.datos_medi2[0][x], interfazOwner.datos_medi2[1][x],
-        interfazOwner.datos_medi2[2][x]});
+            interfazOwner.datos_medi[3][x], interfazOwner.datos_medi2[0][x],
+        interfazOwner.datos_medi2[1][x]});
     }
 
     public void rell_tabla() {
@@ -228,7 +228,7 @@ public class stock_medi extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Codigo", "Nombre", "Dosis", "Marca", "Cantidad", "Vencimineto", "Alerta de stock"
+                "Codigo", "Nombre", "Dosis", "Marca", "Vencimineto", "Cantidad", "Alerta de stock"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -279,7 +279,7 @@ public class stock_medi extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Codigo", "Nombre", "Dosis", "Marca", "Cantidad", "Vencimiento", "Alerta de stock"
+                "Codigo", "Nombre", "Dosis", "Marca", "Vencimiento", "Cantidad", "Alerta de stock"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -350,13 +350,13 @@ public class stock_medi extends javax.swing.JPanel {
         interfazOwner.datos_medi[0][x] = (String) modelo1.getValueAt(x, 1);
         interfazOwner.datos_medi[1][x] = (String) modelo1.getValueAt(x, 2);
         interfazOwner.datos_medi[2][x] = (String) modelo1.getValueAt(x, 3);
-        interfazOwner.datos_medi2[0][x]
-                = Integer.parseInt(modelo1.getValueAt(x, 4).toString());
+        interfazOwner.datos_medi[3][x] = (String) modelo1.getValueAt(x, 4);
+        
 
-        interfazOwner.datos_medi2[1][x]
+        interfazOwner.datos_medi2[0][x]
                 = Integer.parseInt(modelo1.getValueAt(x, 5).toString());
 
-        interfazOwner.datos_medi2[2][x]
+        interfazOwner.datos_medi2[1][x]
                 = Integer.parseInt(modelo1.getValueAt(x, 6).toString());
 
         DefaultTableModel modelo2 = (DefaultTableModel) tabla.getModel();
@@ -364,24 +364,26 @@ public class stock_medi extends javax.swing.JPanel {
         modelo2.setValueAt(interfazOwner.datos_medi[0][x], x, 1);
         modelo2.setValueAt(interfazOwner.datos_medi[1][x], x, 2);
         modelo2.setValueAt(interfazOwner.datos_medi[2][x], x, 3);
-        modelo2.setValueAt(interfazOwner.datos_medi2[0][x], x, 4);
-        modelo2.setValueAt(interfazOwner.datos_medi2[1][x], x, 5);
-        modelo2.setValueAt(interfazOwner.datos_medi2[2][x], x, 6);
+        modelo2.setValueAt(interfazOwner.datos_medi[3][x], x, 4);
+        modelo2.setValueAt(interfazOwner.datos_medi2[0][x], x, 5);
+        modelo2.setValueAt(interfazOwner.datos_medi2[1][x], x, 6);
         
        modelo1.setNumRows(0);
-       jButton3.setEnabled(true);
+       jButton3.setEnabled(false);
        txbusc.setText("");
-        txbusc.setEnabled(true);
+       txbusc.setEnabled(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        jButton2.setEnabled(true);
+    
         int x = Integer.parseInt(txbusc.getText()) - 1;
         DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
         modelo.addRow(new Object[]{x + 1, interfazOwner.datos_medi[0][x],
             interfazOwner.datos_medi[1][x], interfazOwner.datos_medi[2][x],
-            interfazOwner.datos_medi2[0][x], interfazOwner.datos_medi2[1][x],
-            interfazOwner.datos_medi2[2][x]});
+            interfazOwner.datos_medi[3][x], interfazOwner.datos_medi2[0][x],
+            interfazOwner.datos_medi2[1][x]});
 
         jButton3.setEnabled(false);
         txbusc.setEnabled(false);

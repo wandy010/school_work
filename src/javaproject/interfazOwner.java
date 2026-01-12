@@ -11,7 +11,7 @@ import java.awt.Color;
  * @author andylnx
  */
 public class interfazOwner extends javax.swing.JFrame {
-    
+
     final Color azulHover = new Color(153, 204, 255);
     final Color colorLetra = new Color(255, 255, 255);
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfazOwner.class.getName());
@@ -22,11 +22,11 @@ public class interfazOwner extends javax.swing.JFrame {
     public static int[] num_medi = new int[300];//solo cantidad de medicinas de cada paciente
     public static int[][] ind_medi = new int[20][300];//los indices los los medicamentos de cada paciente
     public static int[][] cant_medi = new int[20][300];//la cantidad de cada medicamento de cada paciente
-    public static String[][] datos_medi = new String[3][300];
-    public static int[][] datos_medi2 = new int[3][300];
+    public static String[][] datos_medi = new String[4][300];
+    public static int[][] datos_medi2 = new int[2][300];
 
     public static int indiceCita = 0;
-
+    public static int aten_control = 0;
     public static int paciente_control = 0;
     public static int medi_control = 0;
     //maximo podrá recetar 20 medicamentos
@@ -36,13 +36,13 @@ public class interfazOwner extends javax.swing.JFrame {
         setResizable(true);
         setSize(1366, 768);
         db.setVisible(true);
-       
+
         loginpanel.removeAll();
         login PanelLogin = new login();
         loginpanel.add(PanelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
         loginpanel.revalidate();
         loginpanel.repaint();
-   
+
     }
 
     public void cambiarPanel(javax.swing.JPanel nuevoPanel) {
