@@ -19,6 +19,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         setSize(1360, HEIGHT);
         initComponents();
         activarFormulario(false);
+        paciente_guardar.setEnabled(false);
     }
 
     /**
@@ -37,7 +38,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         paciente_direccion = new javax.swing.JTextField();
         paciente_referencia = new javax.swing.JTextField();
         paciente_sm = new javax.swing.JComboBox<>();
-        pacientes_guardar = new javax.swing.JButton();
+        paciente_guardar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         paciente_ap = new javax.swing.JTextField();
@@ -49,8 +50,8 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         Paciente_agregar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
+        paciente_documento = new javax.swing.JComboBox<>();
+        paciente_reniec = new javax.swing.JButton();
         paciente_hc = new javax.swing.JTextField();
         paciente_dni = new javax.swing.JTextField();
 
@@ -125,12 +126,12 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        pacientes_guardar.setBackground(new java.awt.Color(40, 110, 160));
-        pacientes_guardar.setForeground(new java.awt.Color(255, 255, 255));
-        pacientes_guardar.setText("Guardar Formulario");
-        pacientes_guardar.addActionListener(new java.awt.event.ActionListener() {
+        paciente_guardar.setBackground(new java.awt.Color(40, 110, 160));
+        paciente_guardar.setForeground(new java.awt.Color(255, 255, 255));
+        paciente_guardar.setText("Guardar Formulario");
+        paciente_guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pacientes_guardarActionPerformed(evt);
+                paciente_guardarActionPerformed(evt);
             }
         });
 
@@ -229,13 +230,18 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Identificación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel3.setPreferredSize(new java.awt.Dimension(400, 450));
 
-        jComboBox1.setBackground(new java.awt.Color(236, 242, 246));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DNI - Documento nacional de identidad", "Carnet de Extranjeria" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Documento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        paciente_documento.setBackground(new java.awt.Color(236, 242, 246));
+        paciente_documento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DNI - Documento nacional de identidad", "Carnet de Extranjeria" }));
+        paciente_documento.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Documento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
-        jButton2.setBackground(new java.awt.Color(40, 110, 160));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Consultar con Reniec");
+        paciente_reniec.setBackground(new java.awt.Color(40, 110, 160));
+        paciente_reniec.setForeground(new java.awt.Color(255, 255, 255));
+        paciente_reniec.setText("Consultar con Reniec");
+        paciente_reniec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paciente_reniecActionPerformed(evt);
+            }
+        });
 
         paciente_hc.setBackground(new java.awt.Color(236, 242, 246));
         paciente_hc.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Nro. de Historia Clínica", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
@@ -259,19 +265,19 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(paciente_dni, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(paciente_reniec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(paciente_documento, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(paciente_documento, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(paciente_dni, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(paciente_reniec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(33, 33, 33)
                 .addComponent(paciente_hc, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -287,7 +293,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
                         .addGap(917, 917, 917)
                         .addComponent(Paciente_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
-                        .addComponent(pacientes_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(paciente_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(59, 59, 59))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
@@ -319,7 +325,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pacientes_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(paciente_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Paciente_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31))
         );
@@ -338,6 +344,11 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         paciente_cel.setEnabled(r);
         paciente_direccion.setEnabled(r);
         paciente_referencia.setEnabled(r);
+        paciente_hc.setEnabled(r);
+        paciente_sm.setEnabled(r);
+        paciente_documento.setEnabled(r);
+        paciente_reniec.setEnabled(r);
+        
     }
      public void limpiarFormulario(){
         paciente_dni.setText("");
@@ -350,10 +361,12 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         paciente_direccion.setText("");
         paciente_referencia.setText("");
         paciente_sex.setSelectedIndex(0);
-       
+       paciente_hc.setText("");
+        paciente_sm.setSelectedIndex(0);
+        paciente_documento.setSelectedIndex(0);
         
     }
-    private void pacientes_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pacientes_guardarActionPerformed
+    private void paciente_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_guardarActionPerformed
         // TODO add your handling code here:
         int pacientecontrol =interfazOwner.paciente_control ;
         interfazOwner.datos_pacien[0][pacientecontrol] = paciente_dni.getText();
@@ -369,8 +382,10 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         interfazOwner.paciente_control++;
         limpiarFormulario();
         activarFormulario(false);
+        paciente_guardar.setEnabled(false);
+        Paciente_agregar.setEnabled(true);
         
-    }//GEN-LAST:event_pacientes_guardarActionPerformed
+    }//GEN-LAST:event_paciente_guardarActionPerformed
 
     private void paciente_apActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_apActionPerformed
         // TODO add your handling code here:
@@ -383,7 +398,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
-
+        
         principal.cambiarPanel(new Pacientes_Menu());
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -394,14 +409,23 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
     private void Paciente_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Paciente_agregarActionPerformed
         // TODO add your handling code here:
         activarFormulario(true);
+        Paciente_agregar.setEnabled(false);
+        
     }//GEN-LAST:event_Paciente_agregarActionPerformed
+
+    private void paciente_reniecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_reniecActionPerformed
+        // TODO add your handling code here:
+        String numDni=paciente_dni.getText();
+        if(numDni.length()==8){
+            paciente_guardar.setEnabled(true);
+            paciente_reniec.setEnabled(false);
+        }
+    }//GEN-LAST:event_paciente_reniecActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Paciente_agregar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
@@ -413,13 +437,15 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
     private javax.swing.JTextField paciente_cel;
     private javax.swing.JTextField paciente_direccion;
     private javax.swing.JTextField paciente_dni;
+    private javax.swing.JComboBox<String> paciente_documento;
     private javax.swing.JTextField paciente_edad;
+    private javax.swing.JButton paciente_guardar;
     private javax.swing.JTextField paciente_hc;
     private javax.swing.JTextField paciente_nc;
     private javax.swing.JTextField paciente_nombre;
     private javax.swing.JTextField paciente_referencia;
+    private javax.swing.JButton paciente_reniec;
     private javax.swing.JComboBox<String> paciente_sex;
     private javax.swing.JComboBox<String> paciente_sm;
-    private javax.swing.JButton pacientes_guardar;
     // End of variables declaration//GEN-END:variables
 }

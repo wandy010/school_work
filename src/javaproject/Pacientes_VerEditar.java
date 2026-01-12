@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package javaproject;
-
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author andylnx
@@ -31,18 +31,10 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         paciente_filtro = new javax.swing.JComboBox<>();
         jButton8 = new javax.swing.JButton();
         paciente_bt_busq = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         panelmostrar = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        paciente_mostrar = new javax.swing.JTextPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        paciente_paneldatos = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(236, 242, 246));
@@ -103,63 +95,6 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(236, 242, 246));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210))));
-
-        jLabel1.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel1.setText("DNI");
-
-        jLabel2.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel2.setText("Edad/Sexo");
-
-        jLabel3.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel3.setText("Apellidos y Nombres");
-
-        jLabel4.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel4.setText("Estado SIS");
-
-        jLabel6.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel6.setText("Celular");
-
-        jLabel7.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel7.setText("Acciones");
-
-        jLabel5.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel5.setText("Ultima atencion");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
         jLabel8.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(44, 62, 80));
         jLabel8.setText("Ver o Editar Lista de Pacientes");
@@ -168,11 +103,132 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         panelmostrar.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)));
         panelmostrar.setLayout(new java.awt.BorderLayout());
 
-        paciente_mostrar.setBackground(new java.awt.Color(236, 242, 246));
-        paciente_mostrar.setForeground(new java.awt.Color(44, 62, 80));
-        jScrollPane1.setViewportView(paciente_mostrar);
+        paciente_paneldatos.setBackground(new java.awt.Color(236, 242, 246));
+        paciente_paneldatos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "DNI", "Apellido y Nombres", "Edad / Sexo", "Celular", "Estado SIS", "Ultima Atención", "Acciones"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
 
-        panelmostrar.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(paciente_paneldatos);
+
+        panelmostrar.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
         jButton1.setBackground(new java.awt.Color(40, 110, 160));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -192,12 +248,11 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(panelmostrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(785, 785, 785)
                         .addComponent(jButton1)))
-                .addGap(37, 37, 37))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,11 +263,9 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
                     .addComponent(jButton1))
                 .addGap(14, 14, 14)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(panelmostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10))
+                .addGap(30, 30, 30)
+                .addComponent(panelmostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -225,20 +278,22 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
 
     private void paciente_bt_busqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_bt_busqActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel modelo = (DefaultTableModel) paciente_paneldatos.getModel();
         String busq = paciente_busq.getText();
         if(paciente_filtro.getSelectedIndex()==0){
             for (int i = 0; i < interfazOwner.paciente_control; i++) {
-                if(Integer.parseInt(busq) == Integer.parseInt( interfazOwner.datos_pacien[i][0])){
-                    paciente_mostrar.setText(
-                   interfazOwner.datos_pacien[i][0]+"\t"+
-                    interfazOwner.datos_pacien[i][1] +" "+ interfazOwner.datos_pacien[i][2]+" "+interfazOwner.datos_pacien[i][3]+"\t"+
-                    interfazOwner.datos_pacien[i][5] +"/"+interfazOwner.datos_pacien[i][6]+"\t"+
-                    interfazOwner.datos_pacien[i][7]
-                    );
+                if(Integer.parseInt(busq) == Integer.parseInt(interfazOwner.datos_pacien[0][i])){
+                    
+                   modelo.insertRow(0,new Object[]{interfazOwner.datos_pacien[0][i],
+                   interfazOwner.datos_pacien[1][i]+" "+interfazOwner.datos_pacien[2][i]+" "+interfazOwner.datos_pacien[3][i],
+                   interfazOwner.datos_pacien[5][i]+" / "+interfazOwner.datos_pacien[6][i],
+                   interfazOwner.datos_pacien[7][i],
+                   "comming soon",
+                   "falta conexion con citas",
+                   "faltan imagenes pequelñitas bro"
+                   });
                 }
             }
-        }else{
-            paciente_mostrar.setText("No hay nadie ps sano preuba otro modo perra ");
         }
     }//GEN-LAST:event_paciente_bt_busqActionPerformed
 
@@ -246,21 +301,13 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton8;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton paciente_bt_busq;
     private javax.swing.JTextField paciente_busq;
     private javax.swing.JComboBox<String> paciente_filtro;
-    private javax.swing.JTextPane paciente_mostrar;
+    private javax.swing.JTable paciente_paneldatos;
     private javax.swing.JPanel panelmostrar;
     // End of variables declaration//GEN-END:variables
 }

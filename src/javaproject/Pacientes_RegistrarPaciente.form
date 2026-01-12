@@ -45,7 +45,7 @@
                           <EmptySpace min="-2" pref="917" max="-2" attributes="0"/>
                           <Component id="Paciente_agregar" min="-2" pref="150" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="pacientes_guardar" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="paciente_guardar" min="-2" pref="150" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -87,7 +87,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="pacientes_guardar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="paciente_guardar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                       <Component id="Paciente_agregar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
@@ -281,7 +281,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="pacientes_guardar">
+        <Component class="javax.swing.JButton" name="paciente_guardar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a0" green="6e" red="28" type="rgb"/>
@@ -292,7 +292,7 @@
             <Property name="text" type="java.lang.String" value="Guardar Formulario"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pacientes_guardarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="paciente_guardarActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
@@ -566,9 +566,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="paciente_dni" min="-2" pref="162" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton2" max="32767" attributes="0"/>
+                              <Component id="paciente_reniec" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jComboBox1" alignment="0" min="-2" pref="324" max="-2" attributes="0"/>
+                          <Component id="paciente_documento" alignment="0" min="-2" pref="324" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="30" max="32767" attributes="0"/>
                   </Group>
@@ -578,11 +578,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jComboBox1" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="paciente_documento" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="paciente_dni" alignment="0" pref="60" max="32767" attributes="0"/>
-                          <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="paciente_reniec" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Component id="paciente_hc" min="-2" pref="60" max="-2" attributes="0"/>
@@ -592,7 +592,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="paciente_documento">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="f6" green="f2" red="ec" type="rgb"/>
@@ -620,7 +620,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="paciente_reniec">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="a0" green="6e" red="28" type="rgb"/>
@@ -630,6 +630,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Consultar con Reniec"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="paciente_reniecActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="paciente_hc">
               <Properties>
