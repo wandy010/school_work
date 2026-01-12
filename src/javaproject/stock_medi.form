@@ -338,17 +338,23 @@
                   <Color blue="f6" green="f2" red="ec" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="6" rowCount="0">
+                  <Table columnCount="7" rowCount="0">
                     <Column editable="false" title="Codigo" type="java.lang.Object"/>
                     <Column editable="false" title="Nombre" type="java.lang.Object"/>
                     <Column editable="false" title="Dosis" type="java.lang.Object"/>
                     <Column editable="false" title="Marca" type="java.lang.Object"/>
                     <Column editable="false" title="Cantidad" type="java.lang.Object"/>
                     <Column editable="false" title="Vencimineto" type="java.lang.Object"/>
+                    <Column editable="true" title="Alerta de stock" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
@@ -431,8 +437,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txbuscActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JSeparator" name="jSeparator3">
-            </Component>
             <Component class="javax.swing.JButton" name="jButton3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -447,44 +451,33 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JSeparator" name="jSeparator3">
+            </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator4">
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                    <MatteColorBorder>
-                      <Color PropertyName="color" blue="d2" green="b9" red="96" type="rgb"/>
-                    </MatteColorBorder>
-                  </Border>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="50" green="3e" red="2c" type="rgb"/>
-                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[500, 120]"/>
+                  <Dimension value="[670, 50]"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tabla1">
+                <Component class="javax.swing.JTable" name="jTable1">
                   <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="f6" green="f2" red="ec" type="rgb"/>
-                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="7" rowCount="0">
-                        <Column editable="true" title="Codigo" type="java.lang.Object"/>
+                        <Column editable="false" title="Codigo" type="java.lang.Object"/>
                         <Column editable="true" title="Nombre" type="java.lang.Object"/>
                         <Column editable="true" title="Dosis" type="java.lang.Object"/>
                         <Column editable="true" title="Marca" type="java.lang.Object"/>
                         <Column editable="true" title="Cantidad" type="java.lang.Object"/>
-                        <Column editable="true" title="Vencimineto" type="java.lang.Object"/>
-                        <Column editable="true" title="Alerta(stock)" type="java.lang.Object"/>
+                        <Column editable="true" title="Vencimiento" type="java.lang.Object"/>
+                        <Column editable="true" title="Alerta de stock" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -526,17 +519,10 @@
                         </Column>
                       </TableColumnModel>
                     </Property>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[550, 0]"/>
-                    </Property>
                     <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="stock_medi_jTable1"/>
-                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
