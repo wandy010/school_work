@@ -11,7 +11,6 @@ import java.awt.Color;
  * @author andylnx
  */
 public class interfazOwner extends javax.swing.JFrame {
-
     final Color azulHover = new Color(153, 204, 255);
     final Color colorLetra = new Color(255, 255, 255);
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfazOwner.class.getName());
@@ -29,6 +28,7 @@ public class interfazOwner extends javax.swing.JFrame {
     public static int aten_control = 0;
     public static int paciente_control = 0;
     public static int medi_control = 0;
+    
     //maximo podrá recetar 20 medicamentos
 
     public interfazOwner() {
