@@ -3,18 +3,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package javaproject;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Nestor S
  */
 public class gestionarCitas extends javax.swing.JPanel {
-
-    /**
-     * Creates new form gestionarCitas
-     */
+    
+    String fecha;
+    
     public gestionarCitas() {
         initComponents();
+        for (int i = 0; i < interfazOwner.indiceCita; i++) {
+            addTabla(i);
+        }
+    }
+    public void addTabla(int ind) {
+        DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
+        String fila[] = new String[5]; 
+        fila[0] = String.valueOf(ind+1);
+        for (int i = 1; i < fila.length; i++) {            
+            fila[i] = interfazOwner.datos_citas[i-1][ind];
+        }
+        modelo.addRow(fila);
     }
 
     /**
@@ -27,17 +39,13 @@ public class gestionarCitas extends javax.swing.JPanel {
     private void initComponents() {
 
         panelSecundario = new javax.swing.JPanel();
-        panelFecha = new javax.swing.JPanel();
-        lblDia = new javax.swing.JLabel();
-        cboDia_Buscar = new javax.swing.JComboBox<>();
-        lblMes = new javax.swing.JLabel();
-        cboMes_Buscar = new javax.swing.JComboBox<>();
-        lblAnyo = new javax.swing.JLabel();
         lblFecha = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtListaCitas = new javax.swing.JTextArea();
         btnBorrarCita = new javax.swing.JButton();
-        txtPosicion_a_Borrar = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tabla = new javax.swing.JTable();
+        jSpinner1 = new javax.swing.JSpinner();
+        btnBuscar = new javax.swing.JButton();
+        spinnerFecha = new javax.swing.JSpinner();
 
         setPreferredSize(new java.awt.Dimension(1360, 718));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -45,85 +53,64 @@ public class gestionarCitas extends javax.swing.JPanel {
         panelSecundario.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "BUSCAR"));
         panelSecundario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelFecha.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        lblDia.setText("DÍA:");
-
-        cboDia_Buscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-
-        lblMes.setText("MES:");
-
-        cboMes_Buscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" }));
-
-        lblAnyo.setText("AÑO 2026");
-
-        javax.swing.GroupLayout panelFechaLayout = new javax.swing.GroupLayout(panelFecha);
-        panelFecha.setLayout(panelFechaLayout);
-        panelFechaLayout.setHorizontalGroup(
-            panelFechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelFechaLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(lblDia, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cboDia_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblMes, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(cboMes_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(lblAnyo, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
-        );
-        panelFechaLayout.setVerticalGroup(
-            panelFechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelFechaLayout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(panelFechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDia)
-                    .addComponent(cboDia_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMes)
-                    .addComponent(cboMes_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblAnyo))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
-
-        panelSecundario.add(panelFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 470, 50));
-
         lblFecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFecha.setText("FECHA");
         lblFecha.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        panelSecundario.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 37, 63, -1));
-
-        txtListaCitas.setEditable(false);
-        txtListaCitas.setColumns(20);
-        txtListaCitas.setRows(5);
-        txtListaCitas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jScrollPane1.setViewportView(txtListaCitas);
-
-        panelSecundario.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 147, 191, 250));
+        panelSecundario.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 63, -1));
 
         btnBorrarCita.setText("Borrar");
-        panelSecundario.add(btnBorrarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, -1, 40));
+        panelSecundario.add(btnBorrarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, -1, 40));
 
-        txtPosicion_a_Borrar.setBorder(javax.swing.BorderFactory.createTitledBorder("Borrar en posición..."));
-        panelSecundario.add(txtPosicion_a_Borrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 145, -1));
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
 
-        add(panelSecundario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 810, 460));
+            },
+            new String [] {
+                "Cola", "DNI", "Fecha", "Hora de Inicio", "Hora de Término"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tabla);
+
+        panelSecundario.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 530, 230));
+
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, null, null, 1));
+        jSpinner1.setBorder(javax.swing.BorderFactory.createTitledBorder("Borrar en posición"));
+        panelSecundario.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 140, -1));
+
+        btnBuscar.setText("BUSCAR");
+        btnBuscar.addActionListener(this::btnBuscarActionPerformed);
+        panelSecundario.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 73, 90, 40));
+
+        spinnerFecha.setModel(new javax.swing.SpinnerDateModel());
+        spinnerFecha.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        spinnerFecha.setEditor(new javax.swing.JSpinner.DateEditor(spinnerFecha, "dd/MM/yyyy"));
+        panelSecundario.add(spinnerFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 186, 46));
+
+        add(panelSecundario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 460));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        fecha = ((javax.swing.JSpinner.DateEditor)spinnerFecha.getEditor()).getTextField().getText();
+        System.out.println("s:"+fecha);
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrarCita;
-    private javax.swing.JComboBox<String> cboDia_Buscar;
-    private javax.swing.JComboBox<String> cboMes_Buscar;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblAnyo;
-    private javax.swing.JLabel lblDia;
+    private javax.swing.JButton btnBuscar;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel lblFecha;
-    private javax.swing.JLabel lblMes;
-    private javax.swing.JPanel panelFecha;
     private javax.swing.JPanel panelSecundario;
-    private javax.swing.JTextArea txtListaCitas;
-    private javax.swing.JTextField txtPosicion_a_Borrar;
+    private javax.swing.JSpinner spinnerFecha;
+    private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 }
