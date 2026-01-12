@@ -122,14 +122,17 @@ public class login extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 // 1. Obtener la ventana actual (el JFrame donde estás ahora)
-    javax.swing.JFrame ventanaActual = (javax.swing.JFrame) javax.swing.SwingUtilities.getWindowAncestor(this);
+                                  
+    // 1. Obtienes la referencia a tu ventana principal (interfazOwner)
+    interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
     
-    // 2. Destruir/Cerrar la ventana actual vieja
-    ventanaActual.dispose();
+    // 2. Simplemente ocultas el panel contenedor del login
+    // Al ocultarlo, se verá lo que está detrás (tu sistema principal)
+    principal.loginpanel.setVisible(false);
     
-    // 3. Crear una NUEVA ventana principal desde cero (esto cargará el inicio original)
-    // Asegúrate que "interfazOwner" es el nombre exacto de tu JFrame principal
-    new interfazOwner().setVisible(true);
+    // Opcional: Si quieres que el panel principal se asegure de repintarse
+    // principal.repaint(); 
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
