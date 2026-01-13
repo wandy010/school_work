@@ -10,52 +10,21 @@ public class nuevaCita extends javax.swing.JPanel {
 
         int dia = (cboDia_cita.getSelectedIndex() +1);
         int mes = (cboMes_citas.getSelectedIndex() +1);
-        int horaInicio = 0;
-        switch(cboHoraInicio.getSelectedIndex()) {
-            case 0: horaInicio = 8; break;
-            case 1: horaInicio = 9; break;
-            case 2: horaInicio = 10; break;
-            case 3: horaInicio = 11; break;
-            case 4: horaInicio = 12; break;
-            case 5: horaInicio = 13; break;
-            case 6: horaInicio = 14; break;
-            case 7: horaInicio = 15; break;
-            case 8: horaInicio = 16; break;
-            case 9: horaInicio = 17; break;
-        }
+        //HORA DE INICIO
+        int horaInicio = (cboHoraInicio.getSelectedIndex() +8); 
         int minInicio = 0;
         switch(cboMinInicio.getSelectedIndex()) {
-            case 0: minInicio = 0; break;
-            case 1: minInicio = 10; break;
-            case 2: minInicio = 15; break;
-            case 3: minInicio = 20; break;
-            case 4: minInicio = 30; break;
-            case 5: minInicio = 40; break;
-            case 6: minInicio = 45; break;
+            case 0: minInicio = 0;  break;
+            case 1: minInicio = 30; break;
         }
-        int horaFin = 0;
-        switch(cboHoraFin.getSelectedIndex()) {
-            case 0: horaFin = 8; break;
-            case 1: horaFin = 9; break;
-            case 2: horaFin = 10; break;
-            case 3: horaFin = 11; break;
-            case 4: horaFin = 12; break;
-            case 5: horaFin = 13; break;
-            case 6: horaFin = 14; break;
-            case 7: horaFin = 15; break;
-            case 8: horaFin = 16; break;
-            case 9: horaFin = 17; break;
-        }
+        //HORA DE TERMINO
+        int horaFin = (cboHoraFin.getSelectedIndex() +8);
         int minFin = 0; 
         switch(cboMinFin.getSelectedIndex()) {
             case 0: minFin = 0; break;
             case 1: minFin = 10; break;
-            case 2: minFin = 15; break;
-            case 3: minFin = 20; break;
-            case 4: minFin = 30; break;
-            case 5: minFin = 40; break;
-            case 6: minFin = 45; break;
         }
+        //AREA
         String area = ""; 
         switch(cboArea.getSelectedIndex()) {
             case 0: area = "Medicina general"; break;
@@ -63,11 +32,11 @@ public class nuevaCita extends javax.swing.JPanel {
             case 2: area = "Vacunacion"; break;
             case 3: area = "Triaje"; break;            
         }
-        String fecha = dia + "/" + mes + "/2026";
+        
+        String fecha = String.format("%02d/%02d/2026", dia, mes); 
         String motivo = txtMotivo.getText();
-        String inicio = horaInicio + ":" +minInicio;
-        String fin = horaFin + ":" +minFin;
-        String citaCompleta = "[" + dia + "/" + mes + "/" + "2026" + "] " + inicio + "-" + fin; 
+        String inicio = String.format("%02d:%02d", horaInicio, minInicio);   
+        String fin = String.format("%02d:%02d", horaFin, minFin);
         
         int tiempoInicio = (horaInicio * 60) + minInicio;
         int tiempoFin = (horaFin * 60) + minFin;
@@ -135,7 +104,15 @@ public class nuevaCita extends javax.swing.JPanel {
         cboArea.setSelectedIndex(0);
         txtMotivo.setText("");
     }
-
+    public int buscarDNI(String dniBuscar) {
+        int num = 0;
+        for (int i = 0; i < interfazOwner.indiceCita; i++) {
+            if(interfazOwner.datos_citas[0][i] == dniBuscar) {
+                num = i;
+            }
+        }
+        return num;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -201,17 +178,23 @@ public class nuevaCita extends javax.swing.JPanel {
         txtDNI.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
         panelDatosPersonales.add(txtDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 173, 35));
 
+        txtApellidoPaterno.setEditable(false);
         txtApellidoPaterno.setBackground(new java.awt.Color(236, 242, 246));
         txtApellidoPaterno.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "APELLIDO PATERNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
+        txtApellidoPaterno.setFocusable(false);
         txtApellidoPaterno.addActionListener(this::txtApellidoPaternoActionPerformed);
         panelDatosPersonales.add(txtApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 240, -1));
 
+        txtApellidoMaterno.setEditable(false);
         txtApellidoMaterno.setBackground(new java.awt.Color(236, 242, 246));
         txtApellidoMaterno.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "APELLIDO MATERNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
+        txtApellidoMaterno.setFocusable(false);
         panelDatosPersonales.add(txtApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 240, -1));
 
+        txtNombres.setEditable(false);
         txtNombres.setBackground(new java.awt.Color(236, 242, 246));
         txtNombres.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "NOMBRES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
+        txtNombres.setFocusable(false);
         panelDatosPersonales.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 240, -1));
 
         lblDNI.setForeground(new java.awt.Color(44, 62, 80));
@@ -245,17 +228,21 @@ public class nuevaCita extends javax.swing.JPanel {
         lblSeguro.setText("SEGURO DE VIDA:");
         panelDatosPersonales.add(lblSeguro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 106, 20));
 
+        txtEdad.setEditable(false);
         txtEdad.setBackground(new java.awt.Color(236, 242, 246));
         txtEdad.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtEdad.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
+        txtEdad.setFocusable(false);
         panelDatosPersonales.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 81, 22));
 
         lblTelefono.setForeground(new java.awt.Color(44, 62, 80));
         lblTelefono.setText("TELÉFONO:");
         panelDatosPersonales.add(lblTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
 
+        txtTelefono.setEditable(false);
         txtTelefono.setBackground(new java.awt.Color(236, 242, 246));
         txtTelefono.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(44, 62, 80))); // NOI18N
+        txtTelefono.setFocusable(false);
         panelDatosPersonales.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 90, -1));
 
         btnBorrarDatos1.setBackground(new java.awt.Color(40, 110, 160));
@@ -351,7 +338,7 @@ public class nuevaCita extends javax.swing.JPanel {
         lblMinInicio.setForeground(new java.awt.Color(44, 62, 80));
         lblMinInicio.setText("MINUTO:");
 
-        cboMinInicio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "10", "15", "20", "30", "40", "45" }));
+        cboMinInicio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "30" }));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -393,7 +380,7 @@ public class nuevaCita extends javax.swing.JPanel {
         lblMinFin.setForeground(new java.awt.Color(44, 62, 80));
         lblMinFin.setText("MINUTO:");
 
-        cboMinFin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "10", "15", "20", "30", "40", "45" }));
+        cboMinFin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "30" }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -475,7 +462,7 @@ public class nuevaCita extends javax.swing.JPanel {
                 .addComponent(panelDatosPersonales, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(panelFechaYHora, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -483,7 +470,7 @@ public class nuevaCita extends javax.swing.JPanel {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelDatosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelFechaYHora, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE))
+                    .addComponent(panelFechaYHora, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -493,14 +480,15 @@ public class nuevaCita extends javax.swing.JPanel {
     }//GEN-LAST:event_txtApellidoPaternoActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        txtDNI.setText("");
-        txtApellidoPaterno.setText("");
-        txtApellidoMaterno.setText("");
-        txtNombres.setText("");
-        cboSexo.setSelectedIndex(0);
-        txtEdad.setText("");
-        cboSeguro.setSelectedIndex(0);
-        txtTelefono.setText("");
+        int ind = buscarDNI(txtDNI.getText());        
+        txtDNI.setText(interfazOwner.datos_pacien[0][ind]);
+        txtApellidoPaterno.setText(interfazOwner.datos_pacien[1][ind]);
+        txtApellidoMaterno.setText(interfazOwner.datos_pacien[2][ind]);
+        txtNombres.setText(interfazOwner.datos_pacien[3][ind]);
+        cboSexo.setSelectedItem(ind);
+        txtEdad.setText(interfazOwner.datos_pacien[5][ind]);
+        cboSeguro.setSelectedItem(ind);
+        txtTelefono.setText(interfazOwner.datos_pacien[7][ind]);
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnBorrarFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarFechaActionPerformed
@@ -516,10 +504,14 @@ public class nuevaCita extends javax.swing.JPanel {
 
     private void btnConfirmarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarCitaActionPerformed
         conseguirCita();
-        int i = interfazOwner.indiceCita - 1;
-        System.out.println("["+(i+1)+"] "+interfazOwner.datos_citas[0][i]+" ["+interfazOwner.datos_citas[1][i]+
-                "] "+interfazOwner.datos_citas[2][i]+"-"+interfazOwner.datos_citas[3][i]+"\n");
         borrar();
+        moduloCitas m = (moduloCitas) javax.swing.SwingUtilities.getAncestorOfClass(moduloCitas.class, this);
+    
+        if (m != null) {
+            m.citasProximas(interfazOwner.indiceCita-1);
+        } else {
+            System.out.println("No se encontró el panel moduloCitas");
+        }
     }//GEN-LAST:event_btnConfirmarCitaActionPerformed
 
     private void btnBorrarDatos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarDatos1ActionPerformed

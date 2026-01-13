@@ -29,7 +29,7 @@
               <Component id="panelDatosPersonales" min="-2" pref="261" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="panelFechaYHora" min="-2" pref="539" max="-2" attributes="0"/>
-              <EmptySpace pref="32" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -39,7 +39,7 @@
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="panelDatosPersonales" max="32767" attributes="0"/>
-                  <Component id="panelFechaYHora" pref="549" max="32767" attributes="0"/>
+                  <Component id="panelFechaYHora" pref="530" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -91,6 +91,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtApellidoPaterno">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="f2" red="ec" type="rgb"/>
             </Property>
@@ -106,6 +107,7 @@
                 </TitledBorder>
               </Border>
             </Property>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtApellidoPaternoActionPerformed"/>
@@ -118,6 +120,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtApellidoMaterno">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="f2" red="ec" type="rgb"/>
             </Property>
@@ -133,6 +136,7 @@
                 </TitledBorder>
               </Border>
             </Property>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -142,6 +146,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombres">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="f2" red="ec" type="rgb"/>
             </Property>
@@ -157,6 +162,7 @@
                 </TitledBorder>
               </Border>
             </Property>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -284,6 +290,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtEdad">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="f2" red="ec" type="rgb"/>
             </Property>
@@ -300,6 +307,7 @@
                 </TitledBorder>
               </Border>
             </Property>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -322,6 +330,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtTelefono">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="f2" red="ec" type="rgb"/>
             </Property>
@@ -337,6 +346,7 @@
                 </TitledBorder>
               </Border>
             </Property>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -703,14 +713,9 @@
             <Component class="javax.swing.JComboBox" name="cboMinInicio">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="7">
+                  <StringArray count="2">
                     <StringItem index="0" value="00"/>
-                    <StringItem index="1" value="10"/>
-                    <StringItem index="2" value="15"/>
-                    <StringItem index="3" value="20"/>
-                    <StringItem index="4" value="30"/>
-                    <StringItem index="5" value="40"/>
-                    <StringItem index="6" value="45"/>
+                    <StringItem index="1" value="30"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -811,14 +816,9 @@
             <Component class="javax.swing.JComboBox" name="cboMinFin">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="7">
+                  <StringArray count="2">
                     <StringItem index="0" value="00"/>
-                    <StringItem index="1" value="10"/>
-                    <StringItem index="2" value="15"/>
-                    <StringItem index="3" value="20"/>
-                    <StringItem index="4" value="30"/>
-                    <StringItem index="5" value="40"/>
-                    <StringItem index="6" value="45"/>
+                    <StringItem index="1" value="30"/>
                   </StringArray>
                 </Property>
               </Properties>

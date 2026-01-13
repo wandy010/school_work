@@ -1,12 +1,14 @@
 package javaproject;
 
 import static javaproject.interfazOwner.spaceDates;
+import javax.swing.table.DefaultTableModel;
 
 public class moduloCitas extends javax.swing.JPanel {
 
     
     public moduloCitas() {
-        initComponents();     
+        initComponents();  
+
     }
     public void cambiarPanel(javax.swing.JPanel nuevoPanel) {
         CitasOpciones.removeAll();
@@ -14,6 +16,15 @@ public class moduloCitas extends javax.swing.JPanel {
         CitasOpciones.revalidate();
         CitasOpciones.repaint();
     
+    }
+    public void citasProximas(int ind) {
+        DefaultTableModel modelo = (DefaultTableModel) tablaCitasProximas.getModel();
+        String fila[] = new String[4]; 
+        fila[0] = String.valueOf(ind+1);
+        for (int i = 1; i < fila.length; i++) {            
+            fila[i] = interfazOwner.datos_citas[i-1][ind];
+        }
+        modelo.addRow(fila);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,7 +42,7 @@ public class moduloCitas extends javax.swing.JPanel {
         CitasOpciones = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txtCitasProximasLista = new javax.swing.JTextArea();
+        tablaCitasProximas = new javax.swing.JTable();
         fondo = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1370, 640));
@@ -80,25 +91,30 @@ public class moduloCitas extends javax.swing.JPanel {
         add(citas, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 22, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(10, 60, 100));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Próximas citas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Próximas citas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setLayout(new java.awt.GridLayout(1, 1));
 
-        txtCitasProximasLista.setEditable(false);
-        txtCitasProximasLista.setColumns(20);
-        txtCitasProximasLista.setRows(5);
-        jScrollPane2.setViewportView(txtCitasProximasLista);
+        tablaCitasProximas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-        );
+            },
+            new String [] {
+                "Cola", "DNI", "Fecha", "Hora"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 230, 257));
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tablaCitasProximas);
+
+        jPanel3.add(jScrollPane2);
+
+        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 300, 257));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondoHospital.png"))); // NOI18N
         add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 720));
@@ -126,6 +142,6 @@ public class moduloCitas extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblModuloCitas;
-    private javax.swing.JTextArea txtCitasProximasLista;
+    private javax.swing.JTable tablaCitasProximas;
     // End of variables declaration//GEN-END:variables
 }
