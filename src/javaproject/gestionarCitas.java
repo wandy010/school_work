@@ -85,7 +85,7 @@ public class gestionarCitas extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Cola", "DNI", "Fecha", "Hora de Inicio", "Hora de Término", "Nombres", "Apellidos"
+                "Código", "DNI", "Fecha", "Hora de Inicio", "Hora de Término", "Nombres", "Apellidos"
             }
         ) {
             Class[] types = new Class [] {
