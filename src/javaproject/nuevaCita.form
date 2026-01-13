@@ -29,7 +29,7 @@
               <Component id="panelDatosPersonales" min="-2" pref="261" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="panelFechaYHora" min="-2" pref="539" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -39,7 +39,7 @@
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="panelDatosPersonales" max="32767" attributes="0"/>
-                  <Component id="panelFechaYHora" pref="530" max="32767" attributes="0"/>
+                  <Component id="panelFechaYHora" pref="549" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>

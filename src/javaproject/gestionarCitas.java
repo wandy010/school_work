@@ -61,9 +61,11 @@ public class gestionarCitas extends javax.swing.JPanel {
         spinnerFecha = new javax.swing.JSpinner();
         btnMostrarTodo = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(236, 242, 246));
         setPreferredSize(new java.awt.Dimension(1360, 718));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        panelSecundario.setBackground(new java.awt.Color(236, 242, 246));
         panelSecundario.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "BUSCAR"));
         panelSecundario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -72,9 +74,11 @@ public class gestionarCitas extends javax.swing.JPanel {
         lblFecha.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelSecundario.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 100, -1));
 
-        btnBorrarCita.setText("Borrar");
+        btnBorrarCita.setBackground(new java.awt.Color(40, 110, 160));
+        btnBorrarCita.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrarCita.setText("BORRAR");
         btnBorrarCita.addActionListener(this::btnBorrarCitaActionPerformed);
-        panelSecundario.add(btnBorrarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, -1, 40));
+        panelSecundario.add(btnBorrarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 90, 40));
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -100,6 +104,8 @@ public class gestionarCitas extends javax.swing.JPanel {
         jSpinner1.setBorder(javax.swing.BorderFactory.createTitledBorder("Borrar en Cola"));
         panelSecundario.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 140, -1));
 
+        btnBuscar.setBackground(new java.awt.Color(40, 110, 160));
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscar.setText("BUSCAR");
         btnBuscar.addActionListener(this::btnBuscarActionPerformed);
         panelSecundario.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 90, 40));
@@ -109,11 +115,13 @@ public class gestionarCitas extends javax.swing.JPanel {
         spinnerFecha.setEditor(new javax.swing.JSpinner.DateEditor(spinnerFecha, "dd/MM/yyyy"));
         panelSecundario.add(spinnerFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 186, 46));
 
+        btnMostrarTodo.setBackground(new java.awt.Color(40, 110, 160));
+        btnMostrarTodo.setForeground(new java.awt.Color(255, 255, 255));
         btnMostrarTodo.setText("MOSTRAR TODO");
         btnMostrarTodo.addActionListener(this::btnMostrarTodoActionPerformed);
         panelSecundario.add(btnMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 120, 40));
 
-        add(panelSecundario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 460));
+        add(panelSecundario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 600));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed

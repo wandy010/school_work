@@ -68,13 +68,13 @@ public class moduloCitas extends javax.swing.JPanel {
 
         btnGestionarCitas.setBackground(new java.awt.Color(10, 60, 100));
         btnGestionarCitas.setForeground(new java.awt.Color(255, 255, 255));
-        btnGestionarCitas.setText("Gestionar citas");
+        btnGestionarCitas.setText("GESTIONAR CITAS");
         btnGestionarCitas.addActionListener(this::btnGestionarCitasActionPerformed);
         add(btnGestionarCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 167, 54));
 
         btnNuevaCita.setBackground(new java.awt.Color(10, 60, 100));
         btnNuevaCita.setForeground(new java.awt.Color(255, 255, 255));
-        btnNuevaCita.setText("Nueva cita");
+        btnNuevaCita.setText("NUEVA CITA");
         btnNuevaCita.addActionListener(this::btnNuevaCitaActionPerformed);
         add(btnNuevaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 167, 54));
 
