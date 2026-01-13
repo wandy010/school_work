@@ -7,7 +7,8 @@ public class moduloCitas extends javax.swing.JPanel {
 
     
     public moduloCitas() {
-        initComponents();  
+        initComponents(); 
+        actualizarCitasProximas();
 
     }
     public void cambiarPanel(javax.swing.JPanel nuevoPanel) {
@@ -21,10 +22,20 @@ public class moduloCitas extends javax.swing.JPanel {
         DefaultTableModel modelo = (DefaultTableModel) tablaCitasProximas.getModel();
         String fila[] = new String[4]; 
         fila[0] = String.valueOf(ind+1);
-        for (int i = 1; i < fila.length; i++) {            
+        String hora = interfazOwner.datos_citas[2][ind]+"-"+interfazOwner.datos_citas[3][ind];
+        fila[3] = hora;
+        for (int i = 1; i < fila.length - 1; i++) {            
             fila[i] = interfazOwner.datos_citas[i-1][ind];
         }
         modelo.addRow(fila);
+    }
+    public void actualizarCitasProximas() {
+        DefaultTableModel modelo = (DefaultTableModel) tablaCitasProximas.getModel();
+        modelo.setRowCount(0);
+
+        for (int ind = 0; ind < interfazOwner.indiceCita; ind++) {
+            citasProximas(ind);
+        }
     }
     /**
      * This method is called from within the constructor to initialize the form.

@@ -16,4 +16,4 @@ Thumbs.db
 
 # --- Logs y Errores ---
 *.log
-hs_err_pid*
+hs_err_pid

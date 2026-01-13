@@ -28,6 +28,19 @@ public class gestionarCitas extends javax.swing.JPanel {
         }
         modelo.addRow(fila);
     }
+    public void borrarDelArray(int cola) {
+        int ind = cola - 1;
+        
+        for (int indice = ind; indice < interfazOwner.indiceCita; indice++) {
+            for (int datos = 0; datos < interfazOwner.datos_citas.length; datos++) {
+                interfazOwner.datos_citas[datos][indice] = interfazOwner.datos_citas[datos][indice+1];
+            }
+        }
+        for (int datos = 0; datos < interfazOwner.datos_citas.length; datos++) {
+            interfazOwner.datos_citas[datos][interfazOwner.indiceCita - 1] = null;
+        }
+        interfazOwner.indiceCita--;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -46,6 +59,7 @@ public class gestionarCitas extends javax.swing.JPanel {
         jSpinner1 = new javax.swing.JSpinner();
         btnBuscar = new javax.swing.JButton();
         spinnerFecha = new javax.swing.JSpinner();
+        btnMostrarTodo = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(1360, 718));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -54,23 +68,24 @@ public class gestionarCitas extends javax.swing.JPanel {
         panelSecundario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblFecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFecha.setText("FECHA");
+        lblFecha.setText("Filtrar por fecha");
         lblFecha.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        panelSecundario.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 63, -1));
+        panelSecundario.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 100, -1));
 
         btnBorrarCita.setText("Borrar");
-        panelSecundario.add(btnBorrarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, -1, 40));
+        btnBorrarCita.addActionListener(this::btnBorrarCitaActionPerformed);
+        panelSecundario.add(btnBorrarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, -1, 40));
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Cola", "DNI", "Fecha", "Hora de Inicio", "Hora de Término"
+                "Cola", "DNI", "Fecha", "Hora de Inicio", "Hora de Término", "Nombres", "Apellidos"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -79,33 +94,78 @@ public class gestionarCitas extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tabla);
 
-        panelSecundario.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 530, 230));
+        panelSecundario.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 710, 230));
 
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, null, null, 1));
-        jSpinner1.setBorder(javax.swing.BorderFactory.createTitledBorder("Borrar en posición"));
-        panelSecundario.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 140, -1));
+        jSpinner1.setBorder(javax.swing.BorderFactory.createTitledBorder("Borrar en Cola"));
+        panelSecundario.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 140, -1));
 
         btnBuscar.setText("BUSCAR");
         btnBuscar.addActionListener(this::btnBuscarActionPerformed);
-        panelSecundario.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 73, 90, 40));
+        panelSecundario.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 90, 40));
 
         spinnerFecha.setModel(new javax.swing.SpinnerDateModel());
         spinnerFecha.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         spinnerFecha.setEditor(new javax.swing.JSpinner.DateEditor(spinnerFecha, "dd/MM/yyyy"));
         panelSecundario.add(spinnerFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 186, 46));
 
+        btnMostrarTodo.setText("MOSTRAR TODO");
+        btnMostrarTodo.addActionListener(this::btnMostrarTodoActionPerformed);
+        panelSecundario.add(btnMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 120, 40));
+
         add(panelSecundario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 460));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
+        modelo.setRowCount(0);
         fecha = ((javax.swing.JSpinner.DateEditor)spinnerFecha.getEditor()).getTextField().getText();
-        System.out.println("s:"+fecha);
+        for (int i = 0; i < interfazOwner.indiceCita; i++) {
+        if (interfazOwner.datos_citas[1][i].equals(fecha)) {
+            addTabla(i);
+            }
+        }
     }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void btnMostrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarTodoActionPerformed
+        DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
+        modelo.setRowCount(0);
+        for (int i = 0; i < interfazOwner.indiceCita; i++) {
+            addTabla(i);
+        }
+    }//GEN-LAST:event_btnMostrarTodoActionPerformed
+
+    private void btnBorrarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarCitaActionPerformed
+        DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
+        int colaPosicion = (int) jSpinner1.getValue();
+        for (int i = 0; i < modelo.getRowCount(); i++) {
+            int colaTabla = Integer.parseInt(modelo.getValueAt(i, 0).toString());
+
+            if (colaTabla == colaPosicion) {
+                modelo.removeRow(i);
+                borrarDelArray(colaPosicion);
+                break;
+            }
+        }     
+        modelo.setRowCount(0);
+        for (int i = 0; i < interfazOwner.indiceCita; i++) {
+            addTabla(i);
+        }
+        
+        moduloCitas m = (moduloCitas) javax.swing.SwingUtilities.getAncestorOfClass(moduloCitas.class, this);
+    
+        if (m != null) {
+            m.actualizarCitasProximas();
+        } else {
+            System.out.println("No se encontró el panel moduloCitas");
+        }
+    }//GEN-LAST:event_btnBorrarCitaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrarCita;
     private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnMostrarTodo;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel lblFecha;

@@ -27,84 +27,81 @@ public class seleccion extends javax.swing.JPanel {
     private void initComponents() {
 
         atencionpanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        textodebug = new javax.swing.JTextArea();
-        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
 
-        setPreferredSize(new java.awt.Dimension(1360, 718));
         setLayout(new java.awt.BorderLayout());
 
-        atencionpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel1.setText("MODULO DE ATENCIONES");
-        jLabel1.setToolTipText("");
-        atencionpanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
-
-        jButton1.setBackground(new java.awt.Color(10, 60, 100));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ATENCION");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        });
-        atencionpanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 335, 100));
+        ));
+        jScrollPane2.setViewportView(jTable1);
 
-        jButton2.setBackground(new java.awt.Color(10, 60, 100));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("VER LISTA / DEBUG");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        atencionpanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 335, 100));
+        jButton3.setText("Agregar");
 
-        jScrollPane1.setOpaque(false);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        textodebug.setColumns(20);
-        textodebug.setRows(5);
-        textodebug.setOpaque(false);
-        jScrollPane1.setViewportView(textodebug);
-
-        atencionpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 650, 670));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondoHospital.png"))); // NOI18N
-        jLabel3.setPreferredSize(new java.awt.Dimension(1360, 718));
-        atencionpanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, -1));
+        javax.swing.GroupLayout atencionpanelLayout = new javax.swing.GroupLayout(atencionpanel);
+        atencionpanel.setLayout(atencionpanelLayout);
+        atencionpanelLayout.setHorizontalGroup(
+            atencionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(atencionpanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        atencionpanelLayout.setVerticalGroup(
+            atencionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, atencionpanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(atencionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 568, Short.MAX_VALUE))
+                .addContainerGap())
+        );
 
         add(atencionpanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-          interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);    
-    principal.cambiarPanel(new Atencion());
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-        
-        textodebug.setText(interfazOwner.datos_aten[0][0]);
-        for (int i = 1; i < 11; i++) {
-            textodebug.append(" "+interfazOwner.datos_aten[i][0]);
-            
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel atencionpanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea textodebug;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
