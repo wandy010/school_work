@@ -110,7 +110,7 @@ public class moduloCitas extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Cola", "DNI", "Fecha", "Hora"
+                "Código", "DNI", "Fecha", "Hora"
             }
         ) {
             Class[] types = new Class [] {
