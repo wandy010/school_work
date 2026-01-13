@@ -63,6 +63,7 @@ public class interfazOwner extends javax.swing.JFrame {
     private void initComponents() {
 
         principal_panel = new javax.swing.JPanel();
+        loginpanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jpan5 = new javax.swing.JPanel();
         db5 = new javax.swing.JButton();
@@ -86,7 +87,6 @@ public class interfazOwner extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        loginpanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(20, 20, 40));
@@ -95,6 +95,10 @@ public class interfazOwner extends javax.swing.JFrame {
 
         principal_panel.setPreferredSize(new java.awt.Dimension(1366, 768));
         principal_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        loginpanel.setBackground(new java.awt.Color(102, 255, 0));
+        loginpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        principal_panel.add(loginpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         jPanel1.setBackground(new java.awt.Color(10, 60, 100));
 
@@ -346,10 +350,6 @@ public class interfazOwner extends javax.swing.JFrame {
         spaceDates.add(jPanel2, java.awt.BorderLayout.CENTER);
 
         principal_panel.add(spaceDates, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
-
-        loginpanel.setBackground(new java.awt.Color(102, 255, 0));
-        loginpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        principal_panel.add(loginpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         getContentPane().add(principal_panel, java.awt.BorderLayout.CENTER);
 
