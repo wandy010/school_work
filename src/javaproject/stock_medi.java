@@ -38,8 +38,8 @@ public class stock_medi extends javax.swing.JPanel {
         interfazOwner.datos_medi[0][c] = im1.getText();
         interfazOwner.datos_medi[1][c] = im2.getText();
         interfazOwner.datos_medi[2][c] = im3.getText();
-        interfazOwner.datos_medi[3][c] = im4.getText();
-        interfazOwner.datos_medi2[0][c] = Integer.parseInt(im5.getText());
+        interfazOwner.datos_medi[3][c] = im5.getText();
+        interfazOwner.datos_medi2[0][c] = Integer.parseInt(im4.getText());
         interfazOwner.datos_medi2[1][c] = Integer.parseInt(im6.getText());
         im1.setText("");
         im2.setText("");
@@ -196,6 +196,11 @@ public class stock_medi extends javax.swing.JPanel {
         im5.setBackground(new java.awt.Color(236, 242, 246));
         im5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(150, 185, 210)));
         im5.setEnabled(false);
+        im5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                im5ActionPerformed(evt);
+            }
+        });
         jPanel4.add(im5);
 
         jLabel6.setBackground(new java.awt.Color(236, 242, 246));
@@ -369,7 +374,8 @@ public class stock_medi extends javax.swing.JPanel {
         modelo2.setValueAt(interfazOwner.datos_medi2[1][x], x, 6);
         
        modelo1.setNumRows(0);
-       jButton3.setEnabled(false);
+       jButton3.setEnabled(true);
+       jButton2.setEnabled(false);
        txbusc.setText("");
        txbusc.setEnabled(true);
 
@@ -394,6 +400,10 @@ public class stock_medi extends javax.swing.JPanel {
     private void txbuscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txbuscActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txbuscActionPerformed
+
+    private void im5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_im5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_im5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
