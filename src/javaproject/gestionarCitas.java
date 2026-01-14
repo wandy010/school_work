@@ -19,13 +19,28 @@ public class gestionarCitas extends javax.swing.JPanel {
             addTabla(i);
         }
     }
+    public int buscarDNI(String dniBuscar) {
+        int num = 0;
+        for (int i = 0; i < interfazOwner.paciente_control; i++) {
+            if(interfazOwner.datos_pacien[0][i].trim().equals(dniBuscar)) {
+                num = i;
+                return num;
+            }
+        }
+        return -1;
+    }
     public void addTabla(int ind) {
         DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
-        String fila[] = new String[5]; 
+        String fila[] = new String[7]; 
         fila[0] = String.valueOf(ind+1);
-        for (int i = 1; i < fila.length; i++) {            
-            fila[i] = interfazOwner.datos_citas[i-1][ind];
-        }
+        fila[1] = interfazOwner.datos_citas[0][ind];
+        int indice = buscarDNI(interfazOwner.datos_citas[0][ind]);
+        fila[2] = interfazOwner.datos_pacien[3][indice];
+        fila[3] = interfazOwner.datos_pacien[1][indice]+" "+interfazOwner.datos_pacien[2][indice];
+        fila[4] = interfazOwner.datos_citas[1][ind];
+        fila[5] = interfazOwner.datos_citas[2][ind];
+        fila[6] = interfazOwner.datos_citas[3][ind];
+
         modelo.addRow(fila);
     }
     public void borrarDelArray(int cola) {
@@ -85,7 +100,7 @@ public class gestionarCitas extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Código", "DNI", "Fecha", "Hora de Inicio", "Hora de Término", "Nombres", "Apellidos"
+                "Código", "DNI", "Nombres", "Apellidos", "Fecha", "Hora de Inicio", "Hora de Término"
             }
         ) {
             Class[] types = new Class [] {
