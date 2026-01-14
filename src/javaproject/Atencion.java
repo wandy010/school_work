@@ -21,7 +21,7 @@ public class Atencion extends javax.swing.JPanel {
      * Creates new form panelPersonal
      */
     int pos;
-
+    
     public Atencion() {
 
         initComponents();
@@ -32,7 +32,7 @@ public class Atencion extends javax.swing.JPanel {
         escuchar(precionfield);
         escuchar(saturacionfield);
 
-   
+        
         DefaultTableModel modelo = (DefaultTableModel) citastable.getModel();
         modelo.setRowCount(0);
         for (int i = 0; i < interfazOwner.indiceCita; i++) {
@@ -144,6 +144,19 @@ public class Atencion extends javax.swing.JPanel {
                 validarCampos();
             }
         });
+    }
+    public void borrarDelArray(int cola) {
+        int ind = cola;
+        
+        for (int indice = ind; indice < interfazOwner.indiceCita; indice++) {
+            for (int datos = 0; datos < interfazOwner.datos_citas.length; datos++) {
+                interfazOwner.datos_citas[datos][indice] = interfazOwner.datos_citas[datos][indice+1];
+            }
+        }
+        for (int datos = 0; datos < interfazOwner.datos_citas.length; datos++) {
+            interfazOwner.datos_citas[datos][interfazOwner.indiceCita - 1] = null;
+        }
+        interfazOwner.indiceCita--;
     }
 
     /**
@@ -597,9 +610,11 @@ public class Atencion extends javax.swing.JPanel {
     private void confirmarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarbuttonActionPerformed
         
         activarpaneles(false);
-        for (int i = 0; i < 8; i++) {
-            interfazOwner.datos_citas[i][pos] = null;
-        }
+//        for (int i = 0; i < 8; i++) {
+//            interfazOwner.datos_citas[i][pos] = null;
+//        }
+
+        borrarDelArray(pos);
         //pos++;
         interfazOwner.mantenerdatos = false;
         interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
