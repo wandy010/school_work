@@ -4,6 +4,8 @@
  */
 package javaproject;
 
+import javax.swing.JTextArea;
+
 /**
  *
  * @author jaret
@@ -20,9 +22,25 @@ public class recojo_medi extends javax.swing.JPanel {
         
     }
     private void pacien(){
+        int x=buscarDNI(interfazOwner.datos_aten[0][pos]);
+        
+    jTextField4.setText(interfazOwner.datos_aten[0][x]);
+    jTextField3.setText(interfazOwner.datos_pacien[1][x]+" "+interfazOwner.datos_pacien[2][x]);
+    jTextField2.setText(interfazOwner.datos_pacien[1][x]);
+    jTextField7.setText(interfazOwner.datos_aten[9][pos]);
+    jTextArea1.setText(interfazOwner.datos_aten[10][pos]);
+    jTextField5.setText(interfazOwner.datos_pacien[6][x]);
     
-    
-    
+    }
+     public int buscarDNI(String dniBuscar) {
+        int num = 0;
+        for (int i = 0; i < interfazOwner.paciente_control; i++) {
+            if(interfazOwner.datos_pacien[0][i].trim().equals(dniBuscar)) {
+                num = i;
+                return num;
+            }
+        }
+        return -1;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,7 +66,6 @@ public class recojo_medi extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(236, 242, 246));
         setPreferredSize(new java.awt.Dimension(1366, 718));
@@ -140,16 +157,18 @@ public class recojo_medi extends javax.swing.JPanel {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setPreferredSize(new java.awt.Dimension(600, 84));
+        jTextArea1.setBorder(javax.swing.BorderFactory.createTitledBorder("Consideraciones"));
         jScrollPane2.setViewportView(jTextArea1);
 
         jPanel2.add(jScrollPane2);
 
         jButton2.setText("Volver");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton2);
-
-        jButton1.setText("Siguiente paciente");
-        jPanel2.add(jButton1);
 
         jPanel3.add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
@@ -164,9 +183,15 @@ public class recojo_medi extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
+
+        principal.cambiarPanel(new botica_principal());
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
