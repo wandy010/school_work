@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package javaproject;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author andylnx
@@ -15,7 +15,7 @@ public class login extends javax.swing.JPanel {
      */
     public login() {
         initComponents();
-     
+
     }
 
     /**
@@ -28,13 +28,14 @@ public class login extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        login_usuario = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        login_contraseña = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        verContraseña = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -42,11 +43,12 @@ public class login extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(40,110,160,100));
         jPanel1.setPreferredSize(new java.awt.Dimension(420, 580));
 
-        jTextField1.setText("jTextField1");
+        login_usuario.setBorder(null);
 
         jButton1.setBackground(new java.awt.Color(40, 110, 160));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("INGRESAR");
+        jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -61,7 +63,7 @@ public class login extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Contraseña");
 
-        jPasswordField1.setText("jPasswordField1");
+        login_contraseña.setBorder(null);
 
         jLabel3.setFont(new java.awt.Font("FreeMono", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,6 +71,26 @@ public class login extends javax.swing.JPanel {
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/loginlogo.png"))); // NOI18N
+
+        verContraseña.setBackground(new java.awt.Color(255, 102, 102,0));
+        verContraseña.setFont(new java.awt.Font("FreeMono", 2, 12)); // NOI18N
+        verContraseña.setForeground(new java.awt.Color(255, 255, 255));
+        verContraseña.setText("Ver Contraseña");
+        verContraseña.setOpaque(true);
+        verContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                verContraseñaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                verContraseñaMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                verContraseñaMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                verContraseñaMouseReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -81,14 +103,15 @@ public class login extends javax.swing.JPanel {
                         .addComponent(jLabel4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPasswordField1)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(verContraseña)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(login_contraseña)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE))))
+                                .addComponent(login_usuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -101,14 +124,16 @@ public class login extends javax.swing.JPanel {
                 .addGap(35, 35, 35)
                 .addComponent(jLabel1)
                 .addGap(8, 8, 8)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(login_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(jLabel2)
                 .addGap(8, 8, 8)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
+                .addComponent(login_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(verContraseña)
+                .addGap(43, 43, 43)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 94, -1, -1));
@@ -118,19 +143,47 @@ public class login extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-// 1. Obtener la ventana actual (el JFrame donde estás ahora)
-                                  
-    // 1. Obtienes la referencia a tu ventana principal (interfazOwner)
+
+    String name ="andy";
+     String pass ="123andy";
     interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
-    
-    // 2. Simplemente ocultas el panel contenedor del login
-    // Al ocultarlo, se verá lo que está detrás (tu sistema principal)
+    String temp = login_usuario.getText();
+    String temp2 = String.valueOf(login_contraseña.getPassword());
+    if(name.equals(temp) && pass.equals(temp2)){
     principal.loginpanel.setVisible(false);
-    
-    // Opcional: Si quieres que el panel principal se asegure de repintarse
-    // principal.repaint(); 
+    principal.barraPanel.setVisible(true);
+    }else{
+            JOptionPane.showMessageDialog(this, "Contraseña incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+            limpiarFormulario();
+    }
 
     }//GEN-LAST:event_jButton1ActionPerformed
+    public void limpiarFormulario(){
+        login_contraseña.setText("");
+        login_usuario.setText("");
+    }
+    private void verContraseñaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_verContraseñaMousePressed
+        // TODO add your handling code here:
+        login_contraseña.setEchoChar((char) 0);
+    }//GEN-LAST:event_verContraseñaMousePressed
+
+    private void verContraseñaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_verContraseñaMouseEntered
+        // TODO add your handling code here:
+       
+        verContraseña.setForeground(new java.awt.Color(0,0,0));
+      
+    }//GEN-LAST:event_verContraseñaMouseEntered
+
+    private void verContraseñaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_verContraseñaMouseExited
+        // TODO add your handling code here:
+        verContraseña.setForeground(new java.awt.Color(225,225,225));
+     
+    }//GEN-LAST:event_verContraseñaMouseExited
+
+    private void verContraseñaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_verContraseñaMouseReleased
+        // TODO add your handling code here:
+         login_contraseña.setEchoChar('*');
+    }//GEN-LAST:event_verContraseñaMouseReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -141,7 +194,8 @@ public class login extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField login_contraseña;
+    private javax.swing.JTextField login_usuario;
+    private javax.swing.JLabel verContraseña;
     // End of variables declaration//GEN-END:variables
 }

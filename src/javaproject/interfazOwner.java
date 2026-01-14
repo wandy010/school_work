@@ -35,7 +35,7 @@ public class interfazOwner extends javax.swing.JFrame {
         initComponents();
         setResizable(true);
         setSize(1366, 768);
-        db.setVisible(true);
+       barraPanel.setVisible(false);
 
         loginpanel.removeAll();
         login PanelLogin = new login();
@@ -64,7 +64,7 @@ public class interfazOwner extends javax.swing.JFrame {
 
         principal_panel = new javax.swing.JPanel();
         loginpanel = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        barraPanel = new javax.swing.JPanel();
         jpan5 = new javax.swing.JPanel();
         db5 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -100,7 +100,7 @@ public class interfazOwner extends javax.swing.JFrame {
         loginpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         principal_panel.add(loginpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
-        jPanel1.setBackground(new java.awt.Color(10, 60, 100));
+        barraPanel.setBackground(new java.awt.Color(10, 60, 100));
 
         jpan5.setBackground(new java.awt.Color(10, 60, 100));
         jpan5.setForeground(new java.awt.Color(10, 60, 100));
@@ -270,11 +270,11 @@ public class interfazOwner extends javax.swing.JFrame {
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator2.setFont(new java.awt.Font("sansserif", 1, 13)); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout barraPanelLayout = new javax.swing.GroupLayout(barraPanel);
+        barraPanel.setLayout(barraPanelLayout);
+        barraPanelLayout.setHorizontalGroup(
+            barraPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(barraPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -299,19 +299,19 @@ public class interfazOwner extends javax.swing.JFrame {
                 .addComponent(jpan5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        barraPanelLayout.setVerticalGroup(
+            barraPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(barraPanelLayout.createSequentialGroup()
+                .addGroup(barraPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(barraPanelLayout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(jpan5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(barraPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(barraPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, barraPanelLayout.createSequentialGroup()
                                 .addGap(8, 8, 8)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(barraPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jpan1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jpan, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jpan2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -325,7 +325,7 @@ public class interfazOwner extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        principal_panel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 50));
+        principal_panel.add(barraPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 50));
 
         spaceDates.setForeground(new java.awt.Color(255, 255, 255));
         spaceDates.setPreferredSize(new java.awt.Dimension(1366, 718));
@@ -485,6 +485,7 @@ public class interfazOwner extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JPanel barraPanel;
     private javax.swing.JButton db;
     private javax.swing.JButton db1;
     private javax.swing.JButton db2;
@@ -497,7 +498,6 @@ public class interfazOwner extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
