@@ -372,6 +372,13 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
          boolean a = true;
          return a;
      }
+     public boolean validarNumero(String n){
+         boolean ban = false;
+         for (int i = 0; i < n.length(); i++) {
+       
+         }
+         return ban;
+     }
     private void paciente_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_guardarActionPerformed
         // TODO add your handling code here:
         int pacientecontrol =interfazOwner.paciente_control ;

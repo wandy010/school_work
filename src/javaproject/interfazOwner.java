@@ -24,6 +24,7 @@ public class interfazOwner extends javax.swing.JFrame {
     public static String[][] datos_medi = new String[4][300];
     public static int[][] datos_medi2 = new int[2][300];
 
+    public static int indiceatencion=0; 
     public static int indiceCita = 0;
     public static int aten_control = 0;
     public static int paciente_control = 0;
@@ -405,8 +406,8 @@ public class interfazOwner extends javax.swing.JFrame {
     }//GEN-LAST:event_db2MouseExited
 
     private void db2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_db2ActionPerformed
-        cambiarPanel(new seleccion());
-
+        cambiarPanel(new Atencion());
+        
 
     }//GEN-LAST:event_db2ActionPerformed
 
