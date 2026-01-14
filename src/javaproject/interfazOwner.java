@@ -458,6 +458,13 @@ public class interfazOwner extends javax.swing.JFrame {
 
     private void db5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_db5ActionPerformed
         // TODO add your handling code here:
+        loginpanel.setVisible(true);
+        barraPanel.setVisible(false);
+        loginpanel.removeAll();
+        login PanelLogin = new login();
+        loginpanel.add(PanelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
+        loginpanel.revalidate();
+        loginpanel.repaint();
     }//GEN-LAST:event_db5ActionPerformed
 
     /**

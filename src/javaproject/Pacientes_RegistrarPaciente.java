@@ -368,19 +368,27 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
     }
      
      public boolean validarFormulario(){
-   
-         boolean a = true;
-         return a;
+        if (paciente_ap.getText().trim().isEmpty() || 
+            paciente_am.getText().trim().isEmpty() || 
+            paciente_nombre.getText().trim().isEmpty() || 
+            paciente_nc.getText().trim().isEmpty() || 
+            paciente_edad.getText().trim().isEmpty() || 
+            paciente_cel.getText().trim().isEmpty() || 
+            paciente_direccion.getText().trim().isEmpty() || 
+            paciente_referencia.getText().trim().isEmpty()) {
+
+            javax.swing.JOptionPane.showMessageDialog(this, "Por favor, llene todos los campos.");
+            return false; 
+        }
+
+        return true;
      }
-     public boolean validarNumero(String n){
-         boolean ban = false;
-         for (int i = 0; i < n.length(); i++) {
-       
-         }
-         return ban;
-     }
+
     private void paciente_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_guardarActionPerformed
         // TODO add your handling code here:
+        if(validarFormulario()!=true){
+            return;
+        }
         int pacientecontrol =interfazOwner.paciente_control ;
         interfazOwner.datos_pacien[0][pacientecontrol] = paciente_dni.getText();
         interfazOwner.datos_pacien[1][pacientecontrol] = paciente_ap.getText();
