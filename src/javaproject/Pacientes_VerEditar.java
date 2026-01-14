@@ -127,16 +127,9 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
         });
         paciente_paneldatos.addContainerListener(new java.awt.event.ContainerAdapter() {
@@ -169,6 +162,11 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         jButton4.setBackground(new java.awt.Color(40, 110, 160));
         jButton4.setText("Guardar");
         jButton4.setPreferredSize(new java.awt.Dimension(90, 22));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(40, 110, 160));
         jButton3.setText("Refrescar");
@@ -255,7 +253,7 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         String busq = paciente_busq.getText();
 
             for (int i = 0; i < interfazOwner.paciente_control; i++) {
-                if(Integer.parseInt(busq) == Integer.parseInt(interfazOwner.datos_pacien[0][filtro])){
+                if(Integer.parseInt(busq) == Integer.parseInt(interfazOwner.datos_pacien[filtro][i])){
                     
                    modelo.insertRow(0,new Object[]{interfazOwner.datos_pacien[0][i],
                    interfazOwner.datos_pacien[1][i]+" "+interfazOwner.datos_pacien[2][i]+" "+interfazOwner.datos_pacien[3][i],
@@ -282,14 +280,24 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel modelo = (DefaultTableModel) paciente_paneldatos.getModel();
+        modelo.setRowCount(0);
         cargarDatos();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        javax.swing.table.DefaultTableModel modelo = (javax.swing.table.DefaultTableModel) paciente_paneldatos.getModel();
-       
+        DefaultTableModel modelo = (DefaultTableModel) paciente_paneldatos.getModel();
+       int fila = paciente_paneldatos.getSelectedRow();
+       int filaReal = paciente_paneldatos.convertRowIndexToModel(fila);
+        modelo.removeRow(filaReal); 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
