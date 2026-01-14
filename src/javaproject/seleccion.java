@@ -510,27 +510,7 @@ modelo.setRowCount(0); // limpiar tabla
         codigo, nombre, dosis, marca, cant
     });
 
-        /*DefaultTableModel modelo = (DefaultTableModel) recetatable.getModel();
-modelo.setRowCount(0); // limpiar tabla
-    for (int x = 0; x <z; x++) {
-        
-    // si no hay nombre, no existe registro
-    if (interfazOwner.datos_medi[0][x] == null) {
-        break;
-        
-    }
 
-    modelo.addRow(new Object[]{
-        cola,//codigo
-        interfazOwner.datos_medi[0][x],//nombre
-        interfazOwner.datos_medi[1][x],//dosis
-        interfazOwner.datos_medi[2][x],//marca
-        interfazOwner.datos_medi[4][x],
-        interfazOwner.datos_medi2[0][x],
-        interfazOwner.datos_medi2[1][x]
-    });
-}*/
-        
     }//GEN-LAST:event_añadirbuttonActionPerformed
 
     private void descartarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descartarActionPerformed

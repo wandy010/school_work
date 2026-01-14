@@ -603,21 +603,13 @@ public class Atencion extends javax.swing.JPanel {
                 javax.swing.BorderFactory.createTitledBorder("SIGNOS VITALES (GUARDADO)")
         );
 
-        /*pesofield.setText("");
-        tallafield.setText("");
-        temperaturafield.setText("");
-        frecuenciafield.setText("");
-        precionfield.setText("");
-        saturacionfield.setText("");*/
 
     }//GEN-LAST:event_guardardatosbuttonActionPerformed
 
     private void confirmarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarbuttonActionPerformed
         
         activarpaneles(false);
-//        for (int i = 0; i < 8; i++) {
-//            interfazOwner.datos_citas[i][pos] = null;
-//        }
+
 
         borrarDelArray(pos);
         //pos++;
@@ -632,7 +624,6 @@ public class Atencion extends javax.swing.JPanel {
         if (dnifield != null) {
             switch (seleccioncombo.getSelectedIndex()) {
                 case 0:
-                    //valor = dnifield.getText();
                     for (int i = 0; i < 300; i++) {
                         if (interfazOwner.datos_citas[0][i] != null
                                 && interfazOwner.datos_citas[0][i].equals(dnifield.getText())) {
@@ -653,7 +644,6 @@ public class Atencion extends javax.swing.JPanel {
                     for (int i = 0; i < 300; i++) {
                         if (interfazOwner.datos_citas[0][i] != null
                                 && interfazOwner.datos_citas[0][i].equals(interfazOwner.datos_citas[0][Integer.parseInt(dnifield.getText()) - 1])) {
-                            //valor = interfazOwner.datos_citas[0][Integer.parseInt(dnifield.getText())];
                             setPanelEnabled(signospanel, true);
                             pos = i;
                             dninombre.setText(interfazOwner.datos_pacien[1][i] + " " + interfazOwner.datos_pacien[2][i] + " " + interfazOwner.datos_pacien[3][i]);
