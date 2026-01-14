@@ -480,11 +480,10 @@
                   <Color blue="f6" green="f2" red="ec" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
+                  <StringArray count="3">
                     <StringItem index="0" value="Masculino"/>
                     <StringItem index="1" value="Femenino"/>
-                    <StringItem index="2" value="Avion"/>
-                    <StringItem index="3" value="Otro"/>
+                    <StringItem index="2" value="Otro"/>
                   </StringArray>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
