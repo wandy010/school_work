@@ -37,9 +37,9 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         paciente_paneldatos = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        paciente_eliminar = new javax.swing.JButton();
+        paciente_guardarEdit = new javax.swing.JButton();
+        paciente_refrescar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(236, 242, 246));
         setPreferredSize(new java.awt.Dimension(1366, 640));
@@ -127,9 +127,16 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                true, false, true, true, true, true
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         paciente_paneldatos.addContainerListener(new java.awt.event.ContainerAdapter() {
@@ -150,29 +157,29 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(40, 110, 160));
-        jButton2.setText("Eliminar");
-        jButton2.setPreferredSize(new java.awt.Dimension(80, 22));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        paciente_eliminar.setBackground(new java.awt.Color(40, 110, 160));
+        paciente_eliminar.setText("Eliminar");
+        paciente_eliminar.setPreferredSize(new java.awt.Dimension(80, 22));
+        paciente_eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                paciente_eliminarActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(40, 110, 160));
-        jButton4.setText("Guardar");
-        jButton4.setPreferredSize(new java.awt.Dimension(90, 22));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        paciente_guardarEdit.setBackground(new java.awt.Color(40, 110, 160));
+        paciente_guardarEdit.setText("Guardar");
+        paciente_guardarEdit.setPreferredSize(new java.awt.Dimension(90, 22));
+        paciente_guardarEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                paciente_guardarEditActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(40, 110, 160));
-        jButton3.setText("Refrescar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        paciente_refrescar.setBackground(new java.awt.Color(40, 110, 160));
+        paciente_refrescar.setText("Refrescar");
+        paciente_refrescar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                paciente_refrescarActionPerformed(evt);
             }
         });
 
@@ -190,11 +197,11 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
                         .addGap(785, 785, 785)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(paciente_refrescar)
                         .addGap(73, 73, 73)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(paciente_guardarEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(68, 68, 68)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(paciente_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(43, 43, 43))
         );
         layout.setVerticalGroup(
@@ -210,9 +217,9 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
                 .addComponent(panelmostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3))
+                    .addComponent(paciente_guardarEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(paciente_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(paciente_refrescar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -278,41 +285,60 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         principal.cambiarPanel(new Pacientes_RegistrarPaciente());
     }//GEN-LAST:event_paciente_nuevoPacienteActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void paciente_refrescarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_refrescarActionPerformed
         // TODO add your handling code here:
         DefaultTableModel modelo = (DefaultTableModel) paciente_paneldatos.getModel();
         modelo.setRowCount(0);
         cargarDatos();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_paciente_refrescarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void paciente_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_eliminarActionPerformed
         // TODO add your handling code here:
         DefaultTableModel modelo = (DefaultTableModel) paciente_paneldatos.getModel();
        int fila = paciente_paneldatos.getSelectedRow();
        int filaReal = paciente_paneldatos.convertRowIndexToModel(fila);
         modelo.removeRow(filaReal); 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_paciente_eliminarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+    private void paciente_guardarEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_guardarEditActionPerformed
+
+    int filaSeleccionada = paciente_paneldatos.getSelectedRow();
+
+    if (filaSeleccionada >= 0) {
+
+        int filaReal = paciente_paneldatos.convertRowIndexToModel(filaSeleccionada);
         
+        javax.swing.table.TableModel modelo = paciente_paneldatos.getModel();
+
+        interfazOwner.datos_pacien[0][filaReal] = String.valueOf(paciente_paneldatos.getValueAt(filaSeleccionada, 0));
+        interfazOwner.datos_pacien[2][filaReal] = String.valueOf(paciente_paneldatos.getValueAt(filaSeleccionada, 2));
+        interfazOwner.datos_pacien[3][filaReal] = String.valueOf(paciente_paneldatos.getValueAt(filaSeleccionada, 3));
+        interfazOwner.datos_pacien[4][filaReal] = String.valueOf(paciente_paneldatos.getValueAt(filaSeleccionada, 4));
+  
         
-    }//GEN-LAST:event_jButton4ActionPerformed
+
+        javax.swing.JOptionPane.showMessageDialog(this, "Datos guardados en la matriz correctamente.");
+
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(this, "Por favor, selecciona la fila que quieres guardar.");
+    }
+        
+    }//GEN-LAST:event_paciente_guardarEditActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton paciente_bt_busq;
     private javax.swing.JTextField paciente_busq;
+    private javax.swing.JButton paciente_eliminar;
     private javax.swing.JComboBox<String> paciente_filtro;
+    private javax.swing.JButton paciente_guardarEdit;
     private javax.swing.JButton paciente_nuevoPaciente;
     private javax.swing.JTable paciente_paneldatos;
+    private javax.swing.JButton paciente_refrescar;
     private javax.swing.JPanel panelmostrar;
     // End of variables declaration//GEN-END:variables
 }
