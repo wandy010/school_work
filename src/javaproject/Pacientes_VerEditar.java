@@ -51,7 +51,7 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
         paciente_busq.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)));
 
         paciente_filtro.setBackground(new java.awt.Color(236, 242, 246));
-        paciente_filtro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DNI", "NOMBRE" }));
+        paciente_filtro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DNI", "Edad" }));
         paciente_filtro.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)));
 
         paciente_nuevoPaciente.setBackground(new java.awt.Color(40, 110, 160));
@@ -254,7 +254,7 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
     private void paciente_bt_busqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_bt_busqActionPerformed
         // TODO add your handling code here:
         int filtro = paciente_filtro.getSelectedIndex();
-        filtro = (filtro==0) ? 0 : 3;
+        filtro = (filtro==0) ? 0 : 5;
         DefaultTableModel modelo = (DefaultTableModel) paciente_paneldatos.getModel();
         modelo.setRowCount(0);
         String busq = paciente_busq.getText();

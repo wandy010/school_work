@@ -62,7 +62,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(236, 242, 246));
 
         jPanel7.setBackground(new java.awt.Color(236, 242, 246));
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Identificación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Contacto y Ubicación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel7.setPreferredSize(new java.awt.Dimension(400, 450));
 
         paciente_cel.setBackground(new java.awt.Color(236, 242, 246));
@@ -99,7 +99,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         );
 
         paciente_sm.setBackground(new java.awt.Color(236, 242, 246));
-        paciente_sm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sis", "No tiene" }));
+        paciente_sm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
         paciente_sm.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Seguro Medico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -140,7 +140,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         jLabel1.setText("Registro de Nuevo Paciente");
 
         jPanel6.setBackground(new java.awt.Color(236, 242, 246));
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Identificación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(150, 185, 210)), "Datos Personales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
         jPanel6.setPreferredSize(new java.awt.Dimension(400, 450));
 
         paciente_ap.setBackground(new java.awt.Color(236, 242, 246));
@@ -366,6 +366,11 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         paciente_documento.setSelectedIndex(0);
         
     }
+     
+     public boolean validarFormulario(){
+         String ape = paciente;
+         
+     }
     private void paciente_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_guardarActionPerformed
         // TODO add your handling code here:
         int pacientecontrol =interfazOwner.paciente_control ;
