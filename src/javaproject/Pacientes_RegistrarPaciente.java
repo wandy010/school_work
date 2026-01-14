@@ -400,6 +400,7 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
         interfazOwner.datos_pacien[7][pacientecontrol] = paciente_cel.getText();
         interfazOwner.datos_pacien[8][pacientecontrol] = paciente_direccion.getText();
         interfazOwner.datos_pacien[9][pacientecontrol] = paciente_referencia.getText();
+        interfazOwner.datos_pacien[10][pacientecontrol] =paciente_sm.getSelectedItem().toString();
         interfazOwner.paciente_control++;
         limpiarFormulario();
         activarFormulario(false);

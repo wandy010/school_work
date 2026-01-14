@@ -38,9 +38,10 @@ public class Atencion extends javax.swing.JPanel {
         for (int i = 0; i < interfazOwner.indiceCita; i++) {
             addTabla(i);
         }
-        motivotxt.setEnabled(false);
+        motivotxt.setEditable(false);
         confirmarbutton.setEnabled(false);
         setPanelEnabled(signospanel, false);
+  
         activarpaneles(false);
 
         if (interfazOwner.mantenerdatos) {
@@ -87,6 +88,10 @@ public class Atencion extends javax.swing.JPanel {
     }
 
     private void mantenerdatos(int pos) {
+        dninombre.setText(interfazOwner.datos_pacien[1][pos] + " " + interfazOwner.datos_pacien[2][pos] + " " + interfazOwner.datos_pacien[3][pos]);
+                            dnilabel.setText(interfazOwner.datos_pacien[0][pos]);
+                            edadlabel.setText(interfazOwner.datos_pacien[5][pos]);
+                            sexolabel.setText(interfazOwner.datos_pacien[6][pos]);
         dnifield.setText(interfazOwner.datos_aten[0][pos]);
         //diagnosticotxt.setText(interfazOwner.datos_aten[1][pos]);
         pesofield.setText(interfazOwner.datos_aten[2][pos]);

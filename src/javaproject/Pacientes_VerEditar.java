@@ -128,7 +128,7 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                true, false, true, true, true, true
+                true, false, true, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -236,7 +236,7 @@ public class Pacientes_VerEditar extends javax.swing.JPanel {
                     interfazOwner.datos_pacien[5][i],
                     interfazOwner.datos_pacien[6][i],
                     interfazOwner.datos_pacien[7][i],
-                    "coming soon"
+                    interfazOwner.datos_pacien[10][i]
 
                 
                 });

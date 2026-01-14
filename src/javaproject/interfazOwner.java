@@ -15,7 +15,7 @@ public class interfazOwner extends javax.swing.JFrame {
     final Color colorLetra = new Color(255, 255, 255);
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfazOwner.class.getName());
 
-    public static String[][] datos_pacien = new String[10][100];
+    public static String[][] datos_pacien = new String[11][100];
     public static String[][] datos_citas = new String[8][300];
     public static String[][] datos_aten = new String[14][300];
     public static int[] num_medi = new int[300];//solo cantidad de medicinas de cada paciente

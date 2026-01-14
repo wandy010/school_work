@@ -253,7 +253,7 @@
                     <Column editable="true" title="Edad" type="java.lang.String"/>
                     <Column editable="true" title="Sexo" type="java.lang.String"/>
                     <Column editable="true" title="Celular" type="java.lang.String"/>
-                    <Column editable="true" title="Estado SIS" type="java.lang.String"/>
+                    <Column editable="false" title="Estado SIS" type="java.lang.String"/>
                   </Table>
                 </Property>
               </Properties>
