@@ -144,8 +144,8 @@ public class login extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-    String name ="andy";
-     String pass ="123andy";
+    String name ="";
+     String pass ="";
     interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
     String temp = login_usuario.getText();
     String temp2 = String.valueOf(login_contraseña.getPassword());
