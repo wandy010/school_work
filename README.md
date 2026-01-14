@@ -50,7 +50,7 @@ El sistema está dividido en 5 módulos fundamentales para la operación de la p
 <div align="center">
   <h3>5. Login del sistema  </h3>
   <p>Panel inicial para loguear un usuario y activar funciones dependiendo de su roll.</p>
-  <img src="assetsForReadme/login.png" alt="Modulo Personal" width="60%">
+  <img src="assetsForReadme/entradalogin.png" alt="Modulo Personal" width="60%">
 </div>
 
 <hr>
