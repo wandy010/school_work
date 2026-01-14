@@ -1,7 +1,7 @@
 <h1 align="center">🏥 Sistema de Gestión - Posta de Salud "Fraternidad"</h1>
 
 <p align="center">
-  <img src="assetsForReadme/iniciopart.png" width="600">
+  <img src="assetsForReadme/inicio.png" width="600">
 </p>
 
 <p align="center">
@@ -25,32 +25,32 @@ El sistema está dividido en 5 módulos fundamentales para la operación de la p
     <td align="center" width="50%">
       <h3>1. Módulo de Pacientes</h3>
       <p>Registro de nuevos pacientes, edición de datos y visualización de historial.</p>
-      <img src="assetsForReadme/pacientemenu.png" width="100%">
+      <img src="assetsForReadme/modulopacientes.png" width="100%">
     </td>
     <td align="center" width="50%">
       <h3>2. Módulo de Atenciones</h3>
       <p>Gestión del triaje y consulta médica en tiempo real.</p>
-      <img src="PEGAR_AQUI_LINK_DE_FOTO_ATENCIONES" alt="Modulo Atenciones" width="100%">
+      <img src="assetsForReadme/moduloatenciones.png" alt="Modulo Atenciones" width="100%">
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
       <h3>3. Módulo de Citas</h3>
       <p>Programación de turnos y calendario médico.</p>
-      <img src="PEGAR_AQUI_LINK_DE_FOTO_CITAS" alt="Modulo Citas" width="100%">
+      <img src="assetsForReadme/modulocitas.png" width="100%">
     </td>
     <td align="center" width="50%">
       <h3>4. Módulo de Botica</h3>
       <p>Control de stock de medicamentos y entrega de recetas.</p>
-      <img src="PEGAR_AQUI_LINK_DE_FOTO_BOTICA" alt="Modulo Botica" width="100%">
+      <img src="assetsForReadme/modulobotica.png" alt="Modulo Botica" width="100%">
     </td>
   </tr>
 </table>
 
 <div align="center">
-  <h3>5. Módulo de Personal</h3>
-  <p>Administración de médicos, enfermeros y personal administrativo.</p>
-  <img src="PEGAR_AQUI_LINK_DE_FOTO_PERSONAL" alt="Modulo Personal" width="60%">
+  <h3>5. Login del sistema  </h3>
+  <p>Panel inicial para loguear un usuario y activar funciones dependiendo de su roll.</p>
+  <img src="assetsForReadme/login.png" alt="Modulo Personal" width="60%">
 </div>
 
 <hr>
