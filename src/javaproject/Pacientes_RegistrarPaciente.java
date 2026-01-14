@@ -368,8 +368,9 @@ public class Pacientes_RegistrarPaciente extends javax.swing.JPanel {
     }
      
      public boolean validarFormulario(){
-         String ape = paciente;
-         
+   
+         boolean a = true;
+         return a;
      }
     private void paciente_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paciente_guardarActionPerformed
         // TODO add your handling code here:

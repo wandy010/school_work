@@ -15,11 +15,14 @@ public class Atencion extends javax.swing.JPanel {
     /**
      * Creates new form panelPersonal
      */
-    int[] pos = new int[1];
-     boolean[] modo=new boolean[1];
-     int u=0;
+    int pos;
     public Atencion() {
         initComponents();
+        DefaultTableModel modelo = (DefaultTableModel) citastable.getModel();
+        modelo.setRowCount(0);
+        for (int i = 0; i < interfazOwner.indiceCita; i++) {
+            addTabla(i);
+        }
         /*mostrardatospanel.setVisible(false);
         setPanelEnabled(signospanel, false);
         setPanelEnabled(evaluacionpanel,false);
@@ -27,7 +30,7 @@ public class Atencion extends javax.swing.JPanel {
         
          */
        
-        DefaultTableModel modelo = (DefaultTableModel) citastable.getModel();
+        /*DefaultTableModel modelo = (DefaultTableModel) citastable.getModel();
         modelo.setRowCount(0);
 
         for (int i = 0; i < 300; i++) {
@@ -39,17 +42,26 @@ public class Atencion extends javax.swing.JPanel {
 
             modelo.addRow(new Object[]{
                 i,
-                interfazOwner.datos_citas[0][i],
+                interfazOwner.datos_citas[0][i]+1,
                 interfazOwner.datos_citas[1][i],
                 interfazOwner.datos_citas[2][i] + "0",
                 interfazOwner.datos_citas[3][i] + "0",});
-        }
+        }*/
 
         motivotxt.setEditable(false);
 
         activarpaneles(false);
     }
-
+    public void addTabla(int ind) {
+        DefaultTableModel modelo = (DefaultTableModel) citastable.getModel();
+        String fila[] = new String[5]; 
+        fila[0] = String.valueOf(ind+1);
+        
+        for (int i = 1; i < fila.length; i++) {            
+            fila[i] = interfazOwner.datos_citas[i-1][ind];
+        }
+        modelo.addRow(fila);
+    }
     private void setPanelEnabled(JPanel panel, boolean enabled) {
         panel.setEnabled(enabled);
 
@@ -109,15 +121,11 @@ public class Atencion extends javax.swing.JPanel {
         jScrollPane3 = new javax.swing.JScrollPane();
         consideracionestxt = new javax.swing.JTextArea();
         medicamentospanel = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jTextField10 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
-        borrarbutton = new javax.swing.JButton();
         confirmarbutton = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
-        tablascroll = new javax.swing.JScrollPane();
         citastable = new javax.swing.JTable();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        inventariobutton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(840, 520));
@@ -337,78 +345,35 @@ public class Atencion extends javax.swing.JPanel {
             evaluacionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, evaluacionpanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         evaluacionpanelLayout.setVerticalGroup(
             evaluacionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, evaluacionpanelLayout.createSequentialGroup()
                 .addGroup(evaluacionpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
 
         medicamentospanel.setBorder(javax.swing.BorderFactory.createTitledBorder("MEDICAMENTOS"));
 
-        jTextField10.setBorder(javax.swing.BorderFactory.createTitledBorder("CODIGO"));
-
-        jButton3.setText("AGREGAR");
-
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
-        jSpinner1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cantidad"));
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(375, 375, 375)
-                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner1)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout medicamentospanelLayout = new javax.swing.GroupLayout(medicamentospanel);
         medicamentospanel.setLayout(medicamentospanelLayout);
         medicamentospanelLayout.setHorizontalGroup(
             medicamentospanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(medicamentospanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 168, Short.MAX_VALUE)
         );
         medicamentospanelLayout.setVerticalGroup(
             medicamentospanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(medicamentospanelLayout.createSequentialGroup()
-                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 23, Short.MAX_VALUE)
         );
-
-        borrarbutton.setText("BORRAR");
-        borrarbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                borrarbuttonActionPerformed(evt);
-            }
-        });
 
         confirmarbutton.setText("CONFIRMAR");
         confirmarbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -436,9 +401,16 @@ public class Atencion extends javax.swing.JPanel {
                 return types [columnIndex];
             }
         });
-        tablascroll.setViewportView(citastable);
+        jScrollPane5.setViewportView(citastable);
 
-        jScrollPane5.setViewportView(tablascroll);
+        jToggleButton1.setText("CONFIRMAR SIN MEDICAMENTO");
+
+        inventariobutton.setText("VER Y AGREGAR");
+        inventariobutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inventariobuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -449,10 +421,12 @@ public class Atencion extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(medicamentospanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(confirmarbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                            .addComponent(borrarbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jToggleButton1)
+                        .addGap(46, 46, 46)
+                        .addComponent(inventariobutton, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                        .addGap(373, 373, 373)
+                        .addComponent(confirmarbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(evaluacionpanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -472,15 +446,17 @@ public class Atencion extends javax.swing.JPanel {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(evaluacionpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(borrarbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)
-                        .addComponent(confirmarbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(medicamentospanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jToggleButton1)
+                            .addComponent(confirmarbutton)
+                            .addComponent(inventariobutton)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(medicamentospanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -515,16 +491,15 @@ public class Atencion extends javax.swing.JPanel {
         double tallaM = tallaCm / 100.0;
         double indice = peso / (tallaM * tallaM);
         imclabel.setText(" " + indice);
-        interfazOwner.datos_aten[0][u] = dnifield.getText();
-        interfazOwner.datos_aten[1][pos[0]] = diagnosticotxt.getText();
-        interfazOwner.datos_aten[2][pos[0]] = pesofield.getText();
-        interfazOwner.datos_aten[3][pos[0]] = tallafield.getText();
-        interfazOwner.datos_aten[4][pos[0]] = temperaturafield.getText();
-        interfazOwner.datos_aten[5][pos[0]] = precionfield.getText();
-        interfazOwner.datos_aten[6][pos[0]] = frecuenciafield.getText();
-        interfazOwner.datos_aten[7][pos[0]] = saturacionfield.getText();
-        interfazOwner.datos_aten[8][pos[0]] = String.valueOf(indice);
-        u=10;
+        interfazOwner.datos_aten[0][pos] = dnifield.getText();
+        interfazOwner.datos_aten[1][pos] = diagnosticotxt.getText();
+        interfazOwner.datos_aten[2][pos] = pesofield.getText();
+        interfazOwner.datos_aten[3][pos] = tallafield.getText();
+        interfazOwner.datos_aten[4][pos] = temperaturafield.getText();
+        interfazOwner.datos_aten[5][pos] = precionfield.getText();
+        interfazOwner.datos_aten[6][pos] = frecuenciafield.getText();
+        interfazOwner.datos_aten[7][pos] = saturacionfield.getText();
+        interfazOwner.datos_aten[8][pos] = String.valueOf(indice);
 
         setPanelEnabled(signospanel, false);
         signospanel.setBorder(
@@ -540,34 +515,16 @@ public class Atencion extends javax.swing.JPanel {
     }//GEN-LAST:event_guardardatosbuttonActionPerformed
 
     private void confirmarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarbuttonActionPerformed
-        interfazOwner.datos_aten[9][pos[0]] = diagnosticotxt.getText();
-        interfazOwner.datos_aten[10][pos[0]] = consideracionestxt.getText();
-        interfazOwner.datos_aten[11][pos[0]] = interfazOwner.datos_citas[1][pos[0]];
-        interfazOwner.datos_aten[12][pos[0]] = interfazOwner.datos_citas[2][pos[0]];
-        interfazOwner.datos_aten[13][pos[0]] = interfazOwner.datos_citas[3][pos[0]];
-        pos[0]++;
+        interfazOwner.datos_aten[9][pos] = diagnosticotxt.getText();
+        interfazOwner.datos_aten[10][pos] = consideracionestxt.getText();
+        interfazOwner.datos_aten[11][pos] = interfazOwner.datos_citas[1][pos];
+        interfazOwner.datos_aten[12][pos] = interfazOwner.datos_citas[2][pos];
+        interfazOwner.datos_aten[13][pos] = interfazOwner.datos_citas[3][pos];
+        pos++;
         activarpaneles(false);
+        
+
     }//GEN-LAST:event_confirmarbuttonActionPerformed
-
-    private void borrarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarbuttonActionPerformed
-        dnifield.setText("");
-        tallafield.setText("");
-        pesofield.setText("");
-        temperaturafield.setText("");
-        precionfield.setText("");
-        frecuenciafield.setText("");
-        saturacionfield.setText("");
-
-        motivotxt.setText("");
-        diagnosticotxt.setText("");
-        consideracionestxt.setText("");
-
-        imclabel.setText("");
-        jSpinner1.setValue(0);
-
-        activarpaneles(false);
-
-    }//GEN-LAST:event_borrarbuttonActionPerformed
 
     private void buscarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarbuttonActionPerformed
         String valor;
@@ -579,12 +536,12 @@ public class Atencion extends javax.swing.JPanel {
                                 && interfazOwner.datos_citas[0][i].equals(dnifield.getText())) {
 
                             activarpaneles(true);
-                            pos[0] = i;
+                            pos= i;
                             dninombre.setText(interfazOwner.datos_pacien[1][i] + " " + interfazOwner.datos_pacien[2][i] + " " + interfazOwner.datos_pacien[3][i]);
                             dnilabel.setText(interfazOwner.datos_pacien[0][i]);
                             edadlabel.setText(interfazOwner.datos_pacien[5][i]);
                             sexolabel.setText(interfazOwner.datos_pacien[6][i]);
-                            motivotxt.setText(interfazOwner.datos_citas[4][pos[0]]);
+                            motivotxt.setText(interfazOwner.datos_citas[4][pos]);
                             break; //
                         }
                     }
@@ -597,12 +554,12 @@ public class Atencion extends javax.swing.JPanel {
                             valor=interfazOwner.datos_citas[0][Integer.parseInt(dnifield.getText())];
                             
                             activarpaneles(true);
-                            pos[0] = i;
+                            pos= i;
                             dninombre.setText(interfazOwner.datos_pacien[1][i] + " " + interfazOwner.datos_pacien[2][i] + " " + interfazOwner.datos_pacien[3][i]);
                             dnilabel.setText(interfazOwner.datos_pacien[0][i]);
                             edadlabel.setText(interfazOwner.datos_pacien[5][i]);
                             sexolabel.setText(interfazOwner.datos_pacien[6][i]);
-                            motivotxt.setText(interfazOwner.datos_citas[4][pos[0]]);
+                            motivotxt.setText(interfazOwner.datos_citas[4][pos]);
                             break; //
                         }
                     }
@@ -630,9 +587,15 @@ public class Atencion extends javax.swing.JPanel {
 
     }//GEN-LAST:event_buscarbuttonActionPerformed
 
+    private void inventariobuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inventariobuttonActionPerformed
+        interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
+        interfazOwner.indiceatencion=pos;
+
+        principal.cambiarPanel(new seleccion());
+    }//GEN-LAST:event_inventariobuttonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton borrarbutton;
     private javax.swing.JButton buscarbutton;
     private javax.swing.JTable citastable;
     private javax.swing.JButton confirmarbutton;
@@ -646,16 +609,14 @@ public class Atencion extends javax.swing.JPanel {
     private javax.swing.JTextField frecuenciafield;
     private javax.swing.JButton guardardatosbutton;
     private javax.swing.JLabel imclabel;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton inventariobutton;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextField jTextField10;
+    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JPanel medicamentospanel;
     private javax.swing.JPanel mostrardatospanel;
     private javax.swing.JTextArea motivotxt;
@@ -665,7 +626,6 @@ public class Atencion extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> seleccioncombo;
     private javax.swing.JLabel sexolabel;
     private javax.swing.JPanel signospanel;
-    private javax.swing.JScrollPane tablascroll;
     private javax.swing.JTextField tallafield;
     private javax.swing.JTextField temperaturafield;
     // End of variables declaration//GEN-END:variables
