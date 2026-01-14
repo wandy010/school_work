@@ -3,7 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+      <Color blue="f6" green="f2" red="ec" type="rgb"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[840, 520]"/>
@@ -29,23 +29,26 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="medicamentospanel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      <Component id="inventariobutton" pref="168" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="373" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="confirmarbutton" min="-2" pref="117" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="evaluacionpanel" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="jScrollPane5" pref="0" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="signospanel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="evaluacionpanel" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane5" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="signospanel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -58,23 +61,17 @@
                   <Component id="jScrollPane5" alignment="0" pref="0" max="32767" attributes="0"/>
                   <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="evaluacionpanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jToggleButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="confirmarbutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="inventariobutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                      <Component id="confirmarbutton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="medicamentospanel" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="medicamentospanel" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -82,9 +79,14 @@
   <SubComponents>
     <Container class="javax.swing.JPanel" name="signospanel">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f6" green="f2" red="ec" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="SIGNOS VITALES"/>
+            <TitledBorder title="SIGNOS VITALES">
+              <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+            </TitledBorder>
           </Border>
         </Property>
       </Properties>
@@ -145,9 +147,14 @@
       <SubComponents>
         <Component class="javax.swing.JTextField" name="tallafield">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f6" green="f2" red="ec" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="TALLA (CM)"/>
+                <TitledBorder title="TALLA (CM)">
+                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -157,9 +164,14 @@
         </Component>
         <Component class="javax.swing.JTextField" name="pesofield">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f6" green="f2" red="ec" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="PESO (KG)"/>
+                <TitledBorder title="PESO (KG)">
+                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -169,6 +181,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="precionfield">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f6" green="f2" red="ec" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="PRECION ARTERIAL"/>
@@ -181,9 +196,14 @@
         </Component>
         <Component class="javax.swing.JTextField" name="frecuenciafield">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f6" green="f2" red="ec" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="FRECUENCIA CARDIACA"/>
+                <TitledBorder title="FRECUENCIA CARDIACA">
+                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -193,6 +213,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="saturacionfield">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f6" green="f2" red="ec" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="SATURACION "/>
@@ -205,9 +228,14 @@
         </Component>
         <Component class="javax.swing.JTextField" name="temperaturafield">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f6" green="f2" red="ec" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="TEMPERATURA (C)"/>
+                <TitledBorder title="TEMPERATURA (C)">
+                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -217,6 +245,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="guardardatosbutton">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a0" green="6e" red="28" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="GUARDAR DATOS"/>
           </Properties>
           <Events>
@@ -230,7 +261,9 @@
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="IMC"/>
+                <TitledBorder title="IMC">
+                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -239,9 +272,14 @@
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel3">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f6" green="f2" red="ec" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="DATOS DEL PACIENTE"/>
+            <TitledBorder title="DATOS DEL PACIENTE">
+              <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+            </TitledBorder>
           </Border>
         </Property>
       </Properties>
@@ -279,8 +317,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="seleccioncombo" min="-2" pref="103" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="dnifield" min="-2" pref="224" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="dnifield" min="-2" pref="158" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="buscarbutton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -291,12 +329,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="buscarbutton" min="-2" pref="43" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
                           <Component id="seleccioncombo" pref="45" max="32767" attributes="0"/>
                           <Component id="dnifield" alignment="0" max="32767" attributes="0"/>
+                          <Component id="buscarbutton" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -305,6 +340,9 @@
           <SubComponents>
             <Component class="javax.swing.JTextField" name="dnifield">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder/>
@@ -314,6 +352,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="buscarbutton">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="6e" red="28" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="BUSCAR"/>
               </Properties>
               <Events>
@@ -322,6 +363,9 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="seleccioncombo">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
                     <StringItem index="0" value="DNI"/>
@@ -341,23 +385,29 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="mostrardatospanel">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f6" green="f2" red="ec" type="rgb"/>
+            </Property>
+          </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="dninombre" min="-2" pref="413" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="dnilabel" min="-2" pref="158" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="dninombre" alignment="1" min="-2" pref="340" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="dnilabel" min="-2" pref="181" max="-2" attributes="0"/>
+                                  <Component id="edadlabel" min="-2" pref="181" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="edadlabel" min="-2" pref="121" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="sexolabel" max="32767" attributes="0"/>
+                              <Component id="sexolabel" min="-2" pref="153" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -369,9 +419,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="dnilabel" alignment="0" pref="35" max="32767" attributes="0"/>
-                          <Component id="edadlabel" alignment="0" max="32767" attributes="0"/>
                           <Component id="sexolabel" alignment="0" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="edadlabel" min="-2" pref="35" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -423,9 +474,14 @@
     </Container>
     <Container class="javax.swing.JPanel" name="evaluacionpanel">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f6" green="f2" red="ec" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="EVALUACION"/>
+            <TitledBorder title="EVALUACION">
+              <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+            </TitledBorder>
           </Border>
         </Property>
       </Properties>
@@ -435,11 +491,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="371" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="301" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" pref="403" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" pref="365" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane3" min="-2" pref="292" max="-2" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" pref="256" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -464,11 +520,16 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="motivotxt">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
+                </Property>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Motivo"/>
+                    <TitledBorder title="Motivo">
+                      <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+                    </TitledBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -481,11 +542,16 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="diagnosticotxt">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
+                </Property>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Diagnostico"/>
+                    <TitledBorder title="Diagnostico">
+                      <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+                    </TitledBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -498,11 +564,16 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="consideracionestxt">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
+                </Property>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Consideraciones"/>
+                    <TitledBorder title="Consideraciones">
+                      <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
+                    </TitledBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -513,6 +584,9 @@
     </Container>
     <Container class="javax.swing.JPanel" name="medicamentospanel">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f6" green="f2" red="ec" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="MEDICAMENTOS"/>
@@ -523,18 +597,57 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="168" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="inventariobutton" min="-2" pref="228" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="sinmedicamentos" pref="301" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="23" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="inventariobutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="sinmedicamentos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="inventariobutton">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a0" green="6e" red="28" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="VER Y AGREGAR"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inventariobuttonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="sinmedicamentos">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a0" green="6e" red="28" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="CONFIRMAR SIN MEDICAMENTO"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sinmedicamentosActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
     </Container>
     <Component class="javax.swing.JButton" name="confirmarbutton">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="6e" red="28" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
       </Properties>
       <Events>
@@ -542,11 +655,19 @@
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f6" green="f2" red="ec" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
         <Component class="javax.swing.JTable" name="citastable">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f6" green="f2" red="ec" type="rgb"/>
+            </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="5" rowCount="4">
                 <Column editable="true" title="COLA" type="java.lang.String">
@@ -597,17 +718,15 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+    <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="CONFIRMAR SIN MEDICAMENTO"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="inventariobutton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="VER Y AGREGAR"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="6e" red="28" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="RESTABLECER"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inventariobuttonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -18,7 +18,9 @@ public class seleccion extends javax.swing.JPanel {
     int z=0;
     public seleccion() {
         initComponents();
-        
+        añadirbutton.setEnabled(false);
+        guardaryvolver.setEnabled(false);
+        cantidadspinner.setEnabled(false);
     DefaultTableModel modelo = (DefaultTableModel) listamedicamentos.getModel();
 modelo.setRowCount(0); // limpiar tabla
     int i=1;
@@ -81,10 +83,10 @@ modelo.setRowCount(0); // limpiar tabla
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         recetatable = new javax.swing.JTable();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        guardaryvolver = new javax.swing.JButton();
+        descartar = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
+        añadirbutton = new javax.swing.JButton();
         cantidadspinner = new javax.swing.JSpinner();
         medicamentolabel = new javax.swing.JLabel();
 
@@ -304,29 +306,30 @@ modelo.setRowCount(0); // limpiar tabla
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jButton5.setText("GUARDAR Y VOLVER");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        guardaryvolver.setText("GUARDAR Y VOLVER");
+        guardaryvolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                guardaryvolverActionPerformed(evt);
             }
         });
 
-        jButton7.setText("DESCARTAR Y VOLVER");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        descartar.setText("DESCARTAR Y VOLVER");
+        descartar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                descartarActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(40, 110, 160));
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("AÑADIR");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        añadirbutton.setBackground(new java.awt.Color(40, 110, 160));
+        añadirbutton.setForeground(new java.awt.Color(255, 255, 255));
+        añadirbutton.setText("AÑADIR");
+        añadirbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                añadirbuttonActionPerformed(evt);
             }
         });
 
+        cantidadspinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         cantidadspinner.setBorder(javax.swing.BorderFactory.createTitledBorder("Cantidad"));
 
         medicamentolabel.setBorder(javax.swing.BorderFactory.createTitledBorder("Medicamento"));
@@ -341,7 +344,7 @@ modelo.setRowCount(0); // limpiar tabla
                 .addGap(18, 18, 18)
                 .addComponent(cantidadspinner, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton6)
+                .addComponent(añadirbutton)
                 .addGap(114, 114, 114))
         );
         jPanel4Layout.setVerticalGroup(
@@ -357,7 +360,7 @@ modelo.setRowCount(0); // limpiar tabla
                         .addContainerGap(8, Short.MAX_VALUE))))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(añadirbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -374,9 +377,9 @@ modelo.setRowCount(0); // limpiar tabla
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton7)
+                                .addComponent(descartar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton5))
+                                .addComponent(guardaryvolver))
                             .addComponent(buscador, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -392,8 +395,8 @@ modelo.setRowCount(0); // limpiar tabla
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton7)))
+                    .addComponent(guardaryvolver)
+                    .addComponent(descartar)))
         );
 
         javax.swing.GroupLayout atencionpanelLayout = new javax.swing.GroupLayout(atencionpanel);
@@ -442,7 +445,8 @@ modelo.setRowCount(0); // limpiar tabla
     }//GEN-LAST:event_codigofieldActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-         String texto = codigofield.getText().trim();
+
+        String texto = codigofield.getText().trim();
 
     if (texto.isEmpty()) {
         return;
@@ -462,6 +466,8 @@ modelo.setRowCount(0); // limpiar tabla
     }
 
     // cargar SOLO el encontrado
+    añadirbutton.setEnabled(true);
+    cantidadspinner.setEnabled(true);
     DefaultTableModel modelo = (DefaultTableModel) jTable3.getModel();
     modelo.setRowCount(0);
 
@@ -475,8 +481,9 @@ modelo.setRowCount(0); // limpiar tabla
     medicamentolabel.setText(interfazOwner.datos_medi[0][indice]);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-    String colaStr = jTable3.getValueAt(0, 0).toString();
+    private void añadirbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirbuttonActionPerformed
+        guardaryvolver.setEnabled(true);
+        String colaStr = jTable3.getValueAt(0, 0).toString();
     int cola = Integer.parseInt(colaStr);
         interfazOwner.num_medi[interfazOwner.indiceatencion]++;
         interfazOwner.ind_medi[z][interfazOwner.indiceatencion]=(int)cola;
@@ -524,30 +531,36 @@ modelo.setRowCount(0); // limpiar tabla
     });
 }*/
         
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_añadirbuttonActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void descartarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descartarActionPerformed
         interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
         principal.cambiarPanel(new Atencion());
-    }//GEN-LAST:event_jButton7ActionPerformed
+     
+        
+        
+        
+    }//GEN-LAST:event_descartarActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void guardaryvolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardaryvolverActionPerformed
+       interfazOwner principal = (interfazOwner) javax.swing.SwingUtilities.getWindowAncestor(this);
+        principal.cambiarPanel(new Atencion());
+        
+    }//GEN-LAST:event_guardaryvolverActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel atencionpanel;
+    private javax.swing.JButton añadirbutton;
     private javax.swing.JPanel buscador;
     private javax.swing.JSpinner cantidadspinner;
     private javax.swing.JTextField codigofield;
+    private javax.swing.JButton descartar;
+    private javax.swing.JButton guardaryvolver;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
