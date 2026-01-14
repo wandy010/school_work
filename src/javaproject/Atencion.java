@@ -32,11 +32,7 @@ public class Atencion extends javax.swing.JPanel {
         escuchar(precionfield);
         escuchar(saturacionfield);
 
-        interfazOwner.datos_citas[0][0] = "412";
-        interfazOwner.datos_citas[1][0] = "01/20/26";
-        interfazOwner.datos_citas[2][0] = "9";
-        interfazOwner.datos_citas[3][0] = "10";
-        interfazOwner.datos_citas[4][0] = "Motivoprueba";
+   
         DefaultTableModel modelo = (DefaultTableModel) citastable.getModel();
         modelo.setRowCount(0);
         for (int i = 0; i < interfazOwner.indiceCita; i++) {

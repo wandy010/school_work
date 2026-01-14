@@ -30,11 +30,11 @@ public class botica_principal extends javax.swing.JPanel {
         botica_recojer = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         botica_stock = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
 
@@ -55,36 +55,35 @@ public class botica_principal extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("FreeMono", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("<html><div style=\"width: 200px; text-align: center;\">Gestiona la entrega de recetas médicas al paciente y registra la salida de productos del sistema.</div>");
+        jLabel8.setText("<html><div style=\"width: 200px; text-align: center;\">Recoger medicamentos y descontar del stock</div>");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/guardar.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/recojo.png"))); // NOI18N
 
         javax.swing.GroupLayout botica_recojerLayout = new javax.swing.GroupLayout(botica_recojer);
         botica_recojer.setLayout(botica_recojerLayout);
         botica_recojerLayout.setHorizontalGroup(
             botica_recojerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botica_recojerLayout.createSequentialGroup()
-                .addGroup(botica_recojerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(botica_recojerLayout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(jLabel6))
-                    .addGroup(botica_recojerLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel7)))
-                .addContainerGap(19, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botica_recojerLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
+            .addGroup(botica_recojerLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel7)
+                .addContainerGap(19, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botica_recojerLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(109, 109, 109))
         );
         botica_recojerLayout.setVerticalGroup(
             botica_recojerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botica_recojerLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(jLabel7)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -99,8 +98,6 @@ public class botica_principal extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/agregar.png"))); // NOI18N
-
         jLabel4.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("consultar stock");
@@ -108,7 +105,9 @@ public class botica_principal extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("FreeMono", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("<html><div style=\"width: 200px; text-align: center;\">ingrese datos de personas que nunca se atendieron en esta posta</div>");
+        jLabel5.setText("<html><div style=\"width: 200px; text-align: center;\">Ver y agregar stock de medicamentos</div>");
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/guardar.png"))); // NOI18N
 
         javax.swing.GroupLayout botica_stockLayout = new javax.swing.GroupLayout(botica_stock);
         botica_stock.setLayout(botica_stockLayout);
@@ -117,22 +116,23 @@ public class botica_principal extends javax.swing.JPanel {
             .addGroup(botica_stockLayout.createSequentialGroup()
                 .addGroup(botica_stockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(botica_stockLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jLabel3))
-                    .addGroup(botica_stockLayout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addComponent(jLabel4))
                     .addGroup(botica_stockLayout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(45, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botica_stockLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(97, 97, 97))
         );
         botica_stockLayout.setVerticalGroup(
             botica_stockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botica_stockLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(44, 44, 44)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,7 +172,7 @@ public class botica_principal extends javax.swing.JPanel {
     private javax.swing.JPanel botica_stock;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

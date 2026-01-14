@@ -17,7 +17,7 @@ public class interfazOwner extends javax.swing.JFrame {
 
     public static String[][] datos_pacien = new String[10][100];
     public static String[][] datos_citas = new String[8][300];
-    public static String[][] datos_aten = new String[8][300];
+    public static String[][] datos_aten = new String[14][300];
     public static int[] num_medi = new int[300];//solo cantidad de medicinas de cada paciente
     public static int[][] ind_medi = new int[20][300];//los indices los los medicamentos de cada paciente
     public static int[][] cant_medi = new int[20][300];//la cantidad de cada medicamento de cada paciente
