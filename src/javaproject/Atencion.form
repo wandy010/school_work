@@ -3,7 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="f6" green="f2" red="ec" type="rgb"/>
+      <Color blue="ff" green="ff" red="ff" type="rgb"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[840, 520]"/>
@@ -79,14 +79,9 @@
   <SubComponents>
     <Container class="javax.swing.JPanel" name="signospanel">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="f6" green="f2" red="ec" type="rgb"/>
-        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="SIGNOS VITALES">
-              <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-            </TitledBorder>
+            <TitledBorder title="SIGNOS VITALES"/>
           </Border>
         </Property>
       </Properties>
@@ -147,14 +142,9 @@
       <SubComponents>
         <Component class="javax.swing.JTextField" name="tallafield">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f6" green="f2" red="ec" type="rgb"/>
-            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="TALLA (CM)">
-                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-                </TitledBorder>
+                <TitledBorder title="TALLA (CM)"/>
               </Border>
             </Property>
           </Properties>
@@ -164,14 +154,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="pesofield">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f6" green="f2" red="ec" type="rgb"/>
-            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="PESO (KG)">
-                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-                </TitledBorder>
+                <TitledBorder title="PESO (KG)"/>
               </Border>
             </Property>
           </Properties>
@@ -181,9 +166,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="precionfield">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f6" green="f2" red="ec" type="rgb"/>
-            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="PRECION ARTERIAL"/>
@@ -196,14 +178,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="frecuenciafield">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f6" green="f2" red="ec" type="rgb"/>
-            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="FRECUENCIA CARDIACA">
-                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-                </TitledBorder>
+                <TitledBorder title="FRECUENCIA CARDIACA"/>
               </Border>
             </Property>
           </Properties>
@@ -213,9 +190,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="saturacionfield">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f6" green="f2" red="ec" type="rgb"/>
-            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="SATURACION "/>
@@ -228,14 +202,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="temperaturafield">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f6" green="f2" red="ec" type="rgb"/>
-            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="TEMPERATURA (C)">
-                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-                </TitledBorder>
+                <TitledBorder title="TEMPERATURA (C)"/>
               </Border>
             </Property>
           </Properties>
@@ -245,9 +214,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="guardardatosbutton">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="a0" green="6e" red="28" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="GUARDAR DATOS"/>
           </Properties>
           <Events>
@@ -261,9 +227,7 @@
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="IMC">
-                  <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-                </TitledBorder>
+                <TitledBorder title="IMC"/>
               </Border>
             </Property>
           </Properties>
@@ -272,14 +236,9 @@
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel3">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="f6" green="f2" red="ec" type="rgb"/>
-        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="DATOS DEL PACIENTE">
-              <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-            </TitledBorder>
+            <TitledBorder title="DATOS DEL PACIENTE"/>
           </Border>
         </Property>
       </Properties>
@@ -340,9 +299,6 @@
           <SubComponents>
             <Component class="javax.swing.JTextField" name="dnifield">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
-                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder/>
@@ -352,9 +308,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="buscarbutton">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="a0" green="6e" red="28" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="BUSCAR"/>
               </Properties>
               <Events>
@@ -363,9 +316,6 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="seleccioncombo">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
-                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
                     <StringItem index="0" value="DNI"/>
@@ -385,11 +335,6 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="mostrardatospanel">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f6" green="f2" red="ec" type="rgb"/>
-            </Property>
-          </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -474,14 +419,9 @@
     </Container>
     <Container class="javax.swing.JPanel" name="evaluacionpanel">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="f6" green="f2" red="ec" type="rgb"/>
-        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="EVALUACION">
-              <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-            </TitledBorder>
+            <TitledBorder title="EVALUACION"/>
           </Border>
         </Property>
       </Properties>
@@ -520,16 +460,11 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="motivotxt">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
-                </Property>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Motivo">
-                      <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-                    </TitledBorder>
+                    <TitledBorder title="Motivo"/>
                   </Border>
                 </Property>
               </Properties>
@@ -542,16 +477,11 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="diagnosticotxt">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
-                </Property>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Diagnostico">
-                      <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-                    </TitledBorder>
+                    <TitledBorder title="Diagnostico"/>
                   </Border>
                 </Property>
               </Properties>
@@ -564,16 +494,11 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="consideracionestxt">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="f6" green="f2" red="ec" type="rgb"/>
-                </Property>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Consideraciones">
-                      <Color PropertyName="color" blue="50" green="3e" red="2c" type="rgb"/>
-                    </TitledBorder>
+                    <TitledBorder title="Consideraciones"/>
                   </Border>
                 </Property>
               </Properties>
@@ -584,9 +509,6 @@
     </Container>
     <Container class="javax.swing.JPanel" name="medicamentospanel">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="f6" green="f2" red="ec" type="rgb"/>
-        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="MEDICAMENTOS"/>
@@ -621,9 +543,6 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="inventariobutton">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="a0" green="6e" red="28" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="VER Y AGREGAR"/>
           </Properties>
           <Events>
@@ -632,9 +551,6 @@
         </Component>
         <Component class="javax.swing.JToggleButton" name="sinmedicamentos">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="a0" green="6e" red="28" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="CONFIRMAR SIN MEDICAMENTO"/>
           </Properties>
           <Events>
@@ -645,9 +561,6 @@
     </Container>
     <Component class="javax.swing.JButton" name="confirmarbutton">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="a0" green="6e" red="28" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
       </Properties>
       <Events>
@@ -655,19 +568,11 @@
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane5">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="f6" green="f2" red="ec" type="rgb"/>
-        </Property>
-      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
         <Component class="javax.swing.JTable" name="citastable">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f6" green="f2" red="ec" type="rgb"/>
-            </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="5" rowCount="4">
                 <Column editable="true" title="COLA" type="java.lang.String">
@@ -720,9 +625,6 @@
     </Container>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="a0" green="6e" red="28" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="RESTABLECER"/>
       </Properties>
       <Events>

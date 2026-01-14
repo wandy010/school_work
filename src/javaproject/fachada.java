@@ -27,29 +27,14 @@ public class fachada extends javax.swing.JPanel {
     private void initComponents() {
 
         fachada = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
-        fachada.setMinimumSize(new java.awt.Dimension(1366, 718));
-        fachada.setPreferredSize(new java.awt.Dimension(1366, 718));
-        fachada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Font Awesome 6 Free Solid", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(44, 62, 80));
-        jLabel2.setText("MODULO DE ATENCIONES");
-        fachada.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, -1, -1));
-
-        jPanel1.setOpaque(false);
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jButton2.setBackground(new java.awt.Color(40, 110, 160));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("ATENDER PACIENTE");
-        jButton2.setBorder(null);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -57,10 +42,22 @@ public class fachada extends javax.swing.JPanel {
         });
         jPanel1.add(jButton2, java.awt.BorderLayout.CENTER);
 
-        fachada.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 580, 200));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaproject/images/fondoHospital.png"))); // NOI18N
-        fachada.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 720));
+        javax.swing.GroupLayout fachadaLayout = new javax.swing.GroupLayout(fachada);
+        fachada.setLayout(fachadaLayout);
+        fachadaLayout.setHorizontalGroup(
+            fachadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fachadaLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(200, 200, 200))
+        );
+        fachadaLayout.setVerticalGroup(
+            fachadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fachadaLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                .addGap(200, 200, 200))
+        );
 
         add(fachada, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
@@ -74,8 +71,6 @@ public class fachada extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel fachada;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

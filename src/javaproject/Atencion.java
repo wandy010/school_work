@@ -193,29 +193,25 @@ public class Atencion extends javax.swing.JPanel {
         citastable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(236, 242, 246));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(840, 520));
 
-        signospanel.setBackground(new java.awt.Color(236, 242, 246));
-        signospanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "SIGNOS VITALES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        signospanel.setBorder(javax.swing.BorderFactory.createTitledBorder("SIGNOS VITALES"));
 
-        tallafield.setBackground(new java.awt.Color(236, 242, 246));
-        tallafield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TALLA (CM)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        tallafield.setBorder(javax.swing.BorderFactory.createTitledBorder("TALLA (CM)"));
         tallafield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tallafieldActionPerformed(evt);
             }
         });
 
-        pesofield.setBackground(new java.awt.Color(236, 242, 246));
-        pesofield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PESO (KG)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        pesofield.setBorder(javax.swing.BorderFactory.createTitledBorder("PESO (KG)"));
         pesofield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pesofieldActionPerformed(evt);
             }
         });
 
-        precionfield.setBackground(new java.awt.Color(236, 242, 246));
         precionfield.setBorder(javax.swing.BorderFactory.createTitledBorder("PRECION ARTERIAL"));
         precionfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,15 +219,13 @@ public class Atencion extends javax.swing.JPanel {
             }
         });
 
-        frecuenciafield.setBackground(new java.awt.Color(236, 242, 246));
-        frecuenciafield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FRECUENCIA CARDIACA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        frecuenciafield.setBorder(javax.swing.BorderFactory.createTitledBorder("FRECUENCIA CARDIACA"));
         frecuenciafield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 frecuenciafieldActionPerformed(evt);
             }
         });
 
-        saturacionfield.setBackground(new java.awt.Color(236, 242, 246));
         saturacionfield.setBorder(javax.swing.BorderFactory.createTitledBorder("SATURACION "));
         saturacionfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,15 +233,13 @@ public class Atencion extends javax.swing.JPanel {
             }
         });
 
-        temperaturafield.setBackground(new java.awt.Color(236, 242, 246));
-        temperaturafield.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TEMPERATURA (C)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        temperaturafield.setBorder(javax.swing.BorderFactory.createTitledBorder("TEMPERATURA (C)"));
         temperaturafield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 temperaturafieldActionPerformed(evt);
             }
         });
 
-        guardardatosbutton.setBackground(new java.awt.Color(40, 110, 160));
         guardardatosbutton.setText("GUARDAR DATOS");
         guardardatosbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,7 +248,7 @@ public class Atencion extends javax.swing.JPanel {
         });
 
         imclabel.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        imclabel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "IMC", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        imclabel.setBorder(javax.swing.BorderFactory.createTitledBorder("IMC"));
 
         javax.swing.GroupLayout signospanelLayout = new javax.swing.GroupLayout(signospanel);
         signospanel.setLayout(signospanelLayout);
@@ -300,13 +292,10 @@ public class Atencion extends javax.swing.JPanel {
                 .addGap(12, 12, 12))
         );
 
-        jPanel3.setBackground(new java.awt.Color(236, 242, 246));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS DEL PACIENTE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("DATOS DEL PACIENTE"));
 
-        dnifield.setBackground(new java.awt.Color(236, 242, 246));
         dnifield.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        buscarbutton.setBackground(new java.awt.Color(40, 110, 160));
         buscarbutton.setText("BUSCAR");
         buscarbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -314,7 +303,6 @@ public class Atencion extends javax.swing.JPanel {
             }
         });
 
-        seleccioncombo.setBackground(new java.awt.Color(236, 242, 246));
         seleccioncombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DNI", "COLA" }));
         seleccioncombo.setBorder(javax.swing.BorderFactory.createTitledBorder("Busqueda"));
 
@@ -340,8 +328,6 @@ public class Atencion extends javax.swing.JPanel {
                     .addComponent(dnifield)
                     .addComponent(buscarbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
-
-        mostrardatospanel.setBackground(new java.awt.Color(236, 242, 246));
 
         dninombre.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 12)); // NOI18N
         dninombre.setBorder(javax.swing.BorderFactory.createTitledBorder("PACIENTE"));
@@ -401,25 +387,21 @@ public class Atencion extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        evaluacionpanel.setBackground(new java.awt.Color(236, 242, 246));
-        evaluacionpanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EVALUACION", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        evaluacionpanel.setBorder(javax.swing.BorderFactory.createTitledBorder("EVALUACION"));
 
-        motivotxt.setBackground(new java.awt.Color(236, 242, 246));
         motivotxt.setColumns(20);
         motivotxt.setRows(5);
-        motivotxt.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Motivo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        motivotxt.setBorder(javax.swing.BorderFactory.createTitledBorder("Motivo"));
         jScrollPane1.setViewportView(motivotxt);
 
-        diagnosticotxt.setBackground(new java.awt.Color(236, 242, 246));
         diagnosticotxt.setColumns(20);
         diagnosticotxt.setRows(5);
-        diagnosticotxt.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Diagnostico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        diagnosticotxt.setBorder(javax.swing.BorderFactory.createTitledBorder("Diagnostico"));
         jScrollPane2.setViewportView(diagnosticotxt);
 
-        consideracionestxt.setBackground(new java.awt.Color(236, 242, 246));
         consideracionestxt.setColumns(20);
         consideracionestxt.setRows(5);
-        consideracionestxt.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Consideraciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 0, 13), new java.awt.Color(44, 62, 80))); // NOI18N
+        consideracionestxt.setBorder(javax.swing.BorderFactory.createTitledBorder("Consideraciones"));
         jScrollPane3.setViewportView(consideracionestxt);
 
         javax.swing.GroupLayout evaluacionpanelLayout = new javax.swing.GroupLayout(evaluacionpanel);
@@ -445,10 +427,8 @@ public class Atencion extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        medicamentospanel.setBackground(new java.awt.Color(236, 242, 246));
         medicamentospanel.setBorder(javax.swing.BorderFactory.createTitledBorder("MEDICAMENTOS"));
 
-        inventariobutton.setBackground(new java.awt.Color(40, 110, 160));
         inventariobutton.setText("VER Y AGREGAR");
         inventariobutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -456,7 +436,6 @@ public class Atencion extends javax.swing.JPanel {
             }
         });
 
-        sinmedicamentos.setBackground(new java.awt.Color(40, 110, 160));
         sinmedicamentos.setText("CONFIRMAR SIN MEDICAMENTO");
         sinmedicamentos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -484,7 +463,6 @@ public class Atencion extends javax.swing.JPanel {
                     .addComponent(sinmedicamentos)))
         );
 
-        confirmarbutton.setBackground(new java.awt.Color(40, 110, 160));
         confirmarbutton.setText("CONFIRMAR");
         confirmarbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -492,9 +470,6 @@ public class Atencion extends javax.swing.JPanel {
             }
         });
 
-        jScrollPane5.setBackground(new java.awt.Color(236, 242, 246));
-
-        citastable.setBackground(new java.awt.Color(236, 242, 246));
         citastable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"", null, null, null, null},
@@ -516,7 +491,6 @@ public class Atencion extends javax.swing.JPanel {
         });
         jScrollPane5.setViewportView(citastable);
 
-        jButton1.setBackground(new java.awt.Color(40, 110, 160));
         jButton1.setText("RESTABLECER");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
